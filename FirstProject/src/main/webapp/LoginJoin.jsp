@@ -214,10 +214,10 @@
 				
 				if($('#pw').val() != $('#pwcheck').val()) {
 					$('#pwMsg').html('비밀번호 일치하지 않음');
-					$('#pwMsg').attr('color', 'red');
+					$('#pwMsg').attr('color', '#FF0000');
 				} else {
 					$('#pwMsg').html('비밀번호 일치함');
-					$('#pwMsg').attr('color', 'blue');
+					$('#pwMsg').attr('color', '#0000FF');
 				}
 				
 			});

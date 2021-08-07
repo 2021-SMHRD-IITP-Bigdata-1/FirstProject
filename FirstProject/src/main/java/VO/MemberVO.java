@@ -2,11 +2,16 @@ package VO;
 
 public class MemberVO {
 
+	private String memCode;
 	private String id;
 	private String pw;
 	private String pwcheck;
 	private String gender;
 	private String birth;
+	
+	public String getMemCode() {
+		return memCode;
+	}
 	public String getId() {
 		return id;
 	}
@@ -39,12 +44,20 @@ public class MemberVO {
 	}
 	
 	public MemberVO(String id, String pw, String pwcheck, String gender, String birth) {
-		super();
 		this.id = id;
 		this.pw = pw;
 		this.pwcheck = pwcheck;
 		this.gender = gender;
 		this.birth = birth;
 	}
+	
+	public MemberVO(String memCode, String id, String gender, String birth) {
+		this.memCode = memCode;
+		this.id = id;
+		this.gender = gender;
+		this.birth = birth;
+	}
+	
+	
 	
 }

@@ -56,7 +56,7 @@ public class MemberDAO {
 		try {
 			getConn();
 
-			String sql = "insert into member values(mem_seq.nextval, ?, ?, ?, ?)";
+			String sql = "insert into member values(seq_mem_code.nextval, ?, ?, ?, ?)";
 
 			psmt = conn.prepareStatement(sql);
 
@@ -102,11 +102,10 @@ public class MemberDAO {
 				
 				String getCode = rs.getString(1);
 				String getId = rs.getString(2);
-				String getPw = rs.getString(3);
 				String getGender = rs.getString(4);
 				String getBirth = rs.getString(5);
 				
-				vo = new MemberVO(getCode, getId, getPw, getGender, getBirth);
+				vo = new MemberVO(getCode, getId, getGender, getBirth);
 				
 			}
 			

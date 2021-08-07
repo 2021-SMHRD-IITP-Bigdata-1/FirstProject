@@ -28,9 +28,15 @@ public class LoginCon extends HttpServlet {
 		if(vo != null) {
 			HttpSession session = request.getSession();
 			session.setAttribute("vo_session", vo);
+			
+			System.out.println(vo.getMemCode());
+			System.out.println(vo.getId());
+			System.out.println(vo.getPw());
+			System.out.println(vo.getGender());
+			System.out.println(vo.getBirth());
 		}
 		
-		response.sendRedirect("MainTest.jsp");
+		response.sendRedirect("index.jsp");
 		
 	}
 

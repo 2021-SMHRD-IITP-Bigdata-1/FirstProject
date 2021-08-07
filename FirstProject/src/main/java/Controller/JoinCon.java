@@ -23,9 +23,15 @@ public class JoinCon extends HttpServlet {
 		String birth = request.getParameter("birth");
 		
 		MemberDAO dao = new MemberDAO();
-		dao.join(id, pw, pwcheck, gender, birth);
+		int cnt = dao.join(id, pw, pwcheck, gender, birth);
 		
-		response.sendRedirect("MainTest.jsp");
+		if(cnt > 0) {
+			System.out.println("회원가입 성공!");
+			response.sendRedirect("index.jsp");
+		} else {
+			System.out.println("회원가입 실패ㅠㅠㅠ");
+			response.sendRedirect("LoginJoin.jsp");
+		}
 		
 	}
 
