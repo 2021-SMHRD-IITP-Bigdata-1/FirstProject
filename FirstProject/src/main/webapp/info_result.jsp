@@ -152,8 +152,10 @@ $w.on('scroll', function() {
     MemberDAO dao = new MemberDAO();
     
     PickVO vo2 = dao.selectPickNo(vo);
-    	
     
+    String SymA = vo2.getSymA();
+    String SymB = vo2.getSymB();
+    String SymC = vo2.getSymC();
     
     %>
     

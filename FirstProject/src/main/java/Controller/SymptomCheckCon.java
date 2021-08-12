@@ -39,14 +39,6 @@ public class SymptomCheckCon extends HttpServlet {
 			// 선택한 symptoms들이 MEMBER_PICK에 INSERT 성공 시,
 			System.out.println("선택한 symptoms insert 성공!");
 			
-			PickVO vo2 = dao.selectPickNo(vo);
-	    	
-		    System.out.println("선택1 : " + vo2.getSymA());
-		    System.out.println("선택2 : " + vo2.getSymB());
-		    System.out.println("선택3 : " + vo2.getSymC());
-			
-			
-			
 			response.sendRedirect("info_result.jsp");
 		} else {
 			System.out.println("insert 실패 ㅠㅠ");
