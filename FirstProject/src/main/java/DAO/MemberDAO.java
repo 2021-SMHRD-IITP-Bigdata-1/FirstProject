@@ -125,24 +125,30 @@ public class MemberDAO {
 		
 		try {
 			getConn();
+			
+			int symLength = symptoms.length;
 
-			String sql = "insert into member_pick values(pick_seq.nextval, ?, ?, ?, ?)";
+			String sql = "";
+
+			if(symLength == 3) {
+				sql = "insert into member_pick values(pick_seq.nextval, ?, ?, ?, ?)";
+				
+			} else if(symLength == 2) {
+				sql = "insert into member_pick values(pick_seq.nextval, ?, ?, ?, null)";
+				
+			} else {
+				sql = "insert into member_pick values(pick_seq.nextval, ?, ?, null, null)";
+			}
 
 			psmt = conn.prepareStatement(sql);
 
 			psmt.setString(1, memCode);
 			
-			psmt.setString(2, symptoms[0]);
-			psmt.setString(3, symptoms[1]);
-			psmt.setString(4, symptoms[2]);
-
-			cnt = psmt.executeUpdate();
-			
-			if(cnt > 0) {
-				System.out.println("insert 성공!");
-			}else {
-				System.out.println("insert 실패ㅜㅜ");
+			for(int i = 0; i < symLength; i++) {
+				psmt.setString(i+2, symptoms[i]);
 			}
+			
+			cnt = psmt.executeUpdate();
 			
 		} catch (Exception e) {
 			e.printStackTrace();

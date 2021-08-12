@@ -153,12 +153,6 @@ $w.on('scroll', function() {
     
     PickVO vo2 = dao.selectPickNo(vo);
     	
-    System.out.println(vo2.getSymA());
-    System.out.println(vo2.getSymB());
-    System.out.println(vo2.getSymC());
-    
-    
-    
     
     
     %>
