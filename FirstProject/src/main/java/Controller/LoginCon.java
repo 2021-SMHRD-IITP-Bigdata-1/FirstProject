@@ -34,9 +34,14 @@ public class LoginCon extends HttpServlet {
 			System.out.println(vo.getPw());
 			System.out.println(vo.getGender());
 			System.out.println(vo.getBirth());
+			
+			response.sendRedirect("index.jsp");
+
+		} else {
+			
+			response.sendRedirect("index.jsp");
 		}
 		
-		response.sendRedirect("index.jsp");
 		
 	}
 

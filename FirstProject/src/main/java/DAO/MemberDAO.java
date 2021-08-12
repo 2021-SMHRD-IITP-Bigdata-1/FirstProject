@@ -7,6 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import VO.MemberVO;
+import VO.PickVO;
 
 public class MemberDAO {
 	
@@ -15,6 +16,7 @@ public class MemberDAO {
 	ResultSet rs = null;
 	
 	MemberVO vo = null;
+	PickVO vo2 = null;
 	int cnt = 0;
 	
 	public void getConn() {
@@ -56,7 +58,7 @@ public class MemberDAO {
 		try {
 			getConn();
 
-			String sql = "insert into member values(seq_mem_code.nextval, ?, ?, ?, ?)";
+			String sql = "insert into member values(mem_seq.nextval, ?, ?, ?, ?)";
 
 			psmt = conn.prepareStatement(sql);
 
@@ -117,6 +119,79 @@ public class MemberDAO {
 		}
 		
 		return vo;
+	}
+
+	public int selectSymptom(String[] symptoms, String memCode) {
+		
+		try {
+			getConn();
+
+			String sql = "insert into member_pick values(pick_seq.nextval, ?, ?, ?, ?)";
+
+			psmt = conn.prepareStatement(sql);
+
+			psmt.setString(1, memCode);
+			
+			psmt.setString(2, symptoms[0]);
+			psmt.setString(3, symptoms[1]);
+			psmt.setString(4, symptoms[2]);
+
+			cnt = psmt.executeUpdate();
+			
+			if(cnt > 0) {
+				System.out.println("insert 성공!");
+			}else {
+				System.out.println("insert 실패ㅜㅜ");
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			
+		} finally {
+			close();
+		}
+		
+		return cnt;
+	}
+
+	
+	
+	public PickVO selectPickNo(MemberVO vo) {
+		
+		try {
+			getConn();
+
+			// sql문 작성
+			String sql = "select * from member_pick where mem_code = ?";
+
+			psmt = conn.prepareStatement(sql);
+
+			psmt.setString(1, vo.getMemCode());
+
+			rs = psmt.executeQuery();
+			
+			String getSymA = null;
+			String getSymB = null;
+			String getSymC = null;
+
+			while(rs.next()) {
+				
+				getSymA = rs.getString(3);
+				getSymB = rs.getString(4);
+				getSymC = rs.getString(5);
+				
+				vo2 = new PickVO(getSymA, getSymB, getSymC);
+				
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			
+		} finally {
+			close();
+		}
+		
+		return vo2;
 	}
 	
 	

@@ -49,7 +49,7 @@
                         </div>
                         <nav class="mobile-menu">
                             <ul>
-                                <li><a href="./information1.html">효능/부위별 정보</a></li>
+                                <li><a href="./information1.jsp">효능/부위별 정보</a></li>
                                 <li><a href="./about-us.html">성분별 정보</a></li>
                                 <li><a></a></li>
                                 <li><a href="./elements.html">제품 비교</a></li>
