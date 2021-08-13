@@ -8,6 +8,7 @@ select * from product;
 
 select * from summary;
 
+select * from symptom;
 select * from MEMBER_PICK;
 
 select mem_seq.nextval from dual;

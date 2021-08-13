@@ -1,3 +1,4 @@
+<%@page import="java.util.ArrayList"%>
 <%@page import="DAO.MemberDAO"%>
 <%@page import="VO.MemberVO"%>
 <%@page import="VO.PickVO"%>
@@ -153,13 +154,18 @@ $w.on('scroll', function() {
     
     PickVO vo2 = dao.selectPickNo(vo);
     
-    String SymA = vo2.getSymA();
-    String SymB = vo2.getSymB();
+	String SymA = vo2.getSymA();
+	String SymB = vo2.getSymB();
     String SymC = vo2.getSymC();
     
+    if(vo2.getSymB() == null && vo2.getSymC() == null) {
+	   	SymB = "";
+	    SymC = "";
+    } else if(vo2.getSymC() == null) {
+    	SymC = "";
+    }
+    
     %>
-    
-    
     
     
     <div id="STATICMENU">
@@ -167,6 +173,8 @@ $w.on('scroll', function() {
         <div id="banner">
             <div class="accordin-elem">
                 <div class="accordion" id="accordionExample">
+                
+                <% if(SymA.equals("간") || SymB.equals("간") || SymC.equals("간")) { %>
                     <div class="card 간">
                         <div class="card-heading">
                             <div data-toggle="collapse" data-target="#collapseOne">
@@ -181,6 +189,9 @@ $w.on('scroll', function() {
                             </div>
                         </div>
                     </div>
+                    
+                <% } if (SymA.equals("관절") || SymB.equals("관절") || SymC.equals("관절")) { %>
+                    
                     <div class="card 관절">
                         <div class="card-heading">
                             <div data-toggle="collapse" data-target="#collapseTwo">
@@ -197,6 +208,9 @@ $w.on('scroll', function() {
                             </div>
                         </div>
                     </div>
+                    
+                    <% } if (SymA.equals("기억력") || SymB.equals("기억력") || SymC.equals("기억력")) { %>
+                    
                     <div class="card 기억력">
                         <div class="card-heading">
                             <div data-toggle="collapse" data-target="#collapseThree">
@@ -212,6 +226,9 @@ $w.on('scroll', function() {
                             </div>
                         </div>
                     </div>
+                    
+                    <% } if (SymA.equals("눈") || SymB.equals("눈") || SymC.equals("눈")) { %>
+                    
                     <div class="card 눈">
                         <div class="card-heading">
                             <div data-toggle="collapse" data-target="#collapseFour">
@@ -228,6 +245,9 @@ $w.on('scroll', function() {
                             </div>
                         </div>
                     </div>
+                    
+                    <% } if (SymA.equals("뼈") || SymB.equals("뼈") || SymC.equals("뼈")) { %>
+                    
                     <div class="card 뼈">
                         <div class="card-heading">
                             <div data-toggle="collapse" data-target="#collapseFive">
@@ -243,6 +263,9 @@ $w.on('scroll', function() {
                             </div>
                         </div>
                     </div>
+                    
+                    <% } if (SymA.equals("장") || SymB.equals("장") || SymC.equals("장")) { %>
+                    
                     <div class="card 장">
                         <div class="card-heading">
                             <div data-toggle="collapse" data-target="#collapseSix">
@@ -259,6 +282,9 @@ $w.on('scroll', function() {
                             </div>
                         </div>
                     </div>
+                    
+                    <% } if (SymA.equals("체지방감소") || SymB.equals("체지방감소") || SymC.equals("체지방감소")) { %>
+                    
                     <div class="card 체지방감소">
                         <div class="card-heading">
                             <div data-toggle="collapse" data-target="#collapseSeven">
@@ -275,6 +301,9 @@ $w.on('scroll', function() {
                             </div>
                         </div>
                     </div>
+                    
+                    <% } if (SymA.equals("콜레스테롤") || SymB.equals("콜레스테롤") || SymC.equals("콜레스테롤")) { %>
+                    
                     <div class="card 콜레스테롤">
                         <div class="card-heading">
                             <div data-toggle="collapse" data-target="#collapseEight">
@@ -294,6 +323,9 @@ $w.on('scroll', function() {
                             </div>
                         </div>
                     </div>
+                    
+                    <% } if (SymA.equals("피부") || SymB.equals("피부") || SymC.equals("피부")) { %>
+                    
                     <div class="card 피부">
                         <div class="card-heading">
                             <div data-toggle="collapse" data-target="#collapseNine">
@@ -312,6 +344,8 @@ $w.on('scroll', function() {
                             </div>
                         </div>
                     </div>
+                    
+                    <% } if (SymA.equals("항산화") || SymB.equals("항산화") || SymC.equals("항산화")) { %>
                     <div class="card 항산화">
                         <div class="card-heading">
                             <div data-toggle="collapse" data-target="#collapseTen">
@@ -331,7 +365,11 @@ $w.on('scroll', function() {
                                 <a href="#red-ginseng28">홍삼</a>
                             </div>
                         </div>
-                    </div><div class="card 혈행개선">
+                    </div>
+                    
+                    
+                    <% } if (SymA.equals("혈행개선") || SymB.equals("혈행개선") || SymC.equals("혈행개선")) { %>
+                    <div class="card 혈행개선">
                         <div class="card-heading">
                             <div data-toggle="collapse" data-target="#collapseEleven">
                                 <a>혈행개선</a>
@@ -347,6 +385,8 @@ $w.on('scroll', function() {
                             </div>
                         </div>
                     </div>
+                    
+                    <% } %>
                 </div>
             </div>
             
@@ -430,349 +470,369 @@ $w.on('scroll', function() {
     <section class="blog spad-2">
         <div class="container">
             <div class="row">
+            
+            	<% if(SymA.equals("간") || SymB.equals("간") || SymC.equals("간")) { %>
                 <div class="col-lg-11">
                     <div class="single-blog-item">
-                    <div class="간">
-                        <div id="milkseatle" class="밀크씨슬">
-                            <img class="about-img info-tag" src="img/blog/list/liver/밀크씨슬.png" alt="">
-                            <img class="about-img" src="img/blog/list/liver/main.jpg" alt="">
-                            <img class="about-img" src="img/blog/list/liver/contents_01.jpg" alt="">
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                <div class="col-lg-11">
-                    <div class="single-blog-item">
-                    <div class="joint">
-                        <div id="glucosamine1">
-                            <img class="about-img" src="img/blog/list/joint/관절 - 글루코사민/glucosamine.png" alt="">
-                            <img class="about-img" src="img/blog/list/joint/top.jpg" alt="">
-                            <img class="about-img" src="img/blog/list/joint/관절 - 글루코사민/content.jpg" alt="">
-                        </div>
-                        <br>
-                        <div id="boswelia2">
-                            <img class="about-img" src="img/blog/list/joint/관절 - 보스웰리아/boswelia.png" alt="">
-                            <img class="about-img" src="img/blog/list/joint/관절 - 보스웰리아/main.jpg" alt="">
-                            <img class="about-img" src="img/blog/list/joint/관절 - 보스웰리아/content_01.jpg" alt="">
-                            <img class="about-img" src="img/blog/list/joint/관절 - 보스웰리아/content_02.jpg" alt="">
-                            <img class="about-img" src="img/blog/list/joint/관절 - 보스웰리아/content_03.jpg" alt="">
-                            <img class="about-img" src="img/blog/list/joint/관절 - 보스웰리아/content_04.jpg" alt="">
-                        </div>
-                        <br>
-                        <div id="msm2-5">
-                            <img class="about-img" src="img/blog/list/joint/관절 - 엠에스엠/MSM.png" alt="">
-                            <img class="about-img" src="img/blog/list/joint/관절 - 엠에스엠/main.jpg" alt="">
-                            <img class="about-img" src="img/blog/list/joint/관절 - 엠에스엠/contents_01.jpg" alt="">
-                            <img class="about-img" src="img/blog/list/joint/관절 - 엠에스엠/contents_02.jpg" alt="">
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                <div class="col-lg-11">
-                    <div class="single-blog-item">
-                    <div class="기억력">
-                        <div id="omega-33">
-                            <img class="about-img info-tag" src="img/blog/list/memory/기억력-오메가3/omega3.png" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/memory/기억력-오메가3/top.jpg" alt="">
-                            <img class="about-img" src="img/blog/list/memory/기억력-오메가3/content.jpg" alt="">
-                        </div>
-                        <br>
-                        <div id="ginkgo4">
-                            <img class="about-img info-tag" src="img/blog/list/memory/기억력 - 은행잎/은행잎.png" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/memory/기억력 - 은행잎/210219_ginkgo_800_main.jpg" alt="">
-                            <img class="about-img" src="img/blog/list/memory/기억력 - 은행잎/contents_01.jpg" alt="">
-                            <img class="about-img" src="img/blog/list/memory/기억력 - 은행잎/contents_02.jpg" alt="">
-                        </div>
-                    </div>
+	                    <div class="간">
+	                        <div id="milkseatle" class="밀크씨슬">
+	                            <img class="about-img info-tag" src="img/blog/list/liver/밀크씨슬.png" alt="">
+	                            <img class="about-img" src="img/blog/list/liver/main.jpg" alt="">
+	                            <img class="about-img" src="img/blog/list/liver/contents_01.jpg" alt="">
+	                        </div>
+	                    </div>
                     </div>
                 </div>
                 
+                <% } 
+            	if (SymA.equals("관절") || SymB.equals("관절") || SymC.equals("관절")) { %>
+                <div class="col-lg-11">
+                    <div class="single-blog-item">
+	                    <div class="관절">
+	                        <div id="glucosamine1">
+	                            <img class="about-img" src="img/blog/list/joint/joint_glucosamine/glucosamine.png" alt="">
+	                            <img class="about-img" src="img/blog/list/joint/joint_glucosamine/top.jpg" alt="">
+	                            <img class="about-img" src="img/blog/list/joint/joint_glucosamine/content.jpg" alt="">
+	                        </div>
+	                        <br>
+	                        <div id="boswelia2">
+	                            <img class="about-img" src="img/blog/list/joint/joint_Boswellia/boswelia.png" alt="">
+	                            <img class="about-img" src="img/blog/list/joint/joint_Boswellia/main.jpg" alt="">
+	                            <img class="about-img" src="img/blog/list/joint/joint_Boswellia/content_01.jpg" alt="">
+	                            <img class="about-img" src="img/blog/list/joint/joint_Boswellia/content_02.jpg" alt="">
+	                            <img class="about-img" src="img/blog/list/joint/joint_Boswellia/content_03.jpg" alt="">
+	                            <img class="about-img" src="img/blog/list/joint/joint_Boswellia/content_04.jpg" alt="">
+	                        </div>
+	                        <br>
+	                        <div id="msm2-5">
+	                            <img class="about-img" src="img/blog/list/joint/joint_MSM/MSM.png" alt="">
+	                            <img class="about-img" src="img/blog/list/joint/joint_MSM/main.jpg" alt="">
+	                            <img class="about-img" src="img/blog/list/joint/joint_MSM/contents_01.jpg" alt="">
+	                            <img class="about-img" src="img/blog/list/joint/joint_MSM/contents_02.jpg" alt="">
+	                        </div>
+	                    </div>
+                    </div>
+                </div>
+                
+                <% } if (SymA.equals("기억력") || SymB.equals("기억력") || SymC.equals("기억력")) { %>
+                <div class="col-lg-11">
+                    <div class="single-blog-item">
+	                    <div class="기억력">
+	                        <div id="omega-33">
+	                            <img class="about-img info-tag" src="img/blog/list/memory/memory_omega3/omega3.png" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/memory/memory_omega3/top.jpg" alt="">
+	                            <img class="about-img" src="img/blog/list/memory/memory_omega3/content.jpg" alt="">
+	                        </div>
+	                        <br>
+	                        <div id="ginkgo4">
+	                            <img class="about-img info-tag" src="img/blog/list/memory/memory_zinco/은행잎.png" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/memory/memory_zinco/210219_ginkgo_800_main.jpg" alt="">
+	                            <img class="about-img" src="img/blog/list/memory/memory_zinco/contents_01.jpg" alt="">
+	                            <img class="about-img" src="img/blog/list/memory/memory_zinco/contents_02.jpg" alt="">
+	                        </div>
+	                    </div>
+                    </div>
+                </div>
+                
+                <% } if (SymA.equals("눈") || SymB.equals("눈") || SymC.equals("눈")) { %>
                 <div class="col-lg-11">
                     <div class="single-blog-item">
                         <div class="눈">
                             <div id="vitamin-a5">
-                                <img class="about-img info-tag" src="img/blog/list/eye/눈 - 비타민A/va.png" alt="">
-                                <img class="about-img info-tag" src="img/blog/list/eye/눈 - 비타민A/main.jpg" alt="">
-                                <img class="about-img" src="img/blog/list/eye/눈 - 비타민A/contents_01.jpg" alt="">
-                                <img class="about-img" src="img/blog/list/eye/눈 - 비타민A/contents_02.jpg" alt="">
+                                <img class="about-img info-tag" src="img/blog/list/eye/eye_vitaminA/va.png" alt="">
+                                <img class="about-img info-tag" src="img/blog/list/eye/eye_vitaminA/main.jpg" alt="">
+                                <img class="about-img" src="img/blog/list/eye/eye_vitaminA/contents_01.jpg" alt="">
+                                <img class="about-img" src="img/blog/list/eye/eye_vitaminA/contents_02.jpg" alt="">
                             </div>
                             <br>
                             <div id="lutein-a5-5">
-                                <img class="about-img info-tag" src="img/blog/list/eye/눈 - 루테인/lutein.png" alt="">
-                                <img class="about-img" src="img/blog/list/eye/눈 - 루테인/200317_lutein_800_main.jpg" alt="">
-                                <img class="about-img" src="img/blog/list/eye/눈 - 루테인/contents_01.jpg" alt="">
+                                <img class="about-img info-tag" src="img/blog/list/eye/eye_lutein/lutein.png" alt="">
+                                <img class="about-img" src="img/blog/list/eye/eye_lutein/200317_lutein_800_main.jpg" alt="">
+                                <img class="about-img" src="img/blog/list/eye/eye_lutein/contents_01.jpg" alt="">
                             </div>
                             <br>
                             <div id="omega-36">
-                                <img class="about-img info-tag" src="img/blog/list/memory/기억력-오메가3/omega3.png" alt="">
-                                <img class="about-img info-tag" src="img/blog/list/memory/기억력-오메가3/top.jpg" alt="">
-                                <img class="about-img" src="img/blog/list/memory/기억력-오메가3/content.jpg" alt="">
+                                <img class="about-img info-tag" src="img/blog/list/memory/eye_omega3/omega3.png" alt="">
+                                <img class="about-img info-tag" src="img/blog/list/memory/eye_omega3/top.jpg" alt="">
+                                <img class="about-img" src="img/blog/list/memory/eye_omega3/content.jpg" alt="">
                              </div>
-                    </div>
-                    </div>
-                </div>
-                <div class="col-lg-11">
-                    <div class="single-blog-item">
-                        <div class="뼈">
-                        <div id="vitamin-d7">
-                            <img class="about-img info-tag" src="img/blog/list/bone/뼈 - 비타민D/vd.png" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/bone/뼈 - 비타민D/main.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/bone/뼈 - 비타민D/contents_01.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/bone/뼈 - 비타민D/contents_02.jpg" alt="">
-                        </div>
-                        <br>
-                        <div id="calcium8">
-                            <img class="about-img info-tag" src="img/blog/list/bone/뼈 - 칼슘/calcium.png" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/bone/뼈 - 칼슘/main.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/bone/뼈 - 칼슘/content_01.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/bone/뼈 - 칼슘/content_02.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/bone/뼈 - 칼슘/content_03.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/bone/뼈 - 칼슘/content_04.jpg" alt="">
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                <div class="col-lg-11">
-                    <div class="single-blog-item">
-                        <div class="장">
-                        <div id="aloe-gel8-5">
-                            <img class="about-img info-tag" src="img/blog/list/intestine/장 - 알로에겔/알로에겔.png" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/intestine/장 - 알로에겔/main.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/intestine/장 - 알로에겔/contents_01.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/intestine/장 - 알로에겔/contents_02.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/intestine/장 - 알로에겔/contents_03.jpg" alt="">
-                        </div>
-                        <br>
-                        <div id="probiotics9">
-                            <img class="about-img info-tag" src="img/blog/list/intestine/장 - 프로바이오틱스/probiotics.png" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/intestine/장 - 프로바이오틱스/프1.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/intestine/장 - 프로바이오틱스/프2.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/intestine/장 - 프로바이오틱스/프3.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/intestine/장 - 프로바이오틱스/프4.jpg" alt="">
-                        </div>
-                        <br>
-                        <div id="cha9-5">
-                            <img class="about-img info-tag" src="img/blog/list/intestine/장 - 차전자피/차전자피.png" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/intestine/장 - 차전자피/main.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/intestine/장 - 차전자피/content_01.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/intestine/장 - 차전자피/content_02.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/intestine/장 - 차전자피/content_03.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/intestine/장 - 차전자피/content_04.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/intestine/장 - 차전자피/content_05.jpg" alt="">
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                <div class="col-lg-11">
-                    <div class="single-blog-item">
-                        <div class="체지방감소">
-                        <div id="garcinia10">
-                            <img class="about-img info-tag" src="img/blog/list/diet/체지방감소 - 가르시니아/가르시니아.png" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/diet/체지방감소 - 가르시니아/200608_etc_800_main.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/diet/체지방감소 - 가르시니아/contents_01.jpg" alt="">
-                        </div>
-                        <br>
-                        <div id="catechin11">
-                            <img class="about-img info-tag" src="img/blog/list/diet/체지방감소 - 카테킨/카테킨.png" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/diet/체지방감소 - 카테킨/main.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/diet/체지방감소 - 카테킨/content_01.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/diet/체지방감소 - 카테킨/content_02.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/diet/체지방감소 - 카테킨/content_03.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/diet/체지방감소 - 카테킨/content_04.jpg" alt="">
-                        </div>
-                        <br>
-                        <div id="chitosan12">
-                            <img class="about-img info-tag" src="img/blog/list/diet/체지방감소 - 키토산/키토산.png" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/diet/체지방감소 - 키토산/main.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/diet/체지방감소 - 키토산/content_01.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/diet/체지방감소 - 키토산/content_02.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/diet/체지방감소 - 키토산/content_03.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/diet/체지방감소 - 키토산/content_04.jpg" alt="">
-                        </div>
-                    </div>
+                    	</div>
                     </div>
                 </div>
                 
+                <% } if (SymA.equals("뼈") || SymB.equals("뼈") || SymC.equals("뼈")) { %>
+                <div class="col-lg-11">
+                    <div class="single-blog-item">
+                        <div class="뼈">
+	                        <div id="vitamin-d7">
+	                            <img class="about-img info-tag" src="img/blog/list/bone/bone_vitaminD/vd.png" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/bone/bone_vitaminD/main.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/bone/bone_vitaminD/contents_01.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/bone/bone_vitaminD/contents_02.jpg" alt="">
+	                        </div>
+	                        <br>
+	                        <div id="calcium8">
+	                            <img class="about-img info-tag" src="img/blog/list/bone/bone_calcium/calcium.png" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/bone/bone_calcium/main.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/bone/bone_calcium/content_01.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/bone/bone_calcium/content_02.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/bone/bone_calcium/content_03.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/bone/bone_calcium/content_04.jpg" alt="">
+	                        </div>
+                    	</div>
+                    </div>
+                </div>
+                
+                <% } if (SymA.equals("장") || SymB.equals("장") || SymC.equals("장")) { %>
+                <div class="col-lg-11">
+                    <div class="single-blog-item">
+                        <div class="장">
+	                        <div id="aloe-gel8-5">
+	                            <img class="about-img info-tag" src="img/blog/list/intestine/intestine_AloeGel/알로에겔.png" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/intestine/intestine_AloeGel/main.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/intestine/intestine_AloeGel/contents_01.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/intestine/intestine_AloeGel/contents_02.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/intestine/intestine_AloeGel/contents_03.jpg" alt="">
+	                        </div>
+	                        <br>
+	                        <div id="probiotics9">
+	                            <img class="about-img info-tag" src="img/blog/list/intestine/intestine_probiotics/probiotics.png" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/intestine/intestine_probiotics/프1.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/intestine/intestine_probiotics/프2.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/intestine/intestine_probiotics/프3.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/intestine/intestine_probiotics/프4.jpg" alt="">
+	                        </div>
+	                        <br>
+	                        <div id="cha9-5">
+	                            <img class="about-img info-tag" src="img/blog/list/intestine/intestine_psyllium/차전자피.png" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/intestine/intestine_psyllium/main.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/intestine/intestine_psyllium/content_01.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/intestine/intestine_psyllium/content_02.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/intestine/intestine_psyllium/content_03.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/intestine/intestine_psyllium/content_04.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/intestine/intestine_psyllium/content_05.jpg" alt="">
+	                        </div>
+                    	</div>
+                    </div>
+                </div>
+                
+                <% } if (SymA.equals("체지방감소") || SymB.equals("체지방감소") || SymC.equals("체지방감소")) { %>
+                <div class="col-lg-11">
+                    <div class="single-blog-item">
+                        <div class="체지방감소">
+	                        <div id="garcinia10">
+	                            <img class="about-img info-tag" src="img/blog/list/diet/diet_Garcinia/가르시니아.png" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/diet/diet_Garcinia/200608_etc_800_main.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/diet/diet_Garcinia/contents_01.jpg" alt="">
+	                        </div>
+	                        <br>
+	                        <div id="catechin11">
+	                            <img class="about-img info-tag" src="img/blog/list/diet/diet_catechins/카테킨.png" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/diet/diet_catechins/main.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/diet/diet_catechins/content_01.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/diet/diet_catechins/content_02.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/diet/diet_catechins/content_03.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/diet/diet_catechins/content_04.jpg" alt="">
+	                        </div>
+	                        <br>
+	                        <div id="chitosan12">
+	                            <img class="about-img info-tag" src="img/blog/list/diet/diet_chitosan/키토산.png" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/diet/diet_chitosan/main.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/diet/diet_chitosan/content_01.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/diet/diet_chitosan/content_02.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/diet/diet_chitosan/content_03.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/diet/diet_chitosan/content_04.jpg" alt="">
+	                        </div>
+                    	</div>
+                    </div>
+                </div>
+                
+                <% } if (SymA.equals("콜레스테롤") || SymB.equals("콜레스테롤") || SymC.equals("콜레스테롤")) { %>
                 <div class="col-lg-11">
                     <div class="single-blog-item">
                         <div class="콜레스테롤">
-                        <div id="gamma13">
-                            <img class="about-img info-tag" src="img/blog/list/cholesterol/콜레스테롤 - 감마리놀렌산/감마리놀렌산.png" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/cholesterol/콜레스테롤 - 감마리놀렌산/top.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/cholesterol/콜레스테롤 - 감마리놀렌산/content.jpg" alt="">
-                        </div>
-                        <br>
-                        <div id="spirulina14">
-                            <img class="about-img info-tag" src="img/blog/list/cholesterol/콜레스테롤 - 스피루리나/스피루리나.png" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/cholesterol/콜레스테롤 - 스피루리나/200803_etc_800_main.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/cholesterol/콜레스테롤 - 스피루리나/contents_01.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/cholesterol/콜레스테롤 - 스피루리나/contents_02.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/cholesterol/콜레스테롤 - 스피루리나/contents_03.jpg" alt="">
-                        </div>
-                        <br>
-                        <div id="cha14-5">
-                            <img class="about-img info-tag" src="img/blog/list/intestine/장 - 차전자피/차전자피.png" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/intestine/장 - 차전자피/main.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/intestine/장 - 차전자피/content_01.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/intestine/장 - 차전자피/content_02.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/intestine/장 - 차전자피/content_03.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/intestine/장 - 차전자피/content_04.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/intestine/장 - 차전자피/content_05.jpg" alt="">
-                        </div>
-                        <br>
-                        <div id="catechin15">
-                            <img class="about-img info-tag" src="img/blog/list/diet/체지방감소 - 카테킨/카테킨.png" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/diet/체지방감소 - 카테킨/main.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/diet/체지방감소 - 카테킨/content_01.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/diet/체지방감소 - 카테킨/content_02.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/diet/체지방감소 - 카테킨/content_03.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/diet/체지방감소 - 카테킨/content_04.jpg" alt="">
-                        </div>
-                        <br>
-                        <div id="chlorella16">
-                            <img class="about-img info-tag" src="img/blog/list/cholesterol/콜레스테롤 - 클로렐라/클로렐라.png" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/cholesterol/콜레스테롤 - 클로렐라/201013_etc_800_main.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/cholesterol/콜레스테롤 - 클로렐라/contents_01.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/cholesterol/콜레스테롤 - 클로렐라/contents_02.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/cholesterol/콜레스테롤 - 클로렐라/contents_03.jpg" alt="">
-                        </div>
-                        <br>
-                        <div id="chitosan17">
-                            <img class="about-img info-tag" src="img/blog/list/diet/체지방감소 - 키토산/키토산.png" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/diet/체지방감소 - 키토산/main.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/diet/체지방감소 - 키토산/content_01.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/diet/체지방감소 - 키토산/content_02.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/diet/체지방감소 - 키토산/content_03.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/diet/체지방감소 - 키토산/content_04.jpg" alt="">
-                        </div>
-                    </div>
+	                        <div id="gamma13">
+	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/cholesterol_gamma/감마리놀렌산.png" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/cholesterol_gamma/top.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/cholesterol_gamma/content.jpg" alt="">
+	                        </div>
+	                        <br>
+	                        <div id="spirulina14">
+	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/cholesterol_spirulina/스피루리나.png" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/cholesterol_spirulina/200803_etc_800_main.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/cholesterol_spirulina/contents_01.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/cholesterol_spirulina/contents_02.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/cholesterol_spirulina/contents_03.jpg" alt="">
+	                        </div>
+	                        <br>
+	                        <div id="cha14-5">
+	                            <img class="about-img info-tag" src="img/blog/list/intestine/cholesterol_psyllium/차전자피.png" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/intestine/cholesterol_psyllium/main.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/intestine/cholesterol_psyllium/content_01.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/intestine/cholesterol_psyllium/content_02.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/intestine/cholesterol_psyllium/content_03.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/intestine/cholesterol_psyllium/content_04.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/intestine/cholesterol_psyllium/content_05.jpg" alt="">
+	                        </div>
+	                        <br>
+	                        <div id="catechin15">
+	                            <img class="about-img info-tag" src="img/blog/list/diet/cholesterol_catechins/카테킨.png" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/diet/cholesterol_catechins/main.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/diet/cholesterol_catechins/content_01.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/diet/cholesterol_catechins/content_02.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/diet/cholesterol_catechins/content_03.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/diet/cholesterol_catechins/content_04.jpg" alt="">
+	                        </div>
+	                        <br>
+	                        <div id="chlorella16">
+	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/antioxidant_Chlorella/클로렐라.png" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/antioxidant_Chlorella/201013_etc_800_main.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/antioxidant_Chlorella/contents_01.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/antioxidant_Chlorella/contents_02.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/antioxidant_Chlorella/contents_03.jpg" alt="">
+	                        </div>
+	                        <br>
+	                        <div id="chitosan17">
+	                            <img class="about-img info-tag" src="img/blog/list/diet/cholesterol_chitosan/키토산.png" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/diet/cholesterol_chitosan/main.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/diet/cholesterol_chitosan/content_01.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/diet/cholesterol_chitosan/content_02.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/diet/cholesterol_chitosan/content_03.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/diet/cholesterol_chitosan/content_04.jpg" alt="">
+	                        </div>
+                    	</div>
                     </div>
                 </div>
+                
+                <% } if (SymA.equals("피부") || SymB.equals("피부") || SymC.equals("피부")) { %>
                 <div class="col-lg-11">
                     <div class="single-blog-item">
                         <div class="피부">
-                        <div id="gamma18">
-                            <img class="about-img info-tag" src="img/blog/list/cholesterol/콜레스테롤 - 감마리놀렌산/감마리놀렌산.png" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/cholesterol/콜레스테롤 - 감마리놀렌산/top.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/cholesterol/콜레스테롤 - 감마리놀렌산/content.jpg" alt="">
-                        </div>
-                        <br>
-                        <div id="spirulina19">
-                            <img class="about-img info-tag" src="img/blog/list/cholesterol/콜레스테롤 - 스피루리나/스피루리나.png" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/cholesterol/콜레스테롤 - 스피루리나/200803_etc_800_main.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/cholesterol/콜레스테롤 - 스피루리나/contents_01.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/cholesterol/콜레스테롤 - 스피루리나/contents_02.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/cholesterol/콜레스테롤 - 스피루리나/contents_03.jpg" alt="">
-                        </div>
-                        <br>
-                        <div id="aloe-gel19-5">
-                            <img class="about-img info-tag" src="img/blog/list/intestine/장 - 알로에겔/알로에겔.png" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/intestine/장 - 알로에겔/main.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/intestine/장 - 알로에겔/contents_01.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/intestine/장 - 알로에겔/contents_02.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/intestine/장 - 알로에겔/contents_03.jpg" alt="">
-                        </div>
-                        <br>
-                        <div id="collagen20">
-                            <img class="about-img info-tag" src="img/blog/list/skin/피부 - 콜라겐/콜라겐.png" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/skin/피부 - 콜라겐/main.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/skin/피부 - 콜라겐/contents_01.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/skin/피부 - 콜라겐/contents_03.jpg" alt="">
-                        </div>
-                        <br>
-                        <div id="chlorella21">
-                            <img class="about-img info-tag" src="img/blog/list/cholesterol/콜레스테롤 - 클로렐라/클로렐라.png" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/cholesterol/콜레스테롤 - 클로렐라/201013_etc_800_main.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/cholesterol/콜레스테롤 - 클로렐라/contents_01.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/cholesterol/콜레스테롤 - 클로렐라/contents_02.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/cholesterol/콜레스테롤 - 클로렐라/contents_03.jpg" alt="">
-                        </div>
-                        
-                    </div>
+	                        <div id="gamma18">
+	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/skin_gamma/감마리놀렌산.png" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/skin_gamma/top.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/skin_gamma/content.jpg" alt="">
+	                        </div>
+	                        <br>
+	                        <div id="spirulina19">
+	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/skin_spirulina/스피루리나.png" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/skin_spirulina/200803_etc_800_main.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/skin_spirulina/contents_01.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/skin_spirulina/contents_02.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/skin_spirulina/contents_03.jpg" alt="">
+	                        </div>
+	                        <br>
+	                        <div id="aloe-gel19-5">
+	                            <img class="about-img info-tag" src="img/blog/list/intestine/skin_AloeGel/알로에겔.png" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/intestine/skin_AloeGel/main.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/intestine/skin_AloeGel/contents_01.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/intestine/skin_AloeGel/contents_02.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/intestine/skin_AloeGel/contents_03.jpg" alt="">
+	                        </div>
+	                        <br>
+	                        <div id="collagen20">
+	                            <img class="about-img info-tag" src="img/blog/list/skin/skin_Collagen/콜라겐.png" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/skin/skin_Collagen/main.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/skin/skin_Collagen/contents_01.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/skin/skin_Collagen/contents_03.jpg" alt="">
+	                        </div>
+	                        <br>
+	                        <div id="chlorella21">
+	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/skin_Chlorella/클로렐라.png" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/skin_Chlorella/201013_etc_800_main.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/skin_Chlorella/contents_01.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/skin_Chlorella/contents_02.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/skin_Chlorella/contents_03.jpg" alt="">
+	                        </div>
+                    	</div>
                     </div>
                 </div>
+                
+                <% } if (SymA.equals("항산화") || SymB.equals("항산화") || SymC.equals("항산화")) { %>
                 <div class="col-lg-11">
                     <div class="single-blog-item">
                         <div class="항산화">
                         
-                        <div id="vitamin-c22">
-                            <img class="about-img info-tag" src="img/blog/list/antioxidant/항산화 - 비타민C/vc.png" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/antioxidant/항산화 - 비타민C/main.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/antioxidant/항산화 - 비타민C/contents_01.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/antioxidant/항산화 - 비타민C/contents_02.jpg" alt="">
-                        </div>
-                        <br>
-                        <div id="spirulina23">
-                            <img class="about-img info-tag" src="img/blog/list/cholesterol/콜레스테롤 - 스피루리나/스피루리나.png" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/cholesterol/콜레스테롤 - 스피루리나/200803_etc_800_main.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/cholesterol/콜레스테롤 - 스피루리나/contents_01.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/cholesterol/콜레스테롤 - 스피루리나/contents_02.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/cholesterol/콜레스테롤 - 스피루리나/contents_03.jpg" alt="">
-                        </div>
-                        <br>
-                        <div id="catechin24">
-                            <img class="about-img info-tag" src="img/blog/list/diet/체지방감소 - 카테킨/카테킨.png" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/diet/체지방감소 - 카테킨/main.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/diet/체지방감소 - 카테킨/content_01.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/diet/체지방감소 - 카테킨/content_02.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/diet/체지방감소 - 카테킨/content_03.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/diet/체지방감소 - 카테킨/content_04.jpg" alt="">
-                        </div>
-                        <br>
-                        <div id="co-q-1025">
-                            <img class="about-img info-tag" src="img/blog/list/antioxidant/항산화 - 코큐텐/코큐텐.png" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/antioxidant/항산화 - 코큐텐/200512_etc_800_main.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/antioxidant/항산화 - 코큐텐/contents_01.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/antioxidant/항산화 - 코큐텐/contents_02.jpg" alt="">
-                        </div>
-                        <br>
-                        <div id="chlorella26">
-                            <img class="about-img info-tag" src="img/blog/list/cholesterol/콜레스테롤 - 클로렐라/클로렐라.png" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/cholesterol/콜레스테롤 - 클로렐라/201013_etc_800_main.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/cholesterol/콜레스테롤 - 클로렐라/contents_01.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/cholesterol/콜레스테롤 - 클로렐라/contents_02.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/cholesterol/콜레스테롤 - 클로렐라/contents_03.jpg" alt="">
-                        </div>
-                        <br>
-                        <div id="propolis27">
-                            <img class="about-img info-tag" src="img/blog/list/antioxidant/항산화 - 프로폴리스/프로폴리스.png" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/antioxidant/항산화 - 프로폴리스/top.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/antioxidant/항산화 - 프로폴리스/content.jpg" alt="">
-                        </div>
-                        <br>
-                        <div id="red-ginseng28">
-                            <img class="about-img info-tag" src="img/blog/list/antioxidant/항산화 - 홍삼/홍삼.png" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/antioxidant/항산화 - 홍삼/top.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/antioxidant/항산화 - 홍삼/content.jpg" alt="">
-                        </div>
-                        
-                    </div>
+	                        <div id="vitamin-c22">
+	                            <img class="about-img info-tag" src="img/blog/list/antioxidant/antioxidant_vitaminC/vc.png" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/antioxidant/antioxidant_vitaminC/main.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/antioxidant/antioxidant_vitaminC/contents_01.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/antioxidant/antioxidant_vitaminC/contents_02.jpg" alt="">
+	                        </div>
+	                        <br>
+	                        <div id="spirulina23">
+	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/antioxidant_spirulina/스피루리나.png" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/antioxidant_spirulina/200803_etc_800_main.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/antioxidant_spirulina/contents_01.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/antioxidant_spirulina/contents_02.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/antioxidant_spirulina/contents_03.jpg" alt="">
+	                        </div>
+	                        <br>
+	                        <div id="catechin24">
+	                            <img class="about-img info-tag" src="img/blog/list/diet/antioxidant_catechins/카테킨.png" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/diet/antioxidant_catechins/main.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/diet/antioxidant_catechins/content_01.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/diet/antioxidant_catechins/content_02.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/diet/antioxidant_catechins/content_03.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/diet/antioxidant_catechins/content_04.jpg" alt="">
+	                        </div>
+	                        <br>
+	                        <div id="co-q-1025">
+	                            <img class="about-img info-tag" src="img/blog/list/antioxidant/antioxidant_CoQ10/코큐텐.png" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/antioxidant/antioxidant_CoQ10/200512_etc_800_main.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/antioxidant/antioxidant_CoQ10/contents_01.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/antioxidant/antioxidant_CoQ10/contents_02.jpg" alt="">
+	                        </div>
+	                        <br>
+	                        <div id="chlorella26">
+	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/antioxidant_Chlorella/클로렐라.png" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/antioxidant_Chlorella/201013_etc_800_main.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/antioxidant_Chlorella/contents_01.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/antioxidant_Chlorella/contents_02.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/antioxidant_Chlorella/contents_03.jpg" alt="">
+	                        </div>
+	                        <br>
+	                        <div id="propolis27">
+	                            <img class="about-img info-tag" src="img/blog/list/antioxidant/antioxidant_propolis/프로폴리스.png" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/antioxidant/antioxidant_propolis/top.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/antioxidant/antioxidant_propolis/content.jpg" alt="">
+	                        </div>
+	                        <br>
+	                        <div id="red-ginseng28">
+	                            <img class="about-img info-tag" src="img/blog/list/antioxidant/antioxidant_red_ginseng/홍삼.png" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/antioxidant/antioxidant_red_ginseng/top.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/antioxidant/antioxidant_red_ginseng/content.jpg" alt="">
+	                        </div>
+                    	</div>
                     </div>
                 </div>
+                
+                <% } if (SymA.equals("혈행개선") || SymB.equals("혈행개선") || SymC.equals("혈행개선")) { %>
                 <div class="col-lg-11">
                     <div class="single-blog-item">
                         <div class="혈행개선">
-                        <div id="gamma29">
-                            <img class="about-img info-tag" src="img/blog/list/cholesterol/콜레스테롤 - 감마리놀렌산/감마리놀렌산.png" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/cholesterol/콜레스테롤 - 감마리놀렌산/top.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/cholesterol/콜레스테롤 - 감마리놀렌산/content.jpg" alt="">
-                        </div>
-                        <br>
-                        <div id="ginkgo30">
-                            <img class="about-img info-tag" src="img/blog/list/memory/기억력 - 은행잎/은행잎.png" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/memory/기억력 - 은행잎/210219_ginkgo_800_main.jpg" alt="">
-                            <img class="about-img" src="img/blog/list/memory/기억력 - 은행잎/contents_01.jpg" alt="">
-                            <img class="about-img" src="img/blog/list/memory/기억력 - 은행잎/contents_02.jpg" alt="">
-                        </div>
-                        <br>
-                        <div id="red-ginseng31">
-                            <img class="about-img info-tag" src="img/blog/list/antioxidant/항산화 - 홍삼/홍삼.png" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/antioxidant/항산화 - 홍삼/top.jpg" alt="">
-                            <img class="about-img info-tag" src="img/blog/list/antioxidant/항산화 - 홍삼/content.jpg" alt="">
-                        </div>
-                    </div>
+	                        <div id="gamma29">
+	                            <img class="about-img info-tag" src="img/blog/list/blood/blood_gamma/감마리놀렌산.png" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/blood/blood_gamma/top.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/blood/blood_gamma/content.jpg" alt="">
+	                        </div>
+	                        <br>
+	                        <div id="ginkgo30">
+	                            <img class="about-img info-tag" src="img/blog/list/blood/blood_zinco/은행잎.png" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/blood/blood_zinco/210219_ginkgo_800_main.jpg" alt="">
+	                            <img class="about-img" src="img/blog/list/blood/blood_zinco/contents_01.jpg" alt="">
+	                            <img class="about-img" src="img/blog/list/blood/blood_zinco/contents_02.jpg" alt="">
+	                        </div>
+	                        <br>
+	                        <div id="red-ginseng31">
+	                            <img class="about-img info-tag" src="img/blog/list/blood/blood_red_ginseng/홍삼.png" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/blood/blood_red_ginseng/top.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/blood/blood_red_ginseng/content.jpg" alt="">
+	                        </div>
+                    	</div>
                     </div>
                 </div>
+                <% } %>
                 
             </div>
         </div>
