@@ -11,6 +11,7 @@ public class ProductVO {
 	 private String pdtType;
 	 private String pdtDailyIntake;
 	 private String pdtOneIntake;
+	 private String pdtJung;
 	 private String pdtFree;
 	 private String pdtContent;
 	 
@@ -41,6 +42,9 @@ public class ProductVO {
 	public String getPdtOneIntake() {
 		return pdtOneIntake;
 	}
+	public String getPdtJung() {
+		return pdtJung;
+	}
 	public String getPdtFree() {
 		return pdtFree;
 	}
@@ -48,7 +52,7 @@ public class ProductVO {
 		return pdtContent;
 	}
 	public ProductVO(String pdtCode, String pdtName, String pdtBrand, String pdtCountry, String pdtPrice,
-			String pdtDiscPrice, String pdtType, String pdtDailyIntake, String pdtOneIntake, String pdtFree,
+			String pdtDiscPrice, String pdtType, String pdtDailyIntake, String pdtOneIntake, String pdtJung ,String pdtFree,
 			String pdtContent) {
 		super();
 		this.pdtCode = pdtCode;
@@ -60,6 +64,7 @@ public class ProductVO {
 		this.pdtType = pdtType;
 		this.pdtDailyIntake = pdtDailyIntake;
 		this.pdtOneIntake = pdtOneIntake;
+		this.pdtJung = pdtJung;
 		this.pdtFree = pdtFree;
 		this.pdtContent = pdtContent;
 	}
