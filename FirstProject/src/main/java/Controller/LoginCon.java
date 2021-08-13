@@ -1,6 +1,7 @@
 package Controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -26,6 +27,7 @@ public class LoginCon extends HttpServlet {
 		MemberVO vo = dao.login(id, pw);
 		
 		if(vo != null) {
+			// 로그인 성공 시,
 			HttpSession session = request.getSession();
 			session.setAttribute("vo_session", vo);
 			
@@ -38,8 +40,13 @@ public class LoginCon extends HttpServlet {
 			response.sendRedirect("index.jsp");
 
 		} else {
+			// 로그인 실패 시,
+			response.setContentType("text/html; charset=utf-8");
+			PrintWriter out = response.getWriter();
 			
-			response.sendRedirect("index.jsp");
+			out.println("<script>alert('아이디 혹은 비밀번호를 잘못 입력하셨습니다.'); location.href='"+ "LoginJoin.jsp" +"'; </script>");
+			
+			out.close();
 		}
 		
 		

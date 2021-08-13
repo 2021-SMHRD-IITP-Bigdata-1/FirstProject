@@ -352,7 +352,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 									checkBoxArr.push($(this).val());
 								});
 								
-								alert(checkBoxArr + '를 선택하셨습니다.');
+								alert(checkBoxArr + '을(를) 선택하셨습니다.');
 								
 							}
 						},
