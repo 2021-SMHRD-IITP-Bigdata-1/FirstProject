@@ -8,6 +8,7 @@ import java.sql.SQLException;
 
 import VO.MemberVO;
 import VO.PickVO;
+import VO.ProductVO;
 
 public class MemberDAO {
 	
@@ -17,6 +18,7 @@ public class MemberDAO {
 	
 	MemberVO vo = null;
 	PickVO vo2 = null;
+	ProductVO vo3 = null;
 	int cnt = 0;
 	
 	public void getConn() {
@@ -200,9 +202,44 @@ public class MemberDAO {
 		return vo2;
 	}
 	
+	public ProductVO select() {
+		
 	
-	
-	
+		try {
+			getConn();
+
+			String sql = "select * from Product" ;
+
+			rs = psmt.executeQuery();
+
+			while(rs.next()) {
+				
+				String getpdtCode = rs.getString(0);
+				String getpdtName = rs.getString(1);
+				String getpdtBrand= rs.getString(2);
+				String getpdtCountry = rs.getString(3);
+				String getpdtPrice = rs.getString(4);
+				String getpdtDiscPrice = rs.getString(5);
+				String getpdtType = rs.getString(6);
+				String getpdtDailyIntake = rs.getString(7);
+				String getpdtOneIntake = rs.getString(8);
+				String getpdtFree = rs.getString(9);
+				String getpdtContent= rs.getString(10);
+				
+				
+				vo3 = new ProductVO(getpdtCode,getpdtName, getpdtBrand, getpdtCountry, getpdtPrice, getpdtDiscPrice,getpdtType, getpdtDailyIntake, getpdtOneIntake, getpdtFree, getpdtContent);
+				
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			
+		} finally {
+			close();
+		}
+		
+		return vo3;
+	}
 	
 	
 	
