@@ -45,9 +45,9 @@
                         <nav class="mobile-menu">
                             <ul>
                                 <li><a href="./index.html">Home</a></li>
-                                <li><a href="./about-us.html">About us</a></li>
+                                <li><a href="./about-us.html">성분별 정보</a></li>
                                 <li><a href="./classes.html">Classes</a></li>
-                                <li><a href="./elements.html">Instructors</a></li>
+                                 <li><a href="./elements.html">제품 비교</a></li>
                                 <li><a href="./blog.html">News</a></li>
                                 <li><a href="./contact.html">Contact</a></li>
                                 <li class="search-btn search-trigger"><i class="fa fa-search"></i></li>
