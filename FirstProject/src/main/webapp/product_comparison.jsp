@@ -37,66 +37,67 @@
             }    
             
        .vertical {
-		  display: -ms-grid;
-		  -ms-grid-rows: auto auto;
-		  -ms-grid-columns: auto auto;
+		  display: -ms-grid !important;
+		  -ms-grid-rows: auto auto !important;
+		  -ms-grid-columns: auto auto !important;
 		}
 		.vertical thead {
-		  -ms-grid-row: 2;
-		  -ms-grid-column: 1;
+		  -ms-grid-row: 2 !important;
+		  -ms-grid-column: 1 !important;
 		}
 		.vertical tbody {
-		  -ms-grid-row: 2;
-		  -ms-grid-column: 2;
+		  -ms-grid-row: 2 !important;
+		  -ms-grid-column: 2 !important;
 		}
 		.vertical caption {
-		  -ms-grid-row: 1;
-		  -ms-grid-column: 1;
-		  -ms-grid-column-span: 2;
+		  -ms-grid-row: 1 !important;
+		  -ms-grid-column: 1 !important;
+		  -ms-grid-column-span: 2 !important;
 		}
 		
 		/* Everyone Else's Grid */
 		@supports (display: grid) {
 		   .vertical {
-		     display: grid;
-		     grid-template-columns: min-content min-content;
-		     grid-template-rows: auto auto;
+		     display: grid !important;
+		     grid-template-columns: min-content min-content !important;
+		     grid-template-rows: auto auto !important;
 		     grid-template-areas:
 		       "caption caption"
 		       "head body";
 		   }
 		   .vertical thead {
-		     grid-area: head;
+		     grid-area: head !important;
 		   }
 		   .vertical tbody {
-		     grid-area: body;
+		     grid-area: body !important;
 		   }
 		   .vertical caption {
-		     grid-area: caption; 
+		     grid-area: caption !important; 
 		   }
 		}
-		
 		/* Flex - Cross Browser CSS */
-		.vertical thead {
-		  display: flex;
-		  flex-shrink: 0;
-		  min-width: min-content;
-		}
-		.vertical tbody {
-		    display: flex;
-		}
-		.vertical tr {
-		  display: flex;
-		  flex-direction: column;
-		  min-width: min-content;
-		  flex-shrink: 0;
-		}
-		.vertical td, .vertical th {
-		  display: block;
-		}
-		.vertical caption {
-		  display: block;
-		}
+			.vertical thead {
+			  display: flex;
+			  flex-shrink: 0;
+			  min-width: min-content;
+			}
+			.vertical tbody {
+			    display: flex;
+			}
+			.vertical tr {
+			  display: flex;
+			  flex-direction: column;
+			  min-width: min-content;
+			  flex-shrink: 0;
+			}
+			.vertical td, .vertical th {
+			  display: block;
+			}
+			.vertical caption {
+			  display: block;
+			}
+				
+			
     </style>
 </head>
 
@@ -179,10 +180,9 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="table-wrap">
-                                        <table class="table.vertical">
+                                        <table class="table vertical">
                                           <thead class="thead-dark">
                                             <tr>
-                                               
                                               <th></th>
                                               <th>Name</th>
                                               <th>Brand</th>
@@ -197,6 +197,7 @@
                                               <th>Content</th>
                                             </tr>
                                           </thead>
+                                          <tbody>
                                           <%
                      MemberDAO dao = new MemberDAO();
                      ArrayList<ProductVO> arr = dao.selectAll();
@@ -219,6 +220,7 @@
 					 
                       }
                      %>
+                     </tbody>
                                       </table>
                                     </div>
                                 </div>
