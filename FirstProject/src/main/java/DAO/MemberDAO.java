@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import VO.MemberVO;
 import VO.PickVO;
@@ -202,44 +203,52 @@ public class MemberDAO {
 		return vo2;
 	}
 	
-	public ProductVO select() {
+
+	public ArrayList<ProductVO> selectAll() {
 		
-	
-		try {
-			getConn();
-
-			String sql = "select * from Product" ;
-
-			rs = psmt.executeQuery();
-
-			while(rs.next()) {
-				
-				String getpdtCode = rs.getString(0);
-				String getpdtName = rs.getString(1);
-				String getpdtBrand= rs.getString(2);
-				String getpdtCountry = rs.getString(3);
-				String getpdtPrice = rs.getString(4);
-				String getpdtDiscPrice = rs.getString(5);
-				String getpdtType = rs.getString(6);
-				String getpdtDailyIntake = rs.getString(7);
-				String getpdtOneIntake = rs.getString(8);
-				String getpdtFree = rs.getString(9);
-				String getpdtContent= rs.getString(10);
-				
-				
-				vo3 = new ProductVO(getpdtCode,getpdtName, getpdtBrand, getpdtCountry, getpdtPrice, getpdtDiscPrice,getpdtType, getpdtDailyIntake, getpdtOneIntake, getpdtFree, getpdtContent);
-				
-			}
-			
-		} catch (Exception e) {
-			e.printStackTrace();
-			
-		} finally {
-			close();
-		}
+	    ArrayList<ProductVO> arr = new ArrayList<ProductVO>();
+	    
+	      try{
+	    	 getConn();
+	         
+	         String sql = "select * from Product";
+	         
+	         psmt = conn.prepareStatement(sql);
+	         
+	         rs = psmt.executeQuery();
+	         
+	         while(rs.next()) {
+					
+					String getpdtCode = rs.getString(1);
+					String getpdtName = rs.getString(2);
+					String getpdtBrand= rs.getString(3);
+					String getpdtCountry = rs.getString(4);
+					String getpdtPrice = rs.getString(5);
+					String getpdtDiscPrice = rs.getString(6);
+					String getpdtType = rs.getString(7);
+					String getpdtDailyIntake = rs.getString(8);
+					String getpdtOneIntake = rs.getString(9);
+					String getpdtJung = rs.getString(10);
+					String getpdtFree = rs.getString(11);
+					String getpdtContent= rs.getString(12);
+					
+					
+					vo3 = new ProductVO(getpdtCode,getpdtName, getpdtBrand, getpdtCountry, getpdtPrice, getpdtDiscPrice,getpdtType, getpdtDailyIntake, getpdtOneIntake, getpdtJung, getpdtFree, getpdtContent);
+					
+	        
+	        	 arr.add(vo3);
+	        	 
+	         }
+	      }catch(Exception e){
+	         e.printStackTrace();
+	      }finally{
+	    	 close();
+	      }
+	      return arr;
 		
-		return vo3;
 	}
+	
+	
 	
 	
 	
