@@ -11,7 +11,7 @@ import javax.servlet.http.HttpSession;
 
 import DAO.MemberDAO;
 import VO.MemberVO;
-import VO.PickVO;
+
 
 @WebServlet("/SymptomCheckCon")
 public class SymptomCheckCon extends HttpServlet {

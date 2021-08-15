@@ -188,12 +188,12 @@
                                               <th>Brand</th>
                                               <th>Country</th>
                                               <th>Price</th>
-                                              <th>Discounted Price</th>
+                                              <th>Sale</th>
                                               <th>Type</th>
                                               <th>Daily Intake</th>
                                               <th>One Intake</th>
                                               <th>Quantity</th>
-                                              <th></th>
+                                              <th>Allergen</th>
                                               <th>Content</th>
                                             </tr>
                                           </thead>
@@ -204,6 +204,7 @@
 					
                      for(int i= 0; i<arr.size();i++){
 						out.println("<tr>");
+						
 						out.println("<td>"+arr.get(i).getPdtCode()+"</td>");
 						out.println("<td>"+arr.get(i).getPdtName()+"</td>");
 						out.println("<td>"+arr.get(i).getPdtBrand()+"</td>");
