@@ -14,6 +14,7 @@ public class ProductVO {
 	 private String pdtJung;
 	 private String pdtFree;
 	 private String pdtContent;
+	 private String pdtSrc;
 	 
 	public String getPdtCode() {
 		return pdtCode;
@@ -51,9 +52,12 @@ public class ProductVO {
 	public String getPdtContent() {
 		return pdtContent;
 	}
+	public String getPdtSrc() {
+		return pdtSrc;
+	}
 	public ProductVO(String pdtCode, String pdtName, String pdtBrand, String pdtCountry, String pdtPrice,
 			String pdtDiscPrice, String pdtType, String pdtDailyIntake, String pdtOneIntake, String pdtJung ,String pdtFree,
-			String pdtContent) {
+			String pdtContent,String pdtSrc) {
 		super();
 		this.pdtCode = pdtCode;
 		this.pdtName = pdtName;
@@ -67,6 +71,7 @@ public class ProductVO {
 		this.pdtJung = pdtJung;
 		this.pdtFree = pdtFree;
 		this.pdtContent = pdtContent;
+		this.pdtSrc = pdtSrc;
 	}
 	
 
