@@ -231,10 +231,10 @@ public class MemberDAO {
 					String getpdtJung = rs.getString(10);
 					String getpdtFree = rs.getString(11);
 					String getpdtContent= rs.getString(12);
-					String getpdtSrc= rs.getString(14);
+					String getpdtImg= rs.getString(14);
 					
 					
-					vo3 = new ProductVO(getpdtCode,getpdtName, getpdtBrand, getpdtCountry, getpdtPrice, getpdtDiscPrice,getpdtType, getpdtDailyIntake, getpdtOneIntake, getpdtJung, getpdtFree, getpdtContent, getpdtSrc);
+					vo3 = new ProductVO(getpdtCode,getpdtName, getpdtBrand, getpdtCountry, getpdtPrice, getpdtDiscPrice,getpdtType, getpdtDailyIntake, getpdtOneIntake, getpdtJung, getpdtFree, getpdtContent, getpdtImg);
 					
 	        
 	        	 arr.add(vo3);

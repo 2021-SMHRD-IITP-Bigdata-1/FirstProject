@@ -42,15 +42,15 @@
 		  -ms-grid-columns: auto auto !important;
 		}
 		.vertical thead {
-		  -ms-grid-row: 2 !important;
+		  -ms-grid-row: 3 !important;
 		  -ms-grid-column: 1 !important;
 		}
 		.vertical tbody {
-		  -ms-grid-row: 2 !important;
+		  -ms-grid-row: 3 !important;
 		  -ms-grid-column: 2 !important;
 		}
 		.vertical caption {
-		  -ms-grid-row: 1 !important;
+		  -ms-grid-row: 3 !important;
 		  -ms-grid-column: 1 !important;
 		  -ms-grid-column-span: 2 !important;
 		}
@@ -77,6 +77,7 @@
 		}
 		/* Flex - Cross Browser CSS */
 			.vertical thead {
+			  flex-direction: column
 			  display: flex;
 			  flex-shrink: 0;
 			  min-width: min-content;
@@ -184,6 +185,7 @@
                                           <thead class="thead-dark">
                                             <tr>
                                               <th></th>
+                                              <th></th>
                                               <th>Name</th>
                                               <th>Brand</th>
                                               <th>Country</th>
@@ -195,6 +197,7 @@
                                               <th>Quantity</th>
                                               <th>Allergen</th>
                                               <th>Content</th>
+                                              
                                             </tr>
                                           </thead>
                                           <tbody>
@@ -204,8 +207,11 @@
 					
                      for(int i= 0; i<arr.size();i++){
 						out.println("<tr>");
-						
-						out.println("<td>"+arr.get(i).getPdtCode()+"</td>");
+						out.println("<td>");
+						%>
+						<img src=<%=arr.get(i).getPdtImg()%>>
+						<%
+						out.println("</td>");
 						out.println("<td>"+arr.get(i).getPdtName()+"</td>");
 						out.println("<td>"+arr.get(i).getPdtBrand()+"</td>");
 						out.println("<td>"+arr.get(i).getPdtCountry()+"</td>");
@@ -217,10 +223,9 @@
 						out.println("<td>"+arr.get(i).getPdtJung()+"</td>");
 						out.println("<td>"+arr.get(i).getPdtFree()+"</td>");
 						out.println("<td>"+arr.get(i).getPdtContent()+"</td>");
-						out.println("</tr>");
-					 
-                      }
-                     %>
+						out.println("</td>");
+					  	}
+                    	 %>
                      </tbody>
                                       </table>
                                     </div>
