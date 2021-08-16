@@ -31,15 +31,22 @@
     <style>
         img{ 
             width: auto;
-            height: 100px;
+            height: 131px;
             padding: auto;
             box-sizing: border-box;
             object-fit: contain;
             }    
+        th { 
+        	text-align: center;
+        	width: 150px;
+        	
+        	        
+         }
         td { 
         	text-align: center;
         	width: 200px;
-        
+        	height: auto;
+        	        
          }   
        .vertical {
         display: -ms-grid !important;
@@ -89,6 +96,7 @@
          }
          .vertical tbody {
              display: flex;
+             
          }
          .vertical tr {
            display: flex;
@@ -102,29 +110,7 @@
          .vertical caption {
            display: block;
          }
-            .table {
-  min-width: 1000px !important;
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0 10px; }
-  .table thead th {
-    border: none;
-    padding: 30.8px;
-    font-size: 14px;
-    color: #fff; }
-  .table tbody tr {
-    margin-bottom: 10px;
-    -webkit-box-shadow: 0px 5px 12px -12px rgba(0, 0, 0, 0.29);
-    -moz-box-shadow: 0px 5px 12px -12px rgba(0, 0, 0, 0.29);
-    box-shadow: 0px 5px 12px -12px rgba(0, 0, 0, 0.29); }
-  .table tbody th, .table tbody td {
-    border: none;
-    padding: 31px;
-    font-size: 14px;
-    background: #fff; }
-  .table tbody td .close span {
-    font-size: 12px;
-    color: #dc3545; }
+            
          
     </style>
 </head>
@@ -220,11 +206,12 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-md-12">
-                                    <div class="table-wrap">
+                                <div>
+                                    <div>
                                         <table class="table vertical">
                                           <thead class="thead-dark">
                                             <tr>
+                                              <th></th>
                                               <th></th>
                                               <th></th>
                                               <th>Name</th>

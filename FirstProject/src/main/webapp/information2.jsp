@@ -235,9 +235,10 @@
                             <tr>
                                 <td>
                                     <span class="box">
-                                        <img alt="" src="img/Info2/13.png" />
+                                        <img alt="" src="img/Info2/13.png"  id="오메가3" class="submit">
                                     </span>
                                     <p>오메가3</p>
+                                
                                 </td>
                                 <td>
                                     <span class="box">
@@ -379,6 +380,8 @@
     <script src="js/circle-progress.min.js"></script>
     <script src="js/jquery.barfiller.js"></script>
     <script src="js/main.js"></script>
+    
+    <script type="text/javascript"> document.getElementById("오메가3").onclick = function () { location.href = "product_comparison4.jsp";};</script>
 </body>
 
 </html>

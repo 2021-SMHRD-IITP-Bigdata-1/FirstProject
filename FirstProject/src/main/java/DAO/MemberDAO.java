@@ -213,7 +213,7 @@ public class MemberDAO {
 	      try{
 	    	 getConn();
 	         
-	         String sql = "select * from Product";
+	         String sql = "select * from Product ORDER BY PDT_NUM";
 	         
 	         psmt = conn.prepareStatement(sql);
 	         
