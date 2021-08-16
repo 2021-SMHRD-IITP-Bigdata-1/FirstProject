@@ -48,7 +48,6 @@
         a:link { color: black; text-decoration: none;}
         a:visited { color: black; text-decoration: none;}
         a:hover { color: black; text-decoration: underline;}
-
         .dropdown{
     position: relative;
     display: inline-block;
@@ -71,8 +70,6 @@
         margin: 2px 0px 0px 0px;
         border-radius: 10%;
         }
-
-
 </style>
 <script type="text/javascript">
     var stmnLEFT = 1600; // 오른쪽 여백 
@@ -100,9 +97,7 @@
      document.getElementById('STATICMENU').style.top = document.body.scrollTop + stmnBASE + 'px'; 
      RefreshStaticMenu();
      }
-
     
-
    </script>
    <script src="js/jquery-3.3.1.min.js"></script>
    
@@ -120,24 +115,18 @@
 <body id="본래 설정" onload="InitializeStaticMenu();">
     <script>
         $(function() {
-
 var $w = $(window),
   footerHei = $('footer').outerHeight(),
   $banner = $('#banner');
-
 $w.on('scroll', function() {
-
   var sT = $w.scrollTop();
   var val = $(document).height() - $w.height() - footerHei;
-
   if (sT >= val)
     $banner.addClass('on')
   else
     $banner.removeClass('on')
 });
 });
-
-
         function dp_menu(){
             let click = document.getElementById("drop-content");
             if(click.style.display === "none"){
