@@ -70,21 +70,21 @@
                 <div class="col-lg-11">
                     <div class="main-menu">
                         <div class="logo">
-                            <a href="./index.html">
+                            <a href="./index.jsp">
                                 <img src="img/logo.png" alt="">
                             </a>
                         </div>
                         <nav class="mobile-menu">
                             <ul>
-                                <li><a href="./information1.html">효능/부위별 정보</a></li>
-                                <li><a href="./information2.html">성분별 영양제품비교 </a></li>
+                                <li><a href="./information1.jsp">효능/부위별 정보</a></li>
+                                <li><a href="./information2.jsp">성분별 영양제품비교 </a></li>
                                 <li><a></a></li>
                                 <li><div class="dropdown">
                                     <i onclick="dp_menu()" class="search-btn2 fa">마이페이지</i>
 	                                    <div style="display: none;" id="drop-content">
-	                                        <a href='member_update.html'>회원정보수정</a>
-	                                        <a href='wishlist.html'>즐겨찾기</a>
-	                                        <a href='member_ withdraw.html'>회원탈퇴</a>
+	                                        <a href='member_update.jsp'>회원정보수정</a>
+	                                        <a href='wishlist.jsp'>즐겨찾기</a>
+	                                        <a href='member_ withdraw.jsp'>회원탈퇴</a>
 	                                    </div>
                                     </div>
                                     </li>
@@ -124,15 +124,15 @@
         <div class="slide-items owl-carousel">
             <div class="single-slide set-bg active" data-setbg="img/bg.jpg">
                 <h1>Be Fit.  Comparison</h1>
-                <a href="information1.html" class="primary-btn">Read More</a>
+                <a href="information1.jsp" class="primary-btn">Read More</a>
             </div>
             <div class="single-slide set-bg" data-setbg="img/bg-2.jpg">
                 <h1>Be Fit. Nutritional supplements</h1>
-                <a href="information2.html" class="primary-btn">Read More</a>
+                <a href="information2.jsp" class="primary-btn">Read More</a>
             </div>
             <div class="single-slide set-bg" data-setbg="img/bg-3.jpg">
                 <h1>Be Fit. information</h1>
-                <a href="information1.html" class="primary-btn">Read More</a>
+                <a href="information1.jsp" class="primary-btn">Read More</a>
             </div>
         </div>
     </section>
@@ -197,7 +197,7 @@
                                 <div class="col-md-4">
                                     <div class="single-features">
                                         <div class="features-img">
-                                            <a href="many_knowledge.html"><img src="img/features/feature-1.jpg" style="height: 300px;" alt=""></a>
+                                            <a href="many_knowledge.jsp"><img src="img/features/feature-1.jpg" style="height: 300px;" alt=""></a>
                                         </div>
                                         <div class="feature-text">
                                             <br>
@@ -209,7 +209,7 @@
                                 <div class="col-md-4">
                                     <div class="single-features">
                                         <div class="features-img">
-                                            <a href="age_knowledge.html"><img src="img/features/feature-2.jpg" style="height: 300px;" alt=""></a>
+                                            <a href="age_knowledge.jsp"><img src="img/features/feature-2.jpg" style="height: 300px;" alt=""></a>
                                         </div>
                                         <div class="feature-text">
                                             <br>
@@ -221,7 +221,7 @@
                                 <div class="col-md-4">
                                     <div class="single-features">
                                         <div class="features-img">
-                                            <a href="best_worst_knowledge.html"><img src="img/features/feature-3.jpg" style="height: 300px;" alt=""></a>
+                                            <a href="best_worst_knowledge.jsp"><img src="img/features/feature-3.jpg" style="height: 300px;" alt=""></a>
                                         </div>
                                         <div class="feature-text">
                                             <br>
@@ -250,9 +250,9 @@
                         </div>
                         <div class="footer-menu">
                             <ul>
-                                <li><a href="./information1.html">효능/부위별 정보</a></li>
+                                <li><a href="./information1.jsp">효능/부위별 정보</a></li>
                                 <li><a href="#">성분별 영양제품비교</a></li>
-                                <li><a href="./login.html">로그인/회원가입</a></li>
+                                <li><a href="./login.jsp">로그인/회원가입</a></li>
                             </ul>
                         </div>
                         <div class="subscribe-form">

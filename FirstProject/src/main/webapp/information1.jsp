@@ -1,3 +1,4 @@
+<%@page import="VO.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -38,6 +39,10 @@
 </head>
 
 <body>
+	<%
+		MemberVO vo = (MemberVO)session.getAttribute("vo_session");
+	%>
+
     <!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>
@@ -49,20 +54,31 @@
                 <div class="col-lg-12">
                     <div class="main-menu">
                         <div class="logo">
-                            <a href="./index.html">
+                            <a href="./index.jsp">
                                 <img src="img/logo.png" alt="">
                             </a>
                         </div>
                         <nav class="mobile-menu">
                             <ul>
-                                <li><a href="./information1.html">효능/부위별 정보</a></li>
-                                <li><a href="./information1.html">성분별 정보</a></li>
-                                <li><a></a></li>
-                                <li><a href="./elements.html">제품 비교</a></li>
-                                <li><a href="./login.html">로그인/회원가입</a></li>
-                                <li class="search-btn search-trigger"><i class="fa fa-search"></i></li>
-                                <li class="search-btn2 search-trigger"><i class="fa fa-heart"></i></li>
-                            </ul>
+	                            <li><a href="./information1.jsp">효능/부위별 정보</a></li>
+	                            <li><a href="./information2.jsp">성분별 영양제품비교 </a></li>
+	                            <li><a></a></li>
+	                            <li><div class="dropdown">
+	                                <i onclick="dp_menu()" class="search-btn2 fa">마이페이지</i>
+	                                 <div style="display: none;" id="drop-content">
+	                                     <a href='member_update.jsp'>회원정보수정</a>
+	                                     <a href='wishlist.jsp'>즐겨찾기</a>
+	                                     <a href='member_ withdraw.jsp'>회원탈퇴</a>
+	                                 </div>
+	                                </div>
+	                                </li>
+	                            <% if(vo == null) { %>
+	                         		<li><a href="LoginJoin.jsp">로그인/회원가입</a></li>
+	                         	<% } else { %>
+	                         		<li><a href="LogoutCon">로그아웃</a></li>
+	                         	<% } %>
+	                            <li class="search-btn search-trigger"><i class="fa fa-search"></i></li>
+                           	</ul>
                         </nav>
                         <div id="mobile-menu-wrap"></div>
                     </div>
@@ -113,41 +129,40 @@
                         <div class="single-fitness-feature">
                             <div class="fitness-number0">
                                 <label for="brain" onclick="check(1)">
-                                    <span id="sp1">01</span>
-                                    <img src="./img/icon/Eye.png" id="img1" style="height: 66px; width: 66px; background-color: blue; border-radius: 50%;" >
-                                    <input type="checkbox" id="brain" name="symptom" value="기억력"> <h4>기억력</h4>
+                                    <span id="sp1"><img src="img/WHITE/Memory.png"></span>
+                                    <input type="checkbox" id="brain" name="symptom" value="brain"> <h4>기억력</h4>
                                 </label>
                             </div>
                         </div>
                         <div class="single-fitness-feature">
                             <div class="fitness-number">
                                 <label for="liver" onclick="check(3)">
-                                    <span id="sp3">03</span>
-                                    <input type="checkbox" id="liver" name="symptom" value="간"> <h4>간</h4>
+                                    <span id="sp3"><img src="img/WHITE/Liver.png"></span>
+                                    <input type="checkbox" id="liver" name="symptom" value="liver"> <h4>간</h4>
                                 </label>
                             </div>
                         </div>
                         <div class="single-fitness-feature">
                             <div class="fitness-number">
                                 <label for="bloodcycle" onclick="check(5)">
-                                    <span id="sp5">05</span>
-                                    <input type="checkbox" id="bloodcycle" name="symptom" value="혈행개선"> <h4>혈행개선</h4>
+                                    <span id="sp5"><img src="img/WHITE/Blood.png"></span>
+                                    <input type="checkbox" id="bloodcycle" name="symptom" value="liver"> <h4>혈행개선</h4>
                                 </label>
                             </div>
                         </div>
                         <div class="single-fitness-feature">
                             <div class="fitness-number">
                                 <label for="joint" onclick="check(7)">
-                                    <span id="sp7">07</span>
-                                    <input type="checkbox" id="joint" name="symptom" value="관절"> <h4>관절</h4>
+                                    <span id="sp7"><img src="img/WHITE/Joint.png"></span>
+                                    <input type="checkbox" id="joint" name="symptom" value="liver"> <h4>관절</h4>
                                 </label>
                             </div>
                         </div>
                         <div class="single-fitness-feature">
                             <div class="fitness-number0">
                                 <label for="cholesterol" onclick="check(9)">
-                                    <span id="sp9">09</span>
-                                    <input type="checkbox" id="cholesterol" name="symptom" value="콜레스테롤"> <h4>콜레스테롤</h4>
+                                    <span id="sp9"><img src="img/WHITE/colesterol.png" style="height: 64px;"></span>
+                                    <input type="checkbox" id="cholesterol" name="symptom" value="cholesterol"> <h4>콜레스테롤</h4>
                                 </label>
                             </div>
                         </div>
@@ -156,32 +171,32 @@
                         <div class="single-fitness-feature">
                             <div class="fitness-number left-number0">
                                 <label for="eye" onclick="check(2)">
-                                    <span id="sp2">02</span>
-                                        <input type="checkbox" id="eye" name="symptom" value="눈"> <h4>눈</h4>
+                                    <span id="sp2"><img src="img/WHITE/Eye.png"></span>
+                                        <input type="checkbox" id="eye" name="symptom" value="eye"> <h4>눈</h4>
                                 </label>
                             </div>
                         </div>
                         <div class="single-fitness-feature">
                             <div class="fitness-number left-number">
                                 <label for="skin" onclick="check(4)">
-                                    <input type="checkbox" id="skin" name="symptom" value="피부"> <h4>피부</h4>
-                                    <span id="sp4">04</span>
+                                    <input type="checkbox" id="skin" name="symptom" value="skin"> <h4>피부</h4>
+                                    <span id="sp4"><img src="img/WHITE/skin.png" style="height: 64px;"></span>
                                 </label>
                             </div>
                         </div>
                         <div class="single-fitness-feature">
                             <div class="fitness-number left-number">
                                 <label for="instestine" onclick="check(6)">
-                                    <input type="checkbox" id="instestine" name="symptom" value="장"> <h4>장</h4>
-                                    <span id="sp6">06</span>
+                                    <input type="checkbox" id="instestine" name="symptom" value="instestine"> <h4>장</h4>
+                                    <span id="sp6"><img src="img/WHITE/Stomach.png"></span>
                                 </label>
                             </div>
                         </div>
                         <div class="single-fitness-feature">
                             <div class="fitness-number left-number">
                                 <label for="bone" onclick="check(8)">
-                                    <input type="checkbox" id="bone" name="symptom" value="뼈"> <h4>뼈</h4>
-                                    <span id="sp8">08</span>
+                                    <input type="checkbox" id="bone" name="symptom" value="bone"> <h4>뼈</h4>
+                                    <span id="sp8"><img src="img/WHITE/Bone.png"></span>
                                 </label>
                             </div>
                         </div>
@@ -189,8 +204,8 @@
                         <div class="single-fitness-feature">
                             <div class="fitness-number1">
                                 <label for="antioxidant" onclick="check(10)">
-                                    <input type="checkbox" id="antioxidant" name="symptom" value="항산화"> <h4>항산화</h4>
-                                    <span id="sp10">10</span>
+                                    <input type="checkbox" id="antioxidant" name="symptom" value="antioxidant"> <h4>항산화</h4>
+                                    <span id="sp10"><img src="img/WHITE/Anti.png"></span>
                                 </label>
                             </div>
                         </div>
@@ -200,8 +215,8 @@
             <div class="single-fitness-feature">
                 <div class="left-number1">
                     <label for="diet" onclick="check(11)">
-                        <span id="sp11">11</span>
-                        <input type="checkbox" id="diet" name="symptom" class="check" value="체지방감소"> <h4>체지방감소</h4>
+                        <span id="sp11"><img src="img/WHITE/Fit.png" ></span>
+                        <input type="checkbox" id="diet" name="symptom" class="check" value="diet"> <h4>체지방감소</h4>
                     </label>
                 </div>
             </div>
@@ -210,7 +225,7 @@
                     <div class="col-lg-12 text-center">
                         <div class="classes-callto-text">
                             <br>
-                            <button type="submit" class="primary-btn" onclick="LoginCheck()">next</button>
+                            <button type="submit" class="primary-btn">next</button>
                         </div>
                     </div>
                 </div>
@@ -234,7 +249,7 @@
                                 <li><a href="#">효능/부위별 정보</a></li>
                                 <li><a href="#">성분별 정보</a></li>
                                 <li><a href="#">제품비교</a></li>
-                                <li><a href="./login.html">로그인/회원가입</a></li>
+                                <li><a href="./login.jsp">로그인/회원가입</a></li>
                             </ul>
                         </div>
                         <div class="subscribe-form">

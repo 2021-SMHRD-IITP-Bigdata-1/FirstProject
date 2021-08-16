@@ -1,3 +1,4 @@
+<%@page import="VO.MemberVO"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="VO.ProductVO"%>
 <%@page import="DAO.MemberDAO"%>
@@ -35,74 +36,99 @@
             box-sizing: border-box;
             object-fit: contain;
             }    
-            
+        td { text-align: center; }   
        .vertical {
-		  display: -ms-grid !important;
-		  -ms-grid-rows: auto auto !important;
-		  -ms-grid-columns: auto auto !important;
-		}
-		.vertical thead {
-		  -ms-grid-row: 3 !important;
-		  -ms-grid-column: 1 !important;
-		}
-		.vertical tbody {
-		  -ms-grid-row: 3 !important;
-		  -ms-grid-column: 2 !important;
-		}
-		.vertical caption {
-		  -ms-grid-row: 3 !important;
-		  -ms-grid-column: 1 !important;
-		  -ms-grid-column-span: 2 !important;
-		}
-		
-		/* Everyone Else's Grid */
-		@supports (display: grid) {
-		   .vertical {
-		     display: grid !important;
-		     grid-template-columns: min-content min-content !important;
-		     grid-template-rows: auto auto !important;
-		     grid-template-areas:
-		       "caption caption"
-		       "head body";
-		   }
-		   .vertical thead {
-		     grid-area: head !important;
-		   }
-		   .vertical tbody {
-		     grid-area: body !important;
-		   }
-		   .vertical caption {
-		     grid-area: caption !important; 
-		   }
-		}
-		/* Flex - Cross Browser CSS */
-			.vertical thead {
-			  flex-direction: column
-			  display: flex;
-			  flex-shrink: 0;
-			  min-width: min-content;
-			}
-			.vertical tbody {
-			    display: flex;
-			}
-			.vertical tr {
-			  display: flex;
-			  flex-direction: column;
-			  min-width: min-content;
-			  flex-shrink: 0;
-			}
-			.vertical td, .vertical th {
-			  display: block;
-			}
-			.vertical caption {
-			  display: block;
-			}
-				
-			
+        display: -ms-grid !important;
+        -ms-grid-rows: auto auto !important;
+        -ms-grid-columns: auto auto !important;
+      }
+      .vertical thead {
+        -ms-grid-row: 3 !important;
+        -ms-grid-column: 1 !important;
+      }
+      .vertical tbody {
+        -ms-grid-row: 3 !important;
+        -ms-grid-column: 2 !important;
+      }
+      .vertical caption {
+        -ms-grid-row: 3 !important;
+        -ms-grid-column: 1 !important;
+        -ms-grid-column-span: 2 !important;
+      }
+        
+      /* Everyone Else's Grid */
+      @supports (display: grid) {
+         .vertical {
+           display: grid !important;
+           grid-template-columns: min-content min-content !important;
+           grid-template-rows: auto auto !important;
+           grid-template-areas:
+             "caption caption"
+             "head body";
+         }
+         .vertical thead {
+           grid-area: head !important;
+         }
+         .vertical tbody {
+           grid-area: body !important;
+         }
+         .vertical caption {
+           grid-area: caption !important; 
+         }
+      }
+      /* Flex - Cross Browser CSS */
+         .vertical thead {
+           flex-direction: column
+           display: flex;
+           flex-shrink: 0;
+           min-width: min-content;
+         }
+         .vertical tbody {
+             display: flex;
+         }
+         .vertical tr {
+           display: flex;
+           flex-direction: column;
+           min-width: min-content;
+           flex-shrink: 0;
+         }
+         .vertical td, .vertical th {
+           display: block;
+         }
+         .vertical caption {
+           display: block;
+         }
+            .table {
+  min-width: 1000px !important;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px; }
+  .table thead th {
+    border: none;
+    padding: 30.8px;
+    font-size: 14px;
+    color: #fff; }
+  .table tbody tr {
+    margin-bottom: 10px;
+    -webkit-box-shadow: 0px 5px 12px -12px rgba(0, 0, 0, 0.29);
+    -moz-box-shadow: 0px 5px 12px -12px rgba(0, 0, 0, 0.29);
+    box-shadow: 0px 5px 12px -12px rgba(0, 0, 0, 0.29); }
+  .table tbody th, .table tbody td {
+    border: none;
+    padding: 31px;
+    font-size: 14px;
+    background: #fff; }
+  .table tbody td .close span {
+    font-size: 12px;
+    color: #dc3545; }
+         
     </style>
 </head>
 
 <body>
+	<%
+		MemberVO vo = (MemberVO)session.getAttribute("vo_session");
+	%>
     <!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>
@@ -114,20 +140,31 @@
                 <div class="col-lg-12">
                     <div class="main-menu">
                         <div class="logo">
-                            <a href="./index.html">
+                            <a href="./index.jsp">
                                 <img src="img/logo.png" alt="">
                             </a>
                         </div>
                         <nav class="mobile-menu">
                             <ul>
-                                <li><a href="./information1.html">효능/부위별 정보</a></li>
-                                <li><a href="./information2.html">성분별 정보</a></li>
-                                <li><a></a></li>
-                                <li><a href="./product_comparison.html">제품 비교</a></li>
-                                <li><a href="./login.html">로그인/회원가입</a></li>
-                                <li class="search-btn search-trigger"><i class="fa fa-search"></i></li>
-                                <li class="search-btn2 search-trigger"><i class="fa fa-heart"></i></li>
-                            </ul>
+	                            <li><a href="./information1.jsp">효능/부위별 정보</a></li>
+	                            <li><a href="./information2.jsp">성분별 영양제품비교 </a></li>
+	                            <li><a></a></li>
+	                            <li><div class="dropdown">
+	                                <i onclick="dp_menu()" class="search-btn2 fa">마이페이지</i>
+	                                 <div style="display: none;" id="drop-content">
+	                                     <a href='member_update.jsp'>회원정보수정</a>
+	                                     <a href='wishlist.jsp'>즐겨찾기</a>
+	                                     <a href='member_ withdraw.jsp'>회원탈퇴</a>
+	                                 </div>
+	                                </div>
+	                                </li>
+	                            <% if(vo == null) { %>
+	                         		<li><a href="LoginJoin.jsp">로그인/회원가입</a></li>
+	                         	<% } else { %>
+	                         		<li><a href="LogoutCon">로그아웃</a></li>
+	                         	<% } %>
+	                            <li class="search-btn search-trigger"><i class="fa fa-search"></i></li>
+                           	</ul>
                         </nav>
                         <div id="mobile-menu-wrap"></div>
                     </div>
@@ -197,35 +234,49 @@
                                               <th>Quantity</th>
                                               <th>Allergen</th>
                                               <th>Content</th>
+                                              <th>Review</th>
+                                              <th>Favorite</th>
                                               
                                             </tr>
                                           </thead>
                                           <tbody>
-                                          <%
+                     <%
                      MemberDAO dao = new MemberDAO();
                      ArrayList<ProductVO> arr = dao.selectAll();
-					
+               
                      for(int i= 0; i<arr.size();i++){
-						out.println("<tr>");
-						out.println("<td>");
-						%>
-						<img src=<%=arr.get(i).getPdtImg()%>>
-						<%
-						out.println("</td>");
-						out.println("<td>"+arr.get(i).getPdtName()+"</td>");
-						out.println("<td>"+arr.get(i).getPdtBrand()+"</td>");
-						out.println("<td>"+arr.get(i).getPdtCountry()+"</td>");
-						out.println("<td>"+arr.get(i).getPdtPrice()+"</td>");
-						out.println("<td>"+arr.get(i).getPdtDiscPrice()+"</td>");
-						out.println("<td>"+arr.get(i).getPdtType()+"</td>");
-						out.println("<td>"+arr.get(i).getPdtDailyIntake()+"</td>");
-						out.println("<td>"+arr.get(i).getPdtOneIntake()+"</td>");
-						out.println("<td>"+arr.get(i).getPdtJung()+"</td>");
-						out.println("<td>"+arr.get(i).getPdtFree()+"</td>");
-						out.println("<td>"+arr.get(i).getPdtContent()+"</td>");
-						out.println("</td>");
-					  	}
-                    	 %>
+		             	out.println("<tr>");
+	                  	out.println("<td>");
+		                %>
+		                  <img src=<%=arr.get(i).getPdtImg()%>>
+		                  <%
+		                  out.println("</td>");
+		                  out.println("<td>"+arr.get(i).getPdtName()+"</td>");
+		                  out.println("<td>"+arr.get(i).getPdtBrand()+"</td>");
+		                  out.println("<td>"+arr.get(i).getPdtCountry()+"</td>");
+		                  out.println("<td>"+arr.get(i).getPdtPrice()+"</td>");
+		                  out.println("<td>"+arr.get(i).getPdtDiscPrice()+"</td>");
+		                  out.println("<td>"+arr.get(i).getPdtType()+"</td>");
+		                  out.println("<td>"+arr.get(i).getPdtDailyIntake()+"</td>");
+		                  out.println("<td>"+arr.get(i).getPdtOneIntake()+"</td>");
+		                  out.println("<td>"+arr.get(i).getPdtJung()+"</td>");
+		                  out.println("<td>"+arr.get(i).getPdtFree()+"</td>");
+		                  out.println("<td>"+arr.get(i).getPdtContent()+"</td>");
+                  
+
+                        %>
+                        
+                        <td>
+                            <input type="button" value="Review"> 
+                        </td>
+                      	<td>
+                            <input type="button"  value="Add"> 
+                        </td>
+                        
+                  		<%
+                        out.println("</td>");
+                    }
+                        %>
                      </tbody>
                                       </table>
                                     </div>
@@ -258,10 +309,10 @@
                         </div>
                         <div class="footer-menu">
                             <ul>
-                                <li><a href="./information1.html">효능/부위별 정보</a></li>
+                                <li><a href="./information1.jsp">효능/부위별 정보</a></li>
                                 <li><a href="#">성분별 정보</a></li>
                                 <li><a href="#">제품비교</a></li>
-                                <li><a href="./login.html">로그인/회원가입</a></li>
+                                <li><a href="./login.jsp">로그인/회원가입</a></li>
                             </ul>
                         </div>
                         <div class="subscribe-form">

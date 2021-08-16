@@ -1,3 +1,4 @@
+<%@page import="VO.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -64,6 +65,9 @@
 </head>
 
 <body>
+	<%
+		MemberVO vo = (MemberVO)session.getAttribute("vo_session");
+	%>
     <!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>
@@ -75,20 +79,31 @@
                 <div class="col-lg-12">
                     <div class="main-menu">
                         <div class="logo">
-                            <a href="./index.html">
+                            <a href="./index.jsp">
                                 <img src="img/logo.png" alt="">
                             </a>
                         </div>
                         <nav class="mobile-menu">
                             <ul>
-                                <li><a href="./information1.html">효능/부위별 정보</a></li>
-                                <li><a href="./information2.html">성분별 정보</a></li>
-                                <li><a></a></li>
-                                <li><a href="./product_comparison.html">제품 비교</a></li>
-                                <li><a href="./login.html">로그인/회원가입</a></li>
-                                <li class="search-btn search-trigger"><i class="fa fa-search"></i></li>
-                                <li class="search-btn2 search-trigger"><i class="fa fa-heart"></i></li>
-                            </ul>
+	                            <li><a href="./information1.jsp">효능/부위별 정보</a></li>
+	                            <li><a href="./information2.jsp">성분별 영양제품비교 </a></li>
+	                            <li><a></a></li>
+	                            <li><div class="dropdown">
+	                                <i onclick="dp_menu()" class="search-btn2 fa">마이페이지</i>
+	                                 <div style="display: none;" id="drop-content">
+	                                     <a href='member_update.jsp'>회원정보수정</a>
+	                                     <a href='wishlist.jsp'>즐겨찾기</a>
+	                                     <a href='member_ withdraw.jsp'>회원탈퇴</a>
+	                                 </div>
+	                                </div>
+	                                </li>
+	                            <% if(vo == null) { %>
+	                         		<li><a href="LoginJoin.jsp">로그인/회원가입</a></li>
+	                         	<% } else { %>
+	                         		<li><a href="LogoutCon">로그아웃</a></li>
+	                         	<% } %>
+	                            <li class="search-btn search-trigger"><i class="fa fa-search"></i></li>
+                           	</ul>
                         </nav>
                         <div id="mobile-menu-wrap"></div>
                     </div>
@@ -178,7 +193,7 @@
                             <li><a href="#">효능/부위별 정보</a></li>
                             <li><a href="#">성분별 정보</a></li>
                             <li><a href="#">제품비교</a></li>
-                            <li><a href="./login.html">로그인/회원가입</a></li>
+                            <li><a href="./login.jsp">로그인/회원가입</a></li>
                         </ul>
                     </div>
                     <div class="subscribe-form">

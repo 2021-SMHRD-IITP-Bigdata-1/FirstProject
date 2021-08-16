@@ -1,7 +1,6 @@
-<%@page import="java.util.ArrayList"%>
+<%@page import="VO.PickVO"%>
 <%@page import="DAO.MemberDAO"%>
 <%@page import="VO.MemberVO"%>
-<%@page import="VO.PickVO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -13,7 +12,7 @@
     <meta name="keywords" content="TopGym, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Blog | Template</title>
+    <title>성분별 제품비교</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,500,700,900" rel="stylesheet">
@@ -51,25 +50,29 @@
         a:hover { color: black; text-decoration: underline;}
 
         .dropdown{
-		    position: relative;
-		    display: inline-block;
-		}
-		.button{
-	   
-		}
-		#drop-content{
-		    position: absolute;
-		    z-index: 1;
-		}
-		#drop-content a{
-		    display:block;
-		    font-size: 20px;
-		    background-color: #dfdfdf;
-		    color: black;
-		    text-decoration: none;
-		    padding: 10px 36px;
-		    margin: 2px 0px 0px 0px;
-		}
+    position: relative;
+    display: inline-block;
+}
+.button{
+   
+}
+#drop-content{
+        position: absolute;
+        z-index: 1;
+        }
+    #drop-content a{
+        display:block;
+        font-size: 15px;
+        width: 150px;
+        background-color: #2e2929;
+        color: rgb(250, 250, 250);
+        text-decoration: none;
+        padding: 17px 12px;
+        margin: 2px 0px 0px 0px;
+        border-radius: 10%;
+        }
+
+
 </style>
 <script type="text/javascript">
     var stmnLEFT = 1600; // 오른쪽 여백 
@@ -168,18 +171,17 @@ $w.on('scroll', function() {
     %>
     
     
+    
     <div id="STATICMENU">
     <div id="SCROLL">
         <div id="banner">
             <div class="accordin-elem">
                 <div class="accordion" id="accordionExample">
-                
-                <% if(SymA.equals("간") || SymB.equals("간") || SymC.equals("간")) { %>
                     <div class="card 간">
                         <div class="card-heading">
                             <div data-toggle="collapse" data-target="#collapseOne">
                                 <a>간</a>
-                                <img src="img/Icon2/Icon2/간.png">
+                                <img src="img/Icon2/Icon2/liver.png">
                             </div>
                         </div>
                         <div id="collapseOne" class="collapse"
@@ -189,14 +191,11 @@ $w.on('scroll', function() {
                             </div>
                         </div>
                     </div>
-                    
-                <% } if (SymA.equals("관절") || SymB.equals("관절") || SymC.equals("관절")) { %>
-                    
                     <div class="card 관절">
                         <div class="card-heading">
                             <div data-toggle="collapse" data-target="#collapseTwo">
                                 <a>관절</a>
-                                <img style="height: 64px;" src="img/Icon2/Icon2/관절.png">
+                                <img style="height: 64px;" src="img/Icon2/Icon2/joint.png">
                             </div>
                         </div>
                         <div id="collapseTwo" class="collapse"
@@ -208,14 +207,11 @@ $w.on('scroll', function() {
                             </div>
                         </div>
                     </div>
-                    
-                    <% } if (SymA.equals("기억력") || SymB.equals("기억력") || SymC.equals("기억력")) { %>
-                    
                     <div class="card 기억력">
                         <div class="card-heading">
                             <div data-toggle="collapse" data-target="#collapseThree">
                                 <a>기억력</a>
-                                <img style="height: 64px;" src="img/Icon2/Icon2/기억력.png">
+                                <img style="height: 64px;" src="img/Icon2/Icon2/memory.png">
                             </div>
                         </div>
                         <div id="collapseThree" class="collapse"
@@ -226,14 +222,11 @@ $w.on('scroll', function() {
                             </div>
                         </div>
                     </div>
-                    
-                    <% } if (SymA.equals("눈") || SymB.equals("눈") || SymC.equals("눈")) { %>
-                    
                     <div class="card 눈">
                         <div class="card-heading">
                             <div data-toggle="collapse" data-target="#collapseFour">
                                 <a>눈</a>
-                                <img style="height: 64px;" src="img/Icon2/Icon2/눈.png">
+                                <img style="height: 64px;" src="img/Icon2/Icon2/eye.png">
                             </div>
                         </div>
                         <div id="collapseFour" class="collapse"
@@ -245,14 +238,11 @@ $w.on('scroll', function() {
                             </div>
                         </div>
                     </div>
-                    
-                    <% } if (SymA.equals("뼈") || SymB.equals("뼈") || SymC.equals("뼈")) { %>
-                    
                     <div class="card 뼈">
                         <div class="card-heading">
                             <div data-toggle="collapse" data-target="#collapseFive">
                                 <a>뼈</a>
-                                <img style="height: 64px;" src="img/Icon2/Icon2/뼈.png">
+                                <img style="height: 64px;" src="img/Icon2/Icon2/bone.png">
                             </div>
                         </div>
                         <div id="collapseFive" class="collapse"
@@ -263,14 +253,11 @@ $w.on('scroll', function() {
                             </div>
                         </div>
                     </div>
-                    
-                    <% } if (SymA.equals("장") || SymB.equals("장") || SymC.equals("장")) { %>
-                    
                     <div class="card 장">
                         <div class="card-heading">
                             <div data-toggle="collapse" data-target="#collapseSix">
                                 <a>장</a>
-                                <img style="height: 64px;" src="img/Icon2/Icon2/장.png">
+                                <img style="height: 64px;" src="img/Icon2/Icon2/intestine.png">
                             </div>
                         </div>
                         <div id="collapseSix" class="collapse"
@@ -282,14 +269,11 @@ $w.on('scroll', function() {
                             </div>
                         </div>
                     </div>
-                    
-                    <% } if (SymA.equals("체지방감소") || SymB.equals("체지방감소") || SymC.equals("체지방감소")) { %>
-                    
                     <div class="card 체지방감소">
                         <div class="card-heading">
                             <div data-toggle="collapse" data-target="#collapseSeven">
                                 <a>체지방감소</a>
-                                <img style="height: 64px;" src="img/Icon2/Icon2/체지방.png">
+                                <img style="height: 64px;" src="img/Icon2/Icon2/diet.png">
                             </div>
                         </div>
                         <div id="collapseSeven" class="collapse"
@@ -301,14 +285,11 @@ $w.on('scroll', function() {
                             </div>
                         </div>
                     </div>
-                    
-                    <% } if (SymA.equals("콜레스테롤") || SymB.equals("콜레스테롤") || SymC.equals("콜레스테롤")) { %>
-                    
                     <div class="card 콜레스테롤">
                         <div class="card-heading">
                             <div data-toggle="collapse" data-target="#collapseEight">
                                 <a>콜레스테롤</a>
-                                <img style="height: 64px;" src="img/Icon2/Icon2/콜레스테롤.png">
+                                <img style="height: 64px;" src="img/Icon2/Icon2/cholesterol.png">
                             </div>
                         </div>
                         <div id="collapseEight" class="collapse"
@@ -323,14 +304,11 @@ $w.on('scroll', function() {
                             </div>
                         </div>
                     </div>
-                    
-                    <% } if (SymA.equals("피부") || SymB.equals("피부") || SymC.equals("피부")) { %>
-                    
                     <div class="card 피부">
                         <div class="card-heading">
                             <div data-toggle="collapse" data-target="#collapseNine">
                                 <a>피부</a>
-                                <img style="height: 64px;" src="img/Icon2/Icon2/피부.png">
+                                <img style="height: 64px;" src="img/Icon2/Icon2/skin.png">
                             </div>
                         </div>
                         <div id="collapseNine" class="collapse"
@@ -344,13 +322,11 @@ $w.on('scroll', function() {
                             </div>
                         </div>
                     </div>
-                    
-                    <% } if (SymA.equals("항산화") || SymB.equals("항산화") || SymC.equals("항산화")) { %>
                     <div class="card 항산화">
                         <div class="card-heading">
                             <div data-toggle="collapse" data-target="#collapseTen">
                                 <a>항산화</a>
-                                <img style="height: 64px;" src="img/Icon2/Icon2/항산화.png">
+                                <img style="height: 64px;" src="img/Icon2/Icon2/antioxidant.png">
                             </div>
                         </div>
                         <div id="collapseTen" class="collapse"
@@ -365,15 +341,11 @@ $w.on('scroll', function() {
                                 <a href="#red-ginseng28">홍삼</a>
                             </div>
                         </div>
-                    </div>
-                    
-                    
-                    <% } if (SymA.equals("혈행개선") || SymB.equals("혈행개선") || SymC.equals("혈행개선")) { %>
-                    <div class="card 혈행개선">
+                    </div><div class="card 혈행개선">
                         <div class="card-heading">
                             <div data-toggle="collapse" data-target="#collapseEleven">
                                 <a>혈행개선</a>
-                                <img style="height: 64px;" src="img/Icon2/Icon2/혈행개선.png">
+                                <img style="height: 64px;" src="img/Icon2/Icon2/blood.png">
                             </div>
                         </div>
                         <div id="collapseEleven" class="collapse"
@@ -385,8 +357,6 @@ $w.on('scroll', function() {
                             </div>
                         </div>
                     </div>
-                    
-                    <% } %>
                 </div>
             </div>
             
@@ -408,25 +378,30 @@ $w.on('scroll', function() {
                 <div class="col-lg-11">
                     <div class="main-menu">
                         <div class="logo">
-                            <a href="./index.html">
+                            <a href="./index.jsp">
                                 <img src="img/logo.png" alt="">
                             </a>
                         </div>
                         <nav class="mobile-menu">
                             <ul>
-                                <li><a href="./information1.html">효능/부위별 정보</a></li>
-                                <li><a href="./about-us.html">성분별 영양제품비교 </a></li>
+                                <li><a href="./information1.jsp">효능/부위별 정보</a></li>
+                                <li><a href="./information2.jsp">성분별 영양제품비교 </a></li>
                                 <li><a></a></li>
-                                <li><a href="./elements.html">마이페이지</a></li>
-                                <li><a href="./login.html">로그인/회원가입</a></li>
+                                <li><div class="dropdown">
+                                    <i onclick="dp_menu()" class="search-btn2 fa">마이페이지</i>
+	                                    <div style="display: none;" id="drop-content">
+	                                        <a href='member_update.jsp'>회원정보수정</a>
+	                                        <a href='wishlist.jsp'>즐겨찾기</a>
+	                                        <a href='member_ withdraw.jsp'>회원탈퇴</a>
+	                                    </div>
+                                    </div>
+                                    </li>
+                                <% if(vo == null) { %>
+	                                <li><a href="LoginJoin.jsp">로그인/회원가입</a></li>
+                                <% } else { %>
+                                	<li><a href="LogoutCon">로그아웃</a></li>
+                                <% } %>
                                 <li class="search-btn search-trigger"><i class="fa fa-search"></i></li>
-                                <!-- <li ><div class="dropdown">
-                                    <i onclick="dp_menu()" class="search-btn2 fa fa-heart"></i>
-                                    <div style="display: none;" id="drop-content">
-                                        <a hreaf='#'>UpdateMember</a>
-                                        <a hreaf='#'>WishList</a>
-                                        <a hreaf='#'>Logout</a>
-                                    </div></li> -->
                             </ul>
                         </nav>
                         <div id="mobile-menu-wrap"></div>
@@ -471,7 +446,7 @@ $w.on('scroll', function() {
         <div class="container">
             <div class="row">
             
-            	<% if(SymA.equals("간") || SymB.equals("간") || SymC.equals("간")) { %>
+            <% if(SymA.equals("간") || SymB.equals("간") || SymC.equals("간")) { %>
                 <div class="col-lg-11">
                     <div class="single-blog-item">
 	                    <div class="간">
@@ -848,10 +823,9 @@ $w.on('scroll', function() {
                         </div>
                         <div class="footer-menu">
                             <ul>
-                                <li><a href="./information1.html">효능/부위별 정보</a></li>
+                                <li><a href="./information1.jsp">효능/부위별 정보</a></li>
                                 <li><a href="#">성분별 영양제품비교</a></li>
-                                <li><a href="#">마이페이지</a></li>
-                                <li><a href="./login.html">로그인/회원가입</a></li>
+                                <li><a href="./login.jsp">로그인/회원가입</a></li>
                             </ul>
                         </div>
                         <div class="subscribe-form">
@@ -864,7 +838,6 @@ $w.on('scroll', function() {
                     </div>
                 </div>
             </div>
-        </div>
     </footer>
     <!-- Footer Section End -->
 

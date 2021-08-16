@@ -1,8 +1,7 @@
-<%@page import="VO.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
-<html lang="zxx">
+<html>
 
 <head>
     <meta charset="UTF-8">
@@ -10,7 +9,7 @@
     <meta name="keywords" content="TopGym, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>성분별 영양소</title>
+    <title>About Us | Template</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,500,700,900" rel="stylesheet">
@@ -42,79 +41,42 @@
             font-weight: bold;
             color: black
         }
-        #drop-content{
-        position: absolute;
-        z-index: 1;
-        }
-    #drop-content a{
-        display:block;
-        font-size: 15px;
-        width: 150px;
-        background-color: #2e2929;
-        color: rgb(250, 250, 250);
-        text-decoration: none;
-        padding: 17px 12px;
-        margin: 2px 0px 0px 0px;
-        border-radius: 10%;
-        }
     </style>
 </head>
 
 <body>
-	<%
-		MemberVO vo = (MemberVO)session.getAttribute("vo_session");
-	%>
-
-    <script>
-        function dp_menu(){
-            let click = document.getElementById("drop-content");
-            if(click.style.display === "none"){
-                click.style.display = "block";
-    
-            }else{
-                click.style.display = "none";
-    
-            }
-        }
-    </script>
-        <header class="header-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-11">
-                        <div class="main-menu">
-                            <div class="logo">
-                                <a href="./index.jsp">
-                                    <img src="img/logo.png" alt="">
-                                </a>
-                            </div>
-                            <nav class="mobile-menu">
-                                <ul>
-		                            <li><a href="./information1.jsp">효능/부위별 정보</a></li>
-		                            <li><a href="./information2.jsp">성분별 영양제품비교 </a></li>
-		                            <li><a></a></li>
-		                            <li><div class="dropdown">
-		                                <i onclick="dp_menu()" class="search-btn2 fa">마이페이지</i>
-		                                 <div style="display: none;" id="drop-content">
-		                                     <a href='member_update.jsp'>회원정보수정</a>
-		                                     <a href='wishlist.jsp'>즐겨찾기</a>
-		                                     <a href='member_ withdraw.jsp'>회원탈퇴</a>
-		                                 </div>
-		                                </div>
-		                            </li>
-		                            <% if(vo == null) { %>
-		                         		<li><a href="LoginJoin.jsp">로그인/회원가입</a></li>
-		                         	<% } else { %>
-		                         		<li><a href="LogoutCon">로그아웃</a></li>
-		                         	<% } %>
-		                            <li class="search-btn search-trigger"><i class="fa fa-search"></i></li>
-                           		</ul>
-                            </nav>
-                            <div id="mobile-menu-wrap"></div>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+    <!-- Header Section Begin -->
+    <header class="header-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="main-menu">
+                        <div class="logo">
+                            <a href="./index.html">
+                                <img src="img/logo.png" alt="">
+                            </a>
                         </div>
+                        <nav class="mobile-menu">
+                            <ul>
+                                <li><a href="./information1.html">효능/부위별 정보</a></li>
+                                <li><a href="./information2.html">성분별 정보</a></li>
+                                <li><a></a></li>
+                                <li><a href="./product_comparison.html">제품 비교</a></li>
+                                <li><a href="./login.html">로그인/회원가입</a></li>
+                                <li class="search-btn search-trigger"><i class="fa fa-search"></i></li>
+                                <li class="search-btn2 search-trigger"><i class="fa fa-heart"></i></li>
+                            </ul>
+                        </nav>
+                        <div id="mobile-menu-wrap"></div>
                     </div>
                 </div>
             </div>
-        </header>
+        </div>
+    </header>
     <!-- Header End -->
    <!-- Search Bar Begin -->
    <section class="search-bar-wrap">
@@ -157,37 +119,37 @@
                             <tr>
                                 <td>     
                                     <span class="box">
-                                        <img alt="" src="img/Info2/1.png"/>
+                                        <img alt="" src="img/가르시니아.png"/>
                                     </span>
                                     <p>가르시니아</p>
                                 </td>
                                 <td>
                                     <span class="box">
-                                        <img alt="" src="img/Info2/2.png" />
+                                        <img alt="" src="img/감마리놀렌산.png" />
                                     </span>
                                     <p>감마리놀렌산</p>
                                 </td>
                                 <td>
                                     <span class="box">
-                                    <img alt="" src="img/Info2/3.png" />
+                                    <img alt="" src="img/글루코사민.png" />
                                     </span>
                                     <p>글루코사민</p>
                                 </td>
                                 <td>
                                     <span class="box">
-                                    <img alt="" src="img/Info2/4.png" />
+                                    <img alt="" src="img/루테인.png" />
                                     </span>
                                     <p>루테인</p>
                                 </td>
                                 <td>
                                     <span class="box">
-                                    <img alt="" src="img/Info2/5.png" />
+                                    <img alt="" src="img/밀크씨슬'.png" />
                                     </span>
                                     <p>밀크씨슬</p>
                                 </td>
                                 <td>
                                     <span class="box">
-                                    <img alt="" src="img/Info2/6.png"/>
+                                    <img alt="" src="img/보스웰리아.png"/>
                                     </span>
                                     <p>보스웰리아</p>
                                 </td>
@@ -196,38 +158,38 @@
                             <tr>
                                 <td>
                                     <span class="box">
-                                    <img alt="" src="img/Info2/7.png" />
+                                    <img alt="" src="img/비타민 A.png" />
                                     </span>
                                     <p>비타민 A</p>
                                    
                                 </td>
                                 <td>
                                     <span class="box">
-                                    <img alt="" src="img/Info2/8.png" />
+                                    <img alt="" src="img/비타민 C.png" />
                                     </span>
                                     <p>비타민 C</p>
                                 </td>
                                 <td>
                                     <span class="box">
-                                    <img alt="" src="img/Info2/9.png" />
+                                    <img alt="" src="img/비타민 D.png" />
                                     </span>
                                     <p>비타민 D</p>
                                 </td>
                                 <td>
                                     <span class="box">
-                                    <img alt="" src="img/Info2/10.png" /> 
+                                    <img alt="" src="img/스피루리나.png" /> 
                                     </span>
                                     <p>스피루리나</p>
                                 </td>
                                 <td>
                                     <span class="box">
-                                    <img alt="" src="img/Info2/11.png"/>
+                                    <img alt="" src="img/알로에겔.png"/>
                                     </span>
                                     <p>알로에겔</p>
                                 </td>
                                 <td>
                                     <span class="box">
-                                    <img alt="" src="img/Info2/12.png" />
+                                    <img alt="" src="img/엠에스엠.png" />
                                     </span>
                                     <p>엠에스엠</p>
                                 </td>
@@ -235,37 +197,37 @@
                             <tr>
                                 <td>
                                     <span class="box">
-                                        <img alt="" src="img/Info2/13.png" />
+                                        <img alt="" src="img/오메가3.png" />
                                     </span>
                                     <p>오메가3</p>
                                 </td>
                                 <td>
                                     <span class="box">
-                                    <img alt="" src="img/Info2/14.png" />
+                                    <img alt="" src="img/은행잎.png" />
                                     </span>
                                     <p>은행잎</p>
                                 </td>
                                 <td>
                                     <span class="box">
-                                    <img alt="" src="img/Info2/15.png" />
+                                    <img alt="" src="img/차전자피 식이섬유.png" />
                                     </span>
                                     <p>차전자피</p>
                                 </td>
                                 <td>
                                     <span class="box">
-                                    <img alt="" src="img/Info2/16.png" />
+                                    <img alt="" src="img/카테킨 (2).png" />
                                     </span>
                                     <p>카테킨</p>
                                 </td>
                                 <td>
                                     <span class="box">
-                                    <img alt="" src="img/Info2/17.png" />
+                                    <img alt="" src="img/칼슘.png" />
                                     </span>
                                     <p>칼슘</p>
                                 </td>
                                 <td>
                                     <span class="box">
-                                    <img alt="" src="img/Info2/18.png" />
+                                    <img alt="" src="img/코큐텐.png" />
                                     </span>
                                     <p>코큐텐</p>
                                 </td>
@@ -273,37 +235,37 @@
                             <tr>
                                 <td>
                                     <span class="box">
-                                    <img alt="" src="img/Info2/19.png"/>
+                                    <img alt="" src="img/콜라겐.png"/>
                                     </span>
                                     <p>콜라겐</p>
                                 </td>
                                 <td>
                                     <span class="box">
-                                    <img alt="" src="img/Info2/20.png" />
+                                    <img alt="" src="img/클로렐라.png" />
                                     </span>
                                     <p>클로렐라</p>
                                 </td>
                                 <td>
                                     <span class="box">
-                                    <img alt="" src="img/Info2/21.png" />
+                                    <img alt="" src="img/키토산.png" />
                                     </span>
                                     <p>키토산</p>
                                 </td>
                                 <td>
                                     <span class="box">
-                                    <img alt="" src="img/Info2/22.png" />
+                                    <img alt="" src="img/프로바이오틱스.png" />
                                     </span>
                                     <p>프로바이오틱스</p>
                                 </td>
                                 <td>
                                     <span class="box">
-                                    <img alt="" src="img/Info2/23.png" />
+                                    <img alt="" src="img/프로폴리스.png" />
                                     </span>
                                     <p>프로폴리스</p>
                                 </td>
                                 <td>
                                     <span class="box">
-                                    <img alt="" src="img/Info2/24.png"/>
+                                    <img alt="" src="img/홍삼.png"/>
                                     </span>
                                     <p>홍삼</p>
                                 </td>
@@ -351,9 +313,10 @@
                     </div>
                     <div class="footer-menu">
                         <ul>
-                            <li><a href="./information1.jsp">효능/부위별 정보</a></li>
-                            <li><a href="#">성분별 영양제품비교</a></li>
-                            <li><a href="./login.jsp">로그인/회원가입</a></li>
+                            <li><a href="#">효능/부위별 정보</a></li>
+                            <li><a href="#">성분별 정보</a></li>
+                            <li><a href="#">제품비교</a></li>
+                            <li><a href="./login.html">로그인/회원가입</a></li>
                         </ul>
                     </div>
                     <div class="subscribe-form">
@@ -380,5 +343,4 @@
     <script src="js/jquery.barfiller.js"></script>
     <script src="js/main.js"></script>
 </body>
-
 </html>

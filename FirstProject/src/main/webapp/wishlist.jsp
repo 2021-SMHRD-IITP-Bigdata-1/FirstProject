@@ -29,9 +29,20 @@
         -ms-flex-wrap:wrap;flex-wrap:wrap;
         margin-right:-15px;margin-left:-15px; 
         justify-content: center}
-    .login-btn2{
-        text-align: center;
+    table{
+    border-collapse: separate;
+    text-indent: initial;
+    border-spacing: 2px;
     }
+    .table td, .table th {
+    padding: .75rem;
+    vertical-align: middle !important;
+    border-top: 1px solid #dee2e6;
+}
+    .img-fluid{
+        height: 128px;
+    }
+
     #drop-content{
         position: absolute;
         z-index: 1;
@@ -54,8 +65,8 @@
 	<%
 		MemberVO vo = (MemberVO)session.getAttribute("vo_session");
 	%>
-
-
+   
+    <!-- Page Preloder -->
     <script>
         function dp_menu(){
             let click = document.getElementById("drop-content");
@@ -74,31 +85,31 @@
                     <div class="col-lg-11">
                         <div class="main-menu">
                             <div class="logo">
-                                <a href="./index.html">
+                                <a href="./index.jsp">
                                     <img src="img/logo.png" alt="">
                                 </a>
                             </div>
                             <nav class="mobile-menu">
                                 <ul>
-		                            <li><a href="./information1.jsp">효능/부위별 정보</a></li>
-		                            <li><a href="./information2.jsp">성분별 영양제품비교 </a></li>
-		                            <li><a></a></li>
-		                            <li><div class="dropdown">
-		                                <i onclick="dp_menu()" class="search-btn2 fa">마이페이지</i>
-		                                 <div style="display: none;" id="drop-content">
-		                                     <a href='member_update.jsp'>회원정보수정</a>
-		                                     <a href='wishlist.jsp'>즐겨찾기</a>
-		                                     <a href='member_ withdraw.jsp'>회원탈퇴</a>
-		                                 </div>
-		                                </div>
-		                                </li>
-		                            <% if(vo == null) { %>
-		                         		<li><a href="LoginJoin.jsp">로그인/회원가입</a></li>
-		                         	<% } else { %>
-		                         		<li><a href="LogoutCon">로그아웃</a></li>
-		                         	<% } %>
-		                            <li class="search-btn search-trigger"><i class="fa fa-search"></i></li>
-                           		</ul>
+	                            <li><a href="./information1.jsp">효능/부위별 정보</a></li>
+	                            <li><a href="./information2.jsp">성분별 영양제품비교 </a></li>
+	                            <li><a></a></li>
+	                            <li><div class="dropdown">
+	                                <i onclick="dp_menu()" class="search-btn2 fa">마이페이지</i>
+	                                 <div style="display: none;" id="drop-content">
+	                                     <a href='member_update.jsp'>회원정보수정</a>
+	                                     <a href='wishlist.jsp'>즐겨찾기</a>
+	                                     <a href='member_ withdraw.jsp'>회원탈퇴</a>
+	                                 </div>
+	                                </div>
+	                                </li>
+	                            <% if(vo == null) { %>
+	                         		<li><a href="LoginJoin.jsp">로그인/회원가입</a></li>
+	                         	<% } else { %>
+	                         		<li><a href="LogoutCon">로그아웃</a></li>
+	                         	<% } %>
+	                            <li class="search-btn search-trigger"><i class="fa fa-search"></i></li>
+                           	</ul>
                             </nav>
                             <div id="mobile-menu-wrap"></div>
                         </div>
@@ -106,7 +117,6 @@
                 </div>
             </div>
         </header>
-    </header>
     <!-- Header End -->
     <!-- Search Bar Begin -->
     <section class="search-bar-wrap">
@@ -131,9 +141,9 @@
             <div class="row2">
                 <div class="col-lg-12">
                     <div class="breadcrumb-content">
-                        <h2  class="information-text">로그인 / 회원가입</h2>
+                        <h2  class="information-text">즐겨찾기</h2>
                         <div class="information-text1">
-                            <a>로그인 / 회원가입 페이지입니다.</a>
+                            <a>회원님이 선택한 즐겨찾기 제품을 보실수 있습니다.</a>
                         </div>
                     </div>
                 </div>
@@ -142,77 +152,92 @@
     </section>
     <!-- Breadcrumb Section End -->
     <!-- Contact Section Begin -->
-    <section class="contact-section">
-        <div class="container">
             <div class="row2">
-                <div class="col-lg-6">
                     <div class="contact-info">
                         <div class="contact-details">
-                            <h2>로그인</h2>
-                        </div>
-                        <div class="contact-form">
-                            <form action="LoginCon">
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <h5 class="logf">아이디</h5>
-                                        <input type="text" placeholder="아이디를 입력하세요." name="id">
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <h5 class="logf">비밀번호</h5>
-                                        <input type="password" placeholder="비밀번호를 입력하세요." name="pw">
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <button type="submit" class="site-btn">로그인</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="contact-info">
-                        <div class="contact-details">
-                            <h2>회원가입</h2>
-                        </div>
-                        <div class="contact-form">
-                            <form action="JoinCon">
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <h5 class="logf">아이디</h5>
-                                        <input type="text" placeholder="아이디를 입력하세요." name="id">
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <h5 class="logf">비밀번호</h5>
-                                        <input type="password" id="pw" placeholder="비밀번호를 입력하세요." name="pw" onchange ="isSame()">
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <h5 class="logf">비밀번호 확인</h5>
-                                        <input type="password" id="pwcheck" placeholder="비밀번호를 입력하세요." name="pwcheck" onchange="isSame()">
-                                        <span id="pwMsg"></span>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <h5 class="logf">성별</h5>
-                                        <select class="sel" name="gender">
-                                            <option>남</option>
-                                            <option>여</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <h5 class="logf">생년월일</h5>
-                                        <input type="date" name="birth">
-                                    </div>
-
-                                    <div class="col-lg-12">
-                                        <button type="submit" id="joinSubmit" class="site-btn">회원가입</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-
+                            <h2>즐겨찾기한 제품</h2>
+                        </div>    
+    <div class="site-wrap">
+        <div class="site-section">
+          <div class="container">
+            <div class="row mb-5">
+              <form class="col-md-12" method="post">
+                <div class="site-blocks-table">
+                  <table class="table table-bordered" style="text-align: center;">
+                    <thead>
+                      <tr>
+                        <th class="product-thumbnail">제품이미지</th>
+                        <th class="product-name">제품명</th>
+                        <th class="product-brand">브랜드</th>
+                        <th class="product-maker">제조국</th>
+                        <th class="product-price">정가</th>
+                        <th class="product-min-price">최저가</th>
+                        <th class="product-shape">형테</th>
+                        <th class="product-number">섭취횟수, 양</th>
+                        <th class="product-total">총량</th>
+                        <th class="product-as">특징</th>
+                        <th class="product-review">리뷰</th>
+                        <th class="product-remove">즐겨찾기 제거</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="product-thumbnail"><img src="img/영양제 이미지/가르시니아/그린몬스터 다이어트 가르시니아.jpg" alt="Image" class="img-fluid"></td>
+                        <td class="product-name"><h2 class="h5 text-black">Ibuprofen</h2></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="#" class="btn btn-primary height-auto btn-sm">X</a></td>
+                      </tr>
+                      <tr>
+                        <td class="product-thumbnail"><img src="img/영양제 이미지/감마리놀렌산/나우푸드 이브닝 프림로즈 500mg.jpg" alt="Image" class="img-fluid"></td>
+                        <td class="product-name"><h2 class="h5 text-black">Ibuprofen</h2></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="#" class="btn btn-primary height-auto btn-sm">X</a></td>
+                      </tr>
+                      <tr>
+                        <td class="product-thumbnail"><img src="img/영양제 이미지/루테인/뉴트리디데이 프리미엄 루테인 골드350MG.jpg" alt="Image" class="img-fluid"></td>
+                        <td class="product-name"><h2 class="h5 text-black">Ibuprofen</h2></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="#" class="btn btn-primary height-auto btn-sm">X</a></td>
+                      </tr>
+        
+                    </tbody>
+                  </table>
                 </div>
+              </form>
             </div>
+        
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+    
+    
     <!-- Contact Section End -->
 
     <!-- Footer Section Begin -->
@@ -226,9 +251,9 @@
                         </div>
                         <div class="footer-menu">
                             <ul>
-                                <li><a href="./information1.html">효능/부위별 정보</a></li>
+                                <li><a href="./information1.jsp">효능/부위별 정보</a></li>
                                 <li><a href="#">성분별 영양제품비교</a></li>
-                                <li><a href="./login.html">로그인/회원가입</a></li>
+                                <li><a href="./login.jsp">로그인/회원가입</a></li>
                             </ul>
                        
                         </div>
@@ -255,27 +280,6 @@
     <script src="js/circle-progress.min.js"></script>
     <script src="js/jquery.barfiller.js"></script>
     <script src="js/main.js"></script>
-    <script type="text/javascript">
-		$(function() {
-			$('#pw').keyup(function() {
-				$('#pwMsg').html('');
-			});
-			
-			$('#pwcheck').keyup(function(){
-				
-				if($('#pw').val() != $('#pwcheck').val()) {
-					$('#pwMsg').html('비밀번호 일치하지 않음');
-					$('#pwMsg').attr('color', '#FF0000');
-				} else {
-					$('#pwMsg').html('비밀번호 일치함');
-					$('#pwMsg').attr('color', '#0000FF');
-				}
-				
-			});
-			
-		});
-	</script>
-    
 </body>
 
 </html>
