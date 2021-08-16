@@ -8,6 +8,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import VO.MemberVO;
+import VO.NutritionVO;
 import VO.PickVO;
 import VO.ProductVO;
 
@@ -20,6 +21,7 @@ public class MemberDAO {
 	MemberVO vo = null;
 	PickVO vo2 = null;
 	ProductVO vo3 = null;
+	NutritionVO vo4 = null;
 	int cnt = 0;
 	
 	public void getConn() {
@@ -73,9 +75,9 @@ public class MemberDAO {
 			cnt = psmt.executeUpdate();
 			
 			if(cnt > 0) {
-				System.out.println("insert ¼º°ø!");
+				System.out.println("insert ï¿½ï¿½ï¿½ï¿½!");
 			}else {
-				System.out.println("insert ½ÇÆÐ¤Ì¤Ì");
+				System.out.println("insert ï¿½ï¿½ï¿½Ð¤Ì¤ï¿½");
 			}
 
 		} catch (Exception e) {
@@ -93,7 +95,7 @@ public class MemberDAO {
 		try {
 			getConn();
 
-			// sql¹® ÀÛ¼º
+			// sqlï¿½ï¿½ ï¿½Û¼ï¿½
 			String sql = "select * from member where mem_id=? and mem_pw=?";
 
 			psmt = conn.prepareStatement(sql);
@@ -170,7 +172,7 @@ public class MemberDAO {
 		try {
 			getConn();
 
-			// sql¹® ÀÛ¼º
+			// sqlï¿½ï¿½ ï¿½Û¼ï¿½
 			String sql = "select * from member_pick where mem_code = ?";
 
 			psmt = conn.prepareStatement(sql);
@@ -246,6 +248,88 @@ public class MemberDAO {
 	    	 close();
 	      }
 	      return arr;
+		
+	}
+
+	public String selectNutCode(String nutName) {
+		
+		String getNutCode = null;
+		
+		try {
+			getConn();
+
+			String sql = "select nut_code from nutrition where nut_name = ?";
+
+			psmt = conn.prepareStatement(sql);
+
+			psmt.setString(1, nutName);
+
+			rs = psmt.executeQuery();
+			
+			
+			while(rs.next()) {
+				
+				getNutCode = rs.getString(1);
+				
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			
+		} finally {
+			close();
+		}
+		
+		return getNutCode;
+		
+	}
+
+	public ArrayList<ProductVO> selectProduct(String nutCode) {
+		
+		ArrayList<ProductVO> array = new ArrayList<ProductVO>();
+		
+		try {
+			getConn();
+
+			String sql = "select * from product where nut_code = ?";
+
+			psmt = conn.prepareStatement(sql);
+
+			psmt.setString(1, nutCode);
+
+			rs = psmt.executeQuery();
+			
+			while(rs.next()) {
+				
+				String getpdtCode = rs.getString(1);
+				String getpdtName = rs.getString(2);
+				String getpdtBrand= rs.getString(3);
+				String getpdtCountry = rs.getString(4);
+				String getpdtPrice = rs.getString(5);
+				String getpdtDiscPrice = rs.getString(6);
+				String getpdtType = rs.getString(7);
+				String getpdtDailyIntake = rs.getString(8);
+				String getpdtOneIntake = rs.getString(9);
+				String getpdtJung = rs.getString(10);
+				String getpdtFree = rs.getString(11);
+				String getpdtContent= rs.getString(12);
+				String getpdtImg= rs.getString(14);
+				
+				vo3 = new ProductVO(getpdtCode,getpdtName, getpdtBrand, getpdtCountry, getpdtPrice, getpdtDiscPrice,getpdtType, getpdtDailyIntake, getpdtOneIntake, getpdtJung, getpdtFree, getpdtContent, getpdtImg);
+
+				
+				array.add(vo3);
+				
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			
+		} finally {
+			close();
+		}
+		
+		return array;
 		
 	}
 	

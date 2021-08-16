@@ -166,7 +166,8 @@ $w.on('scroll', function() {
         <div id="banner">
             <div class="accordin-elem">
                 <div class="accordion" id="accordionExample">
-                    <% if(SymA.equals("간") || SymB.equals("간") || SymC.equals("간")) { %>
+                
+                <% if(SymA.equals("간") || SymB.equals("간") || SymC.equals("간")) { %>
                     <div class="card 간">
                         <div class="card-heading">
                             <div data-toggle="collapse" data-target="#collapseOne">
@@ -177,7 +178,8 @@ $w.on('scroll', function() {
                         <div id="collapseOne" class="collapse"
                             data-parent="#accordionExample">
                             <div class="card-body">
-                                <a href = "#milkseatle">밀크씨슬</a>
+                                <a href = "#milkseatle" id="nut1">밀크씨슬</a>
+                                <input type="button" value="+" onclick="goComparison(1)">
                             </div>
                         </div>
                     </div>
@@ -194,9 +196,14 @@ $w.on('scroll', function() {
                         <div id="collapseTwo" class="collapse"
                             data-parent="#accordionExample">
                             <div class="card-body">
-                                <a href="#glucosamine1">글루코사민</a><br>
-                                <a href="#boswelia2">보스웰리아</a><br>
-                                <a href="#msm2-5">엠에스엠(MSM)</a>
+                                <a href="#glucosamine1" id="nut2">글루코사민</a>
+                                <input type="button" value="+" onclick="goComparison(2)">
+                                <br>
+                                <a href="#boswelia2" id="nut3">보스웰리아</a>
+                                <input type="button" value="+" onclick="goComparison(3)">
+                                <br>
+                                <a href="#msm2-5" id="nut4">엠에스엠(MSM)</a>
+                                <input type="button" value="+" onclick="goComparison(4)">
                             </div>
                         </div>
                     </div>
@@ -213,8 +220,12 @@ $w.on('scroll', function() {
                         <div id="collapseThree" class="collapse"
                             data-parent="#accordionExample">
                             <div class="card-body">
-                                <a href="#omega-33">오메가3</a><br>
-                                <a href="#ginkgo4">은행잎(징코)</a>
+                                <a href="#omega-33" id="nut5">오메가3</a>
+                                <input type="button" value="+" onclick="goComparison(5)">
+                                <br>
+                                <a href="#ginkgo4" id="nut6">은행잎(징코)
+                                <input type="button" value="+" onclick="goComparison(6)">
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -231,9 +242,14 @@ $w.on('scroll', function() {
                         <div id="collapseFour" class="collapse"
                             data-parent="#accordionExample">
                             <div class="card-body">
-                                <a href="#vitamin-a5">비타민A</a><br>
-                                <a href="#lutein-a5-5">루테인</a><br>
-                                <a href="#omega-36">오메가3</a>
+                                <a href="#vitamin-a5" id="nut7">비타민A</a>
+                                <input type="button" value="+" onclick="goComparison(7)">
+                                <br>
+                                <a href="#lutein-a5-5" id="nut8">루테인</a>
+                                <input type="button" value="+" onclick="goComparison(8)">
+                                <br>
+                                <a href="#omega-36" id="nut9">오메가3</a>
+                                <input type="button" value="+" onclick="goComparison(9)">
                             </div>
                         </div>
                     </div>
@@ -250,8 +266,11 @@ $w.on('scroll', function() {
                         <div id="collapseFive" class="collapse"
                             data-parent="#accordionExample">
                             <div class="card-body">
-                                <a href="#vitamin-d7">비타민D</a><br>
-                                <a href="#calcium8">칼슘</a>
+                                <a href="#vitamin-d7" id="nut10">비타민D</a>
+                                <input type="button" value="+"  onclick="goComparison(10)">
+                                <br>
+                                <a href="#calcium8" id="nut11">칼슘</a>
+                                <input type="button" value="+"  onclick="goComparison(11)">
                             </div>
                         </div>
                     </div>
@@ -268,9 +287,14 @@ $w.on('scroll', function() {
                         <div id="collapseSix" class="collapse"
                             data-parent="#accordionExample">
                             <div class="card-body">
-                                <a href="#aloe-gel8-5">알로에겔</a><br>
-                                <a href="#probiotics9">프로바이오틱스</a><br>
-                                <a href="#cha9-5">차전자피 식이섬유</a>
+                                <a href="#aloe-gel8-5" id="nut12">알로에겔</a>
+                                <input type="button" value="+"  onclick="goComparison(12)">
+                                <br>
+                                <a href="#probiotics9" id="nut13">프로바이오틱스</a>
+                                <input type="button" value="+"  onclick="goComparison(13)">
+                                <br>
+                                <a href="#cha9-5" id="nut14">차전자피 식이섬유</a>
+                            	<input type="button" value="+ "  onclick="goComparison(14)">
                             </div>
                         </div>
                     </div>
@@ -287,9 +311,14 @@ $w.on('scroll', function() {
                         <div id="collapseSeven" class="collapse"
                             data-parent="#accordionExample">
                             <div class="card-body">
-                                <a href="#garcinia10">가르시니아</a><br>
-                                <a href="#catechin11">카테킨</a><br>
-                                <a href="#chitosan12">키토산</a>
+                                <a href="#garcinia10" id="nut15">가르시니아</a>
+                                <input type="button" value="+"  onclick="goComparison(15)">
+                                <br>
+                                <a href="#catechin11" id="nut16">카테킨</a>
+                                <input type="button" value="+"  onclick="goComparison(16)">
+                                <br>
+                                <a href="#chitosan12" id="nut17">키토산</a>
+                                <input type="button" value="+"  onclick="goComparison(17)">
                             </div>
                         </div>
                     </div>
@@ -306,12 +335,23 @@ $w.on('scroll', function() {
                         <div id="collapseEight" class="collapse"
                             data-parent="#accordionExample">
                             <div class="card-body">
-                                <a href="#gamma13">감마리놀렌산</a><br>
-                                <a href="#spirulina14">스피루리나</a><br>
-                                <a href="#cha14-5">차전자피 식이섬유</a><br>
-                                <a href="#catechin15">카테킨</a><br>
-                                <a href="#chlorella16">클로렐라</a><br>
-                                <a href="#chitosan17">키토산</a>
+                                <a href="#gamma13" id="nut18">감마리놀렌산</a>
+                                <input type="button" value="+"  onclick="goComparison(18)">
+                                <br>
+                                <a href="#spirulina14" id="nut19">스피루리나</a>
+                                <input type="button" value="+"  onclick="goComparison(19)">
+                                <br>
+                                <a href="#cha14-5" id="nut20">차전자피 식이섬유</a>
+                                <input type="button" value="+"  onclick="goComparison(20)">
+                                <br>
+                                <a href="#catechin15" id="nut21">카테킨</a>
+                                <input type="button" value="+"  onclick="goComparison(21)">
+                                <br>
+                                <a href="#chlorella16" id="nut22">클로렐라</a>
+                                <input type="button" value="+"  onclick="goComparison(22)">
+                                <br>
+                                <a href="#chitosan17" id="nut23">키토산</a>
+                                <input type="button" value="+"  onclick="goComparison(23)">
                             </div>
                         </div>
                     </div>
@@ -328,11 +368,20 @@ $w.on('scroll', function() {
                         <div id="collapseNine" class="collapse"
                             data-parent="#accordionExample">
                             <div class="card-body">
-                                <a href="#gamma18">감마리놀렌산</a><br>
-                                <a href="#spirulina19">스피루리나</a><br>
-                                <a href="#aloe-gel19-5">알로에겔</a><br>
-                                <a href="#collagen20">콜라겐</a><br>
-                                <a href="#chlorella21">클로렐라</a>
+                                <a href="#gamma18" id="nut24">감마리놀렌산</a>
+                                <input type="button" value="+"  onclick="goComparison(24)">
+                                <br>
+                                <a href="#spirulina19" id="nut25">스피루리나</a>
+                                <input type="button" value="+"  onclick="goComparison(25)">
+                                <br>
+                                <a href="#aloe-gel19-5" id="nut26">알로에겔</a>
+                                <input type="button" value="+"  onclick="goComparison(26)">
+                                <br>
+                                <a href="#collagen20" id="nut27">콜라겐</a>
+                                <input type="button" value="+"  onclick="goComparison(27)">
+                                <br>
+                                <a href="#chlorella21"id="nut28">클로렐라</a>
+                                <input type="button" value="+"  onclick="goComparison(28)">
                             </div>
                         </div>
                     </div>
@@ -348,13 +397,26 @@ $w.on('scroll', function() {
                         <div id="collapseTen" class="collapse"
                             data-parent="#accordionExample">
                             <div class="card-body">
-                                <a href="#vitamin-c22">비타민C</a><br>
-                                <a href="#spirulina23">스피루리나</a><br>
-                                <a href="#catechin24">카테킨</a><br>
-                                <a href="#co-q-1025">코큐텐</a><br>
-                                <a href="#chlorella26">클로렐라</a><br>
-                                <a href="#propolis27">프로폴리스</a><br>
-                                <a href="#red-ginseng28">홍삼</a>
+                                <a href="#vitamin-c22" id="nut29">비타민C</a>
+                                <input type="button" value="+" onclick="goComparison(29)">
+                                <br>
+                                <a href="#spirulina23" id="nut30">스피루리나</a>
+                                <input type="button" value="+" onclick="goComparison(30)">
+                                <br>
+                                <a href="#catechin24" id="nut31">카테킨</a>
+                                <input type="button" value="+" onclick="goComparison(31)">
+                                <br>
+                                <a href="#co-q-1025" id="nut32">코큐텐</a>
+                                <input type="button" value="+" onclick="goComparison(32)">
+                                <br>
+                                <a href="#chlorella26" id="nut33">클로렐라</a>
+                                <input type="button" value="+" onclick="goComparison(33)">
+                                <br>
+                                <a href="#propolis27" id="nut34">프로폴리스</a>
+                                <input type="button" value="+" onclick="goComparison(34)">
+                                <br>
+                                <a href="#red-ginseng28" id="nut35">홍삼</a>
+                                <input type="button" value="+" onclick="goComparison(35)">
                             </div>
                         </div>
                     </div>
@@ -371,9 +433,14 @@ $w.on('scroll', function() {
                         <div id="collapseEleven" class="collapse"
                             data-parent="#accordionExample">
                             <div class="card-body">
-                                <a href="#gamma29">감마리놀렌산</a><br>
-                                <a href="#ginkgo30">은행잎(징코)</a><br>
-                                <a href="#red-ginseng31">홍삼</a>
+                                <a href="#gamma29" id="nut36">감마리놀렌산</a>
+                                <input type="button" value="+" onclick="goComparison(36)">
+                                <br>
+                                <a href="#ginkgo30" id="nut37">은행잎(징코)</a>
+                                <input type="button" value="+" onclick="goComparison(37)">
+                                <br>
+                                <a href="#red-ginseng31" id="nut38">홍삼</a>
+                                <input type="button" value="+" onclick="goComparison(38)">
                             </div>
                         </div>
                     </div>
@@ -872,6 +939,56 @@ $w.on('scroll', function() {
     <script src="js/circle-progress.min.js"></script>
     <script src="js/jquery.barfiller.js"></script>
     <script src="js/main.js"></script>
+    
+    <script>
+    	function goComparison(num) {
+    		var nutName = document.getElementById('nut'+num).innerText;
+    		
+    		alert(nutName);
+    		
+    		$.ajax({
+				// 데이터 전송방식(get/post)
+				type : "get",
+				// 전송할 데이터
+				data : {"nut" : nutName},
+				// 데이터를 전송할 서버페이지
+				url : "ComparisonCon",
+				
+				// 응답데이터 타입
+				dataType : "text",
+				success : function(data) {
+					 alert(data);
+					 
+					 if(data == "true") {
+						 location.href = 'product_comparison2.jsp';
+						 
+					 } else {
+						 
+					 }
+					 
+				},
+				error : function() {
+					alert("실패!");
+				}
+				
+			})
+    		
+    		
+
+    	}
+    
+    </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </body>
 
 </html>

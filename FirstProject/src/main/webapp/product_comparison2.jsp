@@ -242,26 +242,26 @@
                                           <tbody>
                      <%
                      MemberDAO dao = new MemberDAO();
-                     ArrayList<ProductVO> array = (ArrayList<ProductVO>)request.getAttribute("array");
+                     ArrayList<ProductVO> arr = dao.selectAll();
                
-                     for(int i= 0; i<array.size();i++){
+                     for(int i= 0; i<arr.size();i++){
 		             	out.println("<tr>");
 	                  	out.println("<td>");
 		                %>
-		                  <img src=<%=array.get(i).getPdtImg()%>>
+		                  <img src=<%=arr.get(i).getPdtImg()%>>
 		                  <%
 		                  out.println("</td>");
-		                  out.println("<td>"+array.get(i).getPdtName()+"</td>");
-		                  out.println("<td>"+array.get(i).getPdtBrand()+"</td>");
-		                  out.println("<td>"+array.get(i).getPdtCountry()+"</td>");
-		                  out.println("<td>"+array.get(i).getPdtPrice()+"</td>");
-		                  out.println("<td>"+array.get(i).getPdtDiscPrice()+"</td>");
-		                  out.println("<td>"+array.get(i).getPdtType()+"</td>");
-		                  out.println("<td>"+array.get(i).getPdtDailyIntake()+"</td>");
-		                  out.println("<td>"+array.get(i).getPdtOneIntake()+"</td>");
-		                  out.println("<td>"+array.get(i).getPdtJung()+"</td>");
-		                  out.println("<td>"+array.get(i).getPdtFree()+"</td>");
-		                  out.println("<td>"+array.get(i).getPdtContent()+"</td>");
+		                  out.println("<td>"+arr.get(i).getPdtName()+"</td>");
+		                  out.println("<td>"+arr.get(i).getPdtBrand()+"</td>");
+		                  out.println("<td>"+arr.get(i).getPdtCountry()+"</td>");
+		                  out.println("<td>"+arr.get(i).getPdtPrice()+"</td>");
+		                  out.println("<td>"+arr.get(i).getPdtDiscPrice()+"</td>");
+		                  out.println("<td>"+arr.get(i).getPdtType()+"</td>");
+		                  out.println("<td>"+arr.get(i).getPdtDailyIntake()+"</td>");
+		                  out.println("<td>"+arr.get(i).getPdtOneIntake()+"</td>");
+		                  out.println("<td>"+arr.get(i).getPdtJung()+"</td>");
+		                  out.println("<td>"+arr.get(i).getPdtFree()+"</td>");
+		                  out.println("<td>"+arr.get(i).getPdtContent()+"</td>");
                   
 
                         %>
