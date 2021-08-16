@@ -177,6 +177,7 @@ $w.on('scroll', function() {
         <div id="banner">
             <div class="accordin-elem">
                 <div class="accordion" id="accordionExample">
+                    <% if(SymA.equals("간") || SymB.equals("간") || SymC.equals("간")) { %>
                     <div class="card 간">
                         <div class="card-heading">
                             <div data-toggle="collapse" data-target="#collapseOne">
@@ -191,6 +192,9 @@ $w.on('scroll', function() {
                             </div>
                         </div>
                     </div>
+                    
+                <% } if (SymA.equals("관절") || SymB.equals("관절") || SymC.equals("관절")) { %>
+                    
                     <div class="card 관절">
                         <div class="card-heading">
                             <div data-toggle="collapse" data-target="#collapseTwo">
@@ -207,6 +211,9 @@ $w.on('scroll', function() {
                             </div>
                         </div>
                     </div>
+                    
+                    <% } if (SymA.equals("기억력") || SymB.equals("기억력") || SymC.equals("기억력")) { %>
+                    
                     <div class="card 기억력">
                         <div class="card-heading">
                             <div data-toggle="collapse" data-target="#collapseThree">
@@ -222,6 +229,9 @@ $w.on('scroll', function() {
                             </div>
                         </div>
                     </div>
+                    
+                    <% } if (SymA.equals("눈") || SymB.equals("눈") || SymC.equals("눈")) { %>
+                    
                     <div class="card 눈">
                         <div class="card-heading">
                             <div data-toggle="collapse" data-target="#collapseFour">
@@ -238,6 +248,9 @@ $w.on('scroll', function() {
                             </div>
                         </div>
                     </div>
+                    
+                    <% } if (SymA.equals("뼈") || SymB.equals("뼈") || SymC.equals("뼈")) { %>
+                    
                     <div class="card 뼈">
                         <div class="card-heading">
                             <div data-toggle="collapse" data-target="#collapseFive">
@@ -253,6 +266,9 @@ $w.on('scroll', function() {
                             </div>
                         </div>
                     </div>
+                    
+                    <% } if (SymA.equals("장") || SymB.equals("장") || SymC.equals("장")) { %>
+                    
                     <div class="card 장">
                         <div class="card-heading">
                             <div data-toggle="collapse" data-target="#collapseSix">
@@ -269,6 +285,9 @@ $w.on('scroll', function() {
                             </div>
                         </div>
                     </div>
+                    
+                    <% } if (SymA.equals("체지방감소") || SymB.equals("체지방감소") || SymC.equals("체지방감소")) { %>
+                    
                     <div class="card 체지방감소">
                         <div class="card-heading">
                             <div data-toggle="collapse" data-target="#collapseSeven">
@@ -285,6 +304,9 @@ $w.on('scroll', function() {
                             </div>
                         </div>
                     </div>
+                    
+                    <% } if (SymA.equals("콜레스테롤") || SymB.equals("콜레스테롤") || SymC.equals("콜레스테롤")) { %>
+                    
                     <div class="card 콜레스테롤">
                         <div class="card-heading">
                             <div data-toggle="collapse" data-target="#collapseEight">
@@ -304,6 +326,9 @@ $w.on('scroll', function() {
                             </div>
                         </div>
                     </div>
+                    
+                    <% } if (SymA.equals("피부") || SymB.equals("피부") || SymC.equals("피부")) { %>
+                    
                     <div class="card 피부">
                         <div class="card-heading">
                             <div data-toggle="collapse" data-target="#collapseNine">
@@ -322,6 +347,8 @@ $w.on('scroll', function() {
                             </div>
                         </div>
                     </div>
+                    
+                    <% } if (SymA.equals("항산화") || SymB.equals("항산화") || SymC.equals("항산화")) { %>
                     <div class="card 항산화">
                         <div class="card-heading">
                             <div data-toggle="collapse" data-target="#collapseTen">
@@ -341,7 +368,11 @@ $w.on('scroll', function() {
                                 <a href="#red-ginseng28">홍삼</a>
                             </div>
                         </div>
-                    </div><div class="card 혈행개선">
+                    </div>
+                    
+                    
+                    <% } if (SymA.equals("혈행개선") || SymB.equals("혈행개선") || SymC.equals("혈행개선")) { %>
+                    <div class="card 혈행개선">
                         <div class="card-heading">
                             <div data-toggle="collapse" data-target="#collapseEleven">
                                 <a>혈행개선</a>
@@ -357,6 +388,8 @@ $w.on('scroll', function() {
                             </div>
                         </div>
                     </div>
+                    
+                    <% } %>
                 </div>
             </div>
             
@@ -527,9 +560,9 @@ $w.on('scroll', function() {
                             </div>
                             <br>
                             <div id="omega-36">
-                                <img class="about-img info-tag" src="img/blog/list/memory/eye_omega3/omega3.png" alt="">
-                                <img class="about-img info-tag" src="img/blog/list/memory/eye_omega3/top.jpg" alt="">
-                                <img class="about-img" src="img/blog/list/memory/eye_omega3/content.jpg" alt="">
+                                <img class="about-img info-tag" src="img/blog/list/eye/eye_omega3/omega3.png" alt="">
+                                <img class="about-img info-tag" src="img/blog/list/eye/eye_omega3/top.jpg" alt="">
+                                <img class="about-img" src="img/blog/list/eye/eye_omega3/content.jpg" alt="">
                              </div>
                     	</div>
                     </div>
