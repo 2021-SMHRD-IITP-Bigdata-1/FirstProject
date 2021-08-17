@@ -170,8 +170,6 @@
                         <th class="product-name">제품명</th>
                         <th class="product-brand">브랜드</th>
                         <th class="product-maker">제조국</th>
-                        <th class="product-price">정가</th>
-                        <th class="product-min-price">최저가</th>
                         <th class="product-shape">형테</th>
                         <th class="product-number">섭취횟수, 양</th>
                         <th class="product-total">총량</th>
@@ -192,8 +190,7 @@
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td></td>
-                        <td><a href="#" class="btn btn-primary height-auto btn-sm">X</a></td>
+                        <td><a href="#"  class="btn btn-primary height-auto btn-sm" data-action="delete">X</a></td>
                       </tr>
                       <tr>
                         <td class="product-thumbnail"><img src="img/영양제 이미지/감마리놀렌산/나우푸드 이브닝 프림로즈 500mg.jpg" alt="Image" class="img-fluid"></td>
@@ -280,6 +277,45 @@
     <script src="js/circle-progress.min.js"></script>
     <script src="js/jquery.barfiller.js"></script>
     <script src="js/main.js"></script>
+    
+    <script>
+     function LoginCheck() {
+        	
+        	var checkBoxArr = [];
+					
+					$.ajax({
+						// 데이터 전송방식(get/post)
+						type : "get",
+						// 데이터를 전송할 서버페이지
+						url : "LoginCheckCon",
+						// 응답데이터 타입
+						dataType : "text",
+						success : function(check) {
+							
+							// 로그인 되어있지 않다면,
+							if(check == "true") {
+								
+								alert("로그인 후 이용가능합니다.");
+								location.href='LoginJoin.jsp';
+								
+							} else {
+								
+								// 로그인이 되어있다면,
+								$("input[name=symptom]:checked").each(function() {
+									checkBoxArr.push($(this).val());
+								});
+								
+								alert(checkBoxArr + '을(를) 선택하셨습니다.');
+								
+							}
+						},
+						error : function() {
+							alert("실패!");
+						}
+						
+					})
+				}
+     </script>
 </body>
 
 </html>
