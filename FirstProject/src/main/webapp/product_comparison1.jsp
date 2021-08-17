@@ -252,35 +252,33 @@
 		             	out.println("<tr>");
 	                  	out.println("<td>");
 		                %>
-		                  <img src=<%=arr.get(i).getPdtImg()%>>
-		                  <%
-		                  out.println("</td>");
-		                  out.println("<td>"+arr.get(i).getPdtName()+"</td>");
-		                  out.println("<td>"+arr.get(i).getPdtBrand()+"</td>");
-		                  out.println("<td>"+arr.get(i).getPdtCountry()+"</td>");
-		                  out.println("<td>"+arr.get(i).getPdtPrice()+"</td>");
-		                  out.println("<td>"+arr.get(i).getPdtDiscPrice()+"</td>");
-		                  out.println("<td>"+arr.get(i).getPdtType()+"</td>");
-		                  out.println("<td>"+arr.get(i).getPdtDailyIntake()+"</td>");
-		                  out.println("<td>"+arr.get(i).getPdtOneIntake()+"</td>");
-		                  out.println("<td>"+arr.get(i).getPdtJung()+"</td>");
-		                  out.println("<td>"+arr.get(i).getPdtFree()+"</td>");
-		                  out.println("<td>"+arr.get(i).getPdtContent()+"</td>");
-                  
-
-                        %>
-                        
-                        <td>
-                            <input type="button" value="Review"> 
-                        </td>
-                      	<td>
-                            <input type="button"  value="Add"> 
-                        </td>
-                        
-                  		<%
-                        out.println("</td>");
-                    }
-                        %>
+						<img src=<%=arr.get(i).getPdtImg()%>>
+						<%
+						out.println("</td>");
+						out.println("<td>"+arr.get(i).getPdtName()+"</td>");
+						out.println("<td>"+arr.get(i).getPdtBrand()+"</td>");
+						out.println("<td>"+arr.get(i).getPdtCountry()+"</td>");
+						out.println("<td>"+arr.get(i).getPdtPrice()+"</td>");
+						out.println("<td>"+arr.get(i).getPdtDiscPrice()+"</td>");
+						out.println("<td>"+arr.get(i).getPdtType()+"</td>");
+						out.println("<td>"+arr.get(i).getPdtDailyIntake()+"</td>");
+						out.println("<td>"+arr.get(i).getPdtOneIntake()+"</td>");
+						out.println("<td>"+arr.get(i).getPdtJung()+"</td>");
+						out.println("<td>"+arr.get(i).getPdtFree()+"</td>");
+						out.println("<td>"+arr.get(i).getPdtContent()+"</td>");
+						%>
+						
+						<td>
+						    <input type="button" value="Review" onclick="goReview(<%=i%>)"> 
+						 </td>
+				
+						<td>
+						     <input type="button"  value="Add"> 
+						 </td>
+						 
+						<%
+						out.println("</td>");
+					} %>
                      </tbody>
                                       </table>
                                     </div>
@@ -350,6 +348,15 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="js/circle-progress.min.js"></script>
     <script src="js/jquery.barfiller.js"></script>
     <script src="js/main.js"></script>
+    
+    <script>
+    	function goReview(i) {
+    		alert(i);
+    	}
+    
+    </script>
+    
+    
 </body>
 
 </html>
