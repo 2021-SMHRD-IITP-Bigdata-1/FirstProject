@@ -39,7 +39,6 @@
         td { 
         	text-align: center;
         	width: 200px;
-        
          }   
        .vertical {
         display: -ms-grid !important;
@@ -102,6 +101,7 @@
          .vertical caption {
            display: block;
          }
+         
             .table {
   min-width: 1000px !important;
   width: 100%;
@@ -125,6 +125,7 @@
   .table tbody td .close span {
     font-size: 12px;
     color: #dc3545; }
+    
          
     </style>
 </head>
@@ -223,23 +224,23 @@
                                 <div class="col-md-12">
                                     <div class="table-wrap">
                                         <table class="table vertical">
-                                          <thead class="thead-dark">
+                                          <thead class="thead-dark" style="width: 140px;">
                                             <tr>
-                                              <th></th>
-                                              <th></th>
-                                              <th>Name</th>
-                                              <th>Brand</th>
-                                              <th>Country</th>
-                                              <th>Price</th>
-                                              <th>Sale</th>
-                                              <th>Type</th>
-                                              <th>Daily Intake</th>
-                                              <th>One Intake</th>
-                                              <th>Quantity</th>
-                                              <th>Allergen</th>
-                                              <th>Content</th>
-                                              <th>Review</th>
-                                              <th>Favorite</th>
+                                              <th class="none" style="height: 80.5px;"></th>
+                                              <th class="none" style="height: 80.5px;"></th>
+                                              <th class="column" style="height: 110.87px;">제품명</th>
+                                              <th class="column" style="height: 86.42px;">제조사</th>
+                                              <th class="column" style="height: 86.42px;">제조국</th>
+                                              <th class="column" style="height: 86.42px;">원가</th>
+                                              <th class="column" style="height: 86.42px;">세일가</th>
+                                              <th class="column" style="height: 86.42px;">형태</th>
+                                              <th class="column" style="height: 86.42px;">일일 섭취량</th>
+                                              <th class="column" style="height: 86.42px;">1회 섭취량</th>
+                                              <th class="column" style="height: 86.42px;">개수</th>
+                                              <th class="column" style="height: 111px;">무함유</th>
+                                              <th class="column" style="height: 200px;">함량</th>
+                                              <th class="column" style="height: 92.4px;">리뷰확인</th>
+                                              <th class="column" style="height: 92.4px;">즐겨찾기</th>
                                               
                                             </tr>
                                           </thead>
@@ -264,16 +265,16 @@
 						out.println("<td>"+arr.get(i).getPdtDailyIntake()+"</td>");
 						out.println("<td>"+arr.get(i).getPdtOneIntake()+"</td>");
 						out.println("<td>"+arr.get(i).getPdtJung()+"</td>");
-						out.println("<td>"+arr.get(i).getPdtFree()+"</td>");
-						out.println("<td>"+arr.get(i).getPdtContent()+"</td>");
+						out.println("<td style='height:111px;'>"+arr.get(i).getPdtFree()+"</td>");
+						out.println("<td style='height:200px;'>"+arr.get(i).getPdtContent()+"</td>");
 						%>
 						
 						<td>
-						    <input type="button" value="Review" onclick="goReview(<%=i%>)"> 
+						    <input type="button" value="리뷰 보러가기" onclick="goReview(<%=i%>)"> 
 						 </td>
 				
 						<td>
-						     <input type="button"  value="Add"> 
+						     <input type="button"  value="★"> 
 						 </td>
 						 
 						<%
