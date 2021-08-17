@@ -1,13 +1,14 @@
 <%@page import="VO.PickVO"%>
 <%@page import="DAO.MemberDAO"%>
 <%@page import="VO.MemberVO"%>
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=euc-kr"
+    pageEncoding="euc-kr"%>
+ <%@ page import= "java.net.URLEncoder" %>
 <!DOCTYPE html>
 <html lang="zxx">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="euc-kr">
     <meta name="description" content="TopGym Template">
     <meta name="keywords" content="TopGym, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +16,7 @@
     <title>성분별 제품비교</title>
 
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,500,700,900" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,500,700,900" rel="stylesheet">
 
     <!-- Css Styles -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
@@ -940,15 +941,73 @@ $w.on('scroll', function() {
     <script src="js/jquery.barfiller.js"></script>
     <script src="js/main.js"></script>
     
-    <script>
+    <script type ="text/javascript">
     	function goComparison(num) {
     		var nutName = document.getElementById('nut'+num).innerText;
     		
     		alert(nutName);
     		
+    		
+    		if(nutName.equals("칼슘")) {
+    			location.href = "product_comparison1.jsp";
+    		} else if(nutName.equals("오메가3")) {
+    			location.href = "product_comparison2.jsp";
+    		} else if(nutName.equals("비타민A")) {
+    			location.href = "product_comparison7.jsp";
+    		} else if(nutName.equals("글루코사민")) {
+    			location.href = "product_comparison3.jsp";
+    		} else if(nutName.equals("비타민C")) {
+    			location.href = "product_comparison8.jsp";
+    		} else if(nutName.equals("비타민D")) {
+    			location.href = "product_comparison9.jsp";
+    		} else if(nutName.equals("루테인")) {
+    			location.href = "product_comparison4.jsp";
+    		} else if(nutName.equals("프로바이오틱스")) {
+    			location.href = "product_comparison22.jsp";
+    		} else if(nutName.equals("알로에겔")) {
+    			location.href = "product_comparison11.jsp";
+    		} else if(nutName.equals("차전자피")) {
+    			location.href = "product_comparison15.jsp";
+    		} else if(nutName.equals("엠에스엠")) {
+    			location.href = "product_comparison12.jsp";
+    		} else if(nutName.equals("보스웰리아")) {}
+    			location.href = "product_comparison6.jsp";
+    		} else if(nutName.equals("감마리놀렌산")) {
+    			location.href = "product_comparison2.jsp";
+    		} else if(nutName.equals("은행잎")) {
+    			location.href = "product_comparison14.jsp";
+    		} else if(nutName.equals("홍삼")) {
+    			location.href = "product_comparison24.jsp";
+    		} else if(nutName.equals("스피루리나")) {
+    			location.href = "product_comparison10.jsp";
+    		} else if(nutName.equals("클로렐라")) {
+    			location.href = "product_comparison20.jsp";
+    		} else if(nutName.equals("키토산")) {
+    			location.href = "product_comparison21.jsp";
+    		} else if(nutName.equals("카테킨")) {
+    			location.href = "product_comparison16.jsp";
+    		} else if(nutName.equals("가르시니아")) {
+    			location.href = "product_comparison1.jsp";
+    		} else if(nutName.equals("프로폴리스")) {
+    			location.href = "product_comparison23.jsp";
+    		} else if(nutName.equals("코큐텐")) {
+    			location.href = "product_comparison18.jsp";
+    		} else if(nutName.equals("콜라겐")) {
+    			location.href = "product_comparison19.jsp";
+    		} else if(nutName.equals("밀크시슬")) {
+    			location.href = "product_comparison5.jsp";
+    		} else {
+    			alert("실패 ㅠㅠㅠㅠㅠㅠ");
+    		}
+    		
+    		
+                /*
     		$.ajax({
 				// 데이터 전송방식(get/post)
-				type : "get",
+				type : "post",
+				contentType: "application/x-www-form-urlencoded; charset=euc-kr",
+				
+				
 				// 전송할 데이터
 				data : {"nut" : nutName},
 				// 데이터를 전송할 서버페이지
@@ -960,7 +1019,10 @@ $w.on('scroll', function() {
 					 alert(data);
 					 
 					 if(data == "true") {
-						 location.href = 'product_comparison2.jsp';
+						 if(nutName.equals('')) {
+							 
+						 } else if(nutName.equals(''))
+						 location.href = 'product_comparison.jsp';
 						 
 					 } else {
 						 
@@ -972,6 +1034,7 @@ $w.on('scroll', function() {
 				}
 				
 			})
+			*/
     		
     		
 

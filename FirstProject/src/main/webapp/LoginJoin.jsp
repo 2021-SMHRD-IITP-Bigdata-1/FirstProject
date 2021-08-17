@@ -5,14 +5,18 @@
 <html lang="zxx">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="TopGym Template">
+
+    <meta charset="euc-kr">
+    <meta name="description" content="TopGym Te
+    
+    mplate">
     <meta name="keywords" content="TopGym, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>로그인/회원가입 페이지입니다.</title>
 
     <!-- Google Font -->
+    
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,500,700,900" rel="stylesheet">
 
     <!-- Css Styles -->

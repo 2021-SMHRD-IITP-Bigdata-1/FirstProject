@@ -2,6 +2,7 @@ package Controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.net.URLDecoder;
 import java.util.ArrayList;
 
 import javax.servlet.ServletException;
@@ -19,11 +20,18 @@ public class ComparisonCon extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		request.setCharacterEncoding("utf-8");
-		response.setContentType("text/html;charset=utf-8");
+		request.setCharacterEncoding("euc-kr");
+		response.setCharacterEncoding("euc-kr");
+		response.setContentType("text/html;charset=euc-kr"); 
+
+		String nutName = URLDecoder.decode(request.getParameter("nut"),"euc-kr");
+
 		
-		String nutName = request.getParameter("nut");
-		System.out.println(nutName);
+
+		
+		
+		//String nutName = request.getParameter("nut");
+		System.out.println("가나다"+nutName);
 		
 		MemberDAO dao = new MemberDAO();
 		
@@ -40,11 +48,11 @@ public class ComparisonCon extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		
 		if(array != null) {
-			
 			out.print(true);
 			
 			for(int i = 0; i < array.size(); i++) {
 				System.out.println(array.get(i).getPdtName());
+				System.out.println(array.get(i).getPdtCode());
 			}
 			
 		} 
