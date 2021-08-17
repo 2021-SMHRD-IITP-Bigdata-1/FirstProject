@@ -55,11 +55,11 @@ public class ProductVO {
 	public String getPdtImg() {
 		return pdtImg;
 	}
-	public ProductVO(String getpdtCode, String pdtName, String pdtBrand, String pdtCountry, String pdtPrice,
+	public ProductVO(String pdtCode, String pdtName, String pdtBrand, String pdtCountry, String pdtPrice,
 			String pdtDiscPrice, String pdtType, String pdtDailyIntake, String pdtOneIntake, String pdtJung ,String pdtFree,
 			String pdtContent,String pdtImg) {
 		super();
-		this.pdtCode = getpdtCode;
+		this.pdtCode = pdtCode;
 		this.pdtName = pdtName;
 		this.pdtBrand = pdtBrand;
 		this.pdtCountry = pdtCountry;
@@ -73,6 +73,13 @@ public class ProductVO {
 		this.pdtContent = pdtContent;
 		this.pdtImg = pdtImg;
 	}
+	
+	public ProductVO(String pdtCode, String pdtName) {
+		this.pdtCode = pdtCode;
+		this.pdtName = pdtName;
+	}
+	
+	
 	
 
 	 

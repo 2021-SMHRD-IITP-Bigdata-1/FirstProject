@@ -1,6 +1,6 @@
 select * from MEMBER;
 
-select * from MEMBER where mem_id='ÇÑ±ÛÀÎÄÚµùµÉ±î';
+select * from MEMBER where mem_id='ï¿½Ñ±ï¿½ï¿½ï¿½ï¿½Úµï¿½ï¿½É±ï¿½';
 
 delete from member;
 
@@ -17,4 +17,6 @@ select mem_seq.nextval from dual;
 select * from user_sequences;
 
 SELECT mem_seq.NEXTVAL FROM DUAL;
+
+select * from review;
 

@@ -11,6 +11,7 @@ import VO.MemberVO;
 import VO.NutritionVO;
 import VO.PickVO;
 import VO.ProductVO;
+import VO.ReviewVO;
 
 public class MemberDAO {
 	
@@ -22,6 +23,7 @@ public class MemberDAO {
 	PickVO vo2 = null;
 	ProductVO vo3 = null;
 	NutritionVO vo4 = null;
+	ReviewVO vo5 = null;
 	int cnt = 0;
 	
 	public void getConn() {
@@ -75,9 +77,9 @@ public class MemberDAO {
 			cnt = psmt.executeUpdate();
 			
 			if(cnt > 0) {
-				System.out.println("insert ����!");
+				System.out.println("insert 성공!");
 			}else {
-				System.out.println("insert ���Ф̤�");
+				System.out.println("insert 실패,,");
 			}
 
 		} catch (Exception e) {
@@ -334,7 +336,80 @@ public class MemberDAO {
 	}
 	
 	
+	public ArrayList<ReviewVO> selectReview(int pdtCode) {
+		
+		ArrayList<ReviewVO> arr = new ArrayList<ReviewVO>();
+		
+		try {
+			getConn();
+
+			String sql = "select * from review where pdt_code = ?";
+
+			psmt = conn.prepareStatement(sql);
+
+			psmt.setInt(1, pdtCode);
+
+			rs = psmt.executeQuery();
+			
+			while(rs.next()) {
+				
+				int getRevNo = rs.getInt(1);
+				int getRevPdtCode = rs.getInt(2);
+				String getRevTitle = rs.getString(3);
+				String getContent = rs.getString(4);
+				int getRevRating = rs.getInt(5);
+				
+				vo5 = new ReviewVO(getRevNo, getRevPdtCode, getRevTitle, getContent, getRevRating);
+				
+				arr.add(vo5);
+				
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			
+		} finally {
+			close();
+		}
+		
+		
+		return arr;
+		
+		
+		
+	}
 	
+	
+	public String selectPdtName(int pdtCode) {
+		
+		String getPdtName = "";
+		
+		try {
+			getConn();
+
+			String sql = "select pdt_name from product where pdt_code = ?";
+
+			psmt = conn.prepareStatement(sql);
+
+			psmt.setInt(1, pdtCode);
+
+			rs = psmt.executeQuery();
+			
+			while(rs.next()) {
+				
+				getPdtName = rs.getString(1);
+				
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			
+		} finally {
+			close();
+		}
+		
+		return getPdtName;
+	}
 	
 	
 }

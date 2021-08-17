@@ -1,3 +1,7 @@
+<%@page import="VO.ProductVO"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="DAO.MemberDAO"%>
+<%@page import="VO.ReviewVO"%>
 <%@page import="VO.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
@@ -32,7 +36,7 @@
 			border : 3px solid gray;
 			border-spacing : 5px;
 			width : 100%;
-			height : 500px;
+			height : 400px;
 		}
 		td {
 			border: 2px solid lightgray;
@@ -48,16 +52,15 @@
 		}
 		
 		.reviewTitle {
-			width : 60%;
+			width : 55%;
 		}
 		.reviewRatings {
-			width : 20%;
+			width : 25%;
 		}
 		.reviewContent {
 			height : 90%;
-		}
-		.reviewContent {
-			padding : 10px;
+			font-size: 20px;
+			padding : 25px;
 		}
 
 
@@ -67,6 +70,17 @@
 <body>
 	<%
 		MemberVO vo = (MemberVO)session.getAttribute("vo_session");
+		
+	
+		MemberDAO dao = new MemberDAO();
+		
+		// ƒÆΩ∑ æÿ ∏∂±◊≥◊Ω∑ ∫Ò≈∏πŒD æ∆ø¨
+		int pdtCode = 1;
+		
+		ArrayList<ReviewVO> arr = dao.selectReview(pdtCode);
+		
+		String pdtName = dao.selectPdtName(pdtCode);
+		
 	%>
     <!-- Page Preloder -->
     <div id="preloder">
@@ -146,23 +160,56 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2 class="heading-section" style="bottom-margin: 10px;"><strong>[¡¶«∞∏Ì] ∏Æ∫‰</strong></h2>
+                    <h3 class="heading-section" style="bottom-margin: 10px;"><strong>[<%= pdtName %>] ∏Æ∫‰</strong></h3>
                     <div class="section-title">
                        
+                       
+                       <% for(int i = 0; i < arr.size(); i++) { %>
+                       			
+                       			
+                       			
                        	<div>
 	                        <table>
 	                        	<tr id="reviewRow1">
 	                        		<td width="10%" style="text-align : center;">¡¶∏Ò</td>
-	                        		<td class="reviewTitle"></td>
+	                        		<td class="reviewTitle"><%=arr.get(i).getTitle() %></td>
 	                        		<td width="10%" style="text-align : center;">∆Ú¡°</td>
-	                        		<td class="reviewRating"></td>
+	                        		<td class="reviewRating">
+	                        		<% if(arr.get(i).getRating() > 80) { %>
+	                        			<span style="width:45px; display:inline-block;"><img src="img/star.png"></span>
+	                        			<span style="width:45px; display:inline-block;"><img src="img/star.png"></span>
+	                        			<span style="width:45px; display:inline-block;"><img src="img/star.png"></span>
+	                        			<span style="width:45px; display:inline-block;"><img src="img/star.png"></span>
+	                        			<span style="width:45px; display:inline-block;"><img src="img/star.png"></span>
+	                        		<% } else if(arr.get(i).getRating() > 60) { %>
+	                        			<span style="width:45px; display:inline-block;"><img src="img/star.png"></span>
+	                        			<span style="width:45px; display:inline-block;"><img src="img/star.png"></span>
+	                        			<span style="width:45px; display:inline-block;"><img src="img/star.png"></span>
+	                        			<span style="width:45px; display:inline-block;"><img src="img/star.png"></span>
+	                        		
+	                        		<% } else if(arr.get(i).getRating() > 40) { %>
+	                        			<span style="width:45px; display:inline-block;"><img src="img/star.png"></span>
+	                        			<span style="width:45px; display:inline-block;"><img src="img/star.png"></span>
+	                        			<span style="width:45px; display:inline-block;"><img src="img/star.png"></span>
+	                        		
+	                        		<% } else if(arr.get(i).getRating() > 20) { %>
+	                        			<span style="width:45px; display:inline-block;"><img src="img/star.png"></span>
+	                        			<span style="width:45px; display:inline-block;"><img src="img/star.png"></span>
+	                        		
+	                        		<% } else if(arr.get(i).getRating() > 0) { %>
+	                        			<span style="width:45px; display:inline-block;"><img src="img/star.png"></span>
+	                        		<% } %>
+	                        		
+	                        		</td>
 	                        	</tr>
 	                        	<tr id="reviewRow2">
-	                        		<td class="reviewContent" colspan="4"></td>
+	                        		<td class="reviewContent" colspan="4" style=""><%=arr.get(i).getContent() %></td>
 	                        	</tr>
 	                        </table>
 	                        
                        	</div>
+                       	
+                       <% } %>
                         
                         
                         
