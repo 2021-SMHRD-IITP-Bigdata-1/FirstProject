@@ -157,37 +157,37 @@
                             <tr>
                                 <td>     
                                     <span class="box">
-                                        <img alt="" src="img/Info2/1.png"/>
+                                        <img alt="" src="img/Info2/1.png" id="°¡¸£½Ã´Ï¾Æ" class="submit" />
                                     </span>
                                     <p>°¡¸£½Ã´Ï¾Æ</p>
                                 </td>
                                 <td>
                                     <span class="box">
-                                        <img alt="" src="img/Info2/2.png" />
+                                        <img alt="" src="img/Info2/2.png" id="°¨¸¶¸®³î·»»ê" class="submit" />
                                     </span>
                                     <p>°¨¸¶¸®³î·»»ê</p>
                                 </td>
                                 <td>
                                     <span class="box">
-                                    <img alt="" src="img/Info2/3.png" />
+                                    <img alt="" src="img/Info2/3.png" id="±Û·çÄÚ»ç¹Î" class="submit" />
                                     </span>
-                                    <p>±Û·çÄÚ»ç¹Î</p>
+                                    <p>±Û·çÄÚ»ç¹Î</p> 
                                 </td>
                                 <td>
                                     <span class="box">
-                                    <img alt="" src="img/Info2/4.png" />
+                                    <img alt="" src="img/Info2/4.png" id="·çÅ×ÀÎ" class="submit" />
                                     </span>
                                     <p>·çÅ×ÀÎ</p>
                                 </td>
                                 <td>
                                     <span class="box">
-                                    <img alt="" src="img/Info2/5.png" />
+                                    <img alt="" src="img/Info2/5.png" id="¹ÐÅ©¾¾½½" class="submit"/>
                                     </span>
-                                    <p>¹ÐÅ©¾¾½½</p>
+                                    <p>¹ÐÅ©¾¾½½</p> 
                                 </td>
                                 <td>
                                     <span class="box">
-                                    <img alt="" src="img/Info2/6.png"/>
+                                    <img alt="" src="img/Info2/6.png"/ id="º¸½ºÀ£¸®¾Æ" class="submit">
                                     </span>
                                     <p>º¸½ºÀ£¸®¾Æ</p>
                                 </td>
@@ -196,38 +196,38 @@
                             <tr>
                                 <td>
                                     <span class="box">
-                                    <img alt="" src="img/Info2/7.png" />
+                                    <img alt="" src="img/Info2/7.png" id="ºñÅ¸¹Î A" class="submit">
                                     </span>
                                     <p>ºñÅ¸¹Î A</p>
                                    
                                 </td>
                                 <td>
                                     <span class="box">
-                                    <img alt="" src="img/Info2/8.png" />
+                                    <img alt="" src="img/Info2/8.png" id="ºñÅ¸¹Î C" class="submit"/>
                                     </span>
                                     <p>ºñÅ¸¹Î C</p>
                                 </td>
                                 <td>
                                     <span class="box">
-                                    <img alt="" src="img/Info2/9.png" />
+                                    <img alt="" src="img/Info2/9.png" id="ºñÅ¸¹Î D" class="submit">
                                     </span>
                                     <p>ºñÅ¸¹Î D</p>
                                 </td>
                                 <td>
                                     <span class="box">
-                                    <img alt="" src="img/Info2/10.png" /> 
+                                    <img alt="" src="img/Info2/10.png" id="½ºÇÇ·ç¸®³ª" class="submit"/> 
                                     </span>
                                     <p>½ºÇÇ·ç¸®³ª</p>
                                 </td>
                                 <td>
                                     <span class="box">
-                                    <img alt="" src="img/Info2/11.png"/>
+                                    <img alt="" src="img/Info2/11.png" id="¾Ë·Î¿¡°Ö" class="submit"/>
                                     </span>
                                     <p>¾Ë·Î¿¡°Ö</p>
                                 </td>
                                 <td>
                                     <span class="box">
-                                    <img alt="" src="img/Info2/12.png" />
+                                    <img alt="" src="img/Info2/12.png" id="¿¥¿¡½º¿¥" class="submit" />
                                     </span>
                                     <p>¿¥¿¡½º¿¥</p>
                                 </td>
@@ -242,31 +242,31 @@
                                 </td>
                                 <td>
                                     <span class="box">
-                                    <img alt="" src="img/Info2/14.png" />
+                                    <img alt="" src="img/Info2/14.png" id="ÀºÇàÀÙ" class="submit" />
                                     </span>
                                     <p>ÀºÇàÀÙ</p>
                                 </td>
                                 <td>
                                     <span class="box">
-                                    <img alt="" src="img/Info2/15.png" />
+                                    <img alt="" src="img/Info2/15.png" id="Â÷ÀüÀÚÇÇ" class="submit" />
                                     </span>
                                     <p>Â÷ÀüÀÚÇÇ</p>
                                 </td>
                                 <td>
                                     <span class="box">
-                                    <img alt="" src="img/Info2/16.png" />
+                                    <img alt="" src="img/Info2/16.png" id="Ä«Å×Å²" class="submit" />
                                     </span>
                                     <p>Ä«Å×Å²</p>
                                 </td>
                                 <td>
                                     <span class="box">
-                                    <img alt="" src="img/Info2/17.png" />
+                                    <img alt="" src="img/Info2/17.png" id="Ä®½·" class="submit"/>
                                     </span>
                                     <p>Ä®½·</p>
                                 </td>
                                 <td>
                                     <span class="box">
-                                    <img alt="" src="img/Info2/18.png" />
+                                    <img alt="" src="img/Info2/18.png" id="ÄÚÅ¥ÅÙ" class="submit"/>
                                     </span>
                                     <p>ÄÚÅ¥ÅÙ</p>
                                 </td>
@@ -274,37 +274,37 @@
                             <tr>
                                 <td>
                                     <span class="box">
-                                    <img alt="" src="img/Info2/19.png"/>
+                                    <img alt="" src="img/Info2/19.png" id="ÄÝ¶ó°Õ" class="submit"/>
                                     </span>
                                     <p>ÄÝ¶ó°Õ</p>
                                 </td>
                                 <td>
                                     <span class="box">
-                                    <img alt="" src="img/Info2/20.png" />
+                                    <img alt="" src="img/Info2/20.png" id="Å¬·Î·¼¶ó" class="submit" />
                                     </span>
                                     <p>Å¬·Î·¼¶ó</p>
                                 </td>
                                 <td>
                                     <span class="box">
-                                    <img alt="" src="img/Info2/21.png" />
+                                    <img alt="" src="img/Info2/21.png" id="Å°Åä»ê" class="submit"/>
                                     </span>
                                     <p>Å°Åä»ê</p>
                                 </td>
                                 <td>
                                     <span class="box">
-                                    <img alt="" src="img/Info2/22.png" />
+                                    <img alt="" src="img/Info2/22.png" id="ÇÁ·Î¹ÙÀÌ¿ÀÆ½½º" class="submit" />
                                     </span>
                                     <p>ÇÁ·Î¹ÙÀÌ¿ÀÆ½½º</p>
                                 </td>
                                 <td>
                                     <span class="box">
-                                    <img alt="" src="img/Info2/23.png" />
+                                    <img alt="" src="img/Info2/23.png"  id="ÇÁ·ÎÆú¸®½º" class="submit"/>
                                     </span>
                                     <p>ÇÁ·ÎÆú¸®½º</p>
                                 </td>
                                 <td>
                                     <span class="box">
-                                    <img alt="" src="img/Info2/24.png"/>
+                                    <img alt="" src="img/Info2/24.png" id="È«»ï" class="submit"/>
                                     </span>
                                     <p>È«»ï</p>
                                 </td>
@@ -381,7 +381,34 @@
     <script src="js/jquery.barfiller.js"></script>
     <script src="js/main.js"></script>
     
-    <script type="text/javascript"> document.getElementById("¿À¸Þ°¡3").onclick = function () { location.href = "product_comparison4.jsp";};</script>
+    <script type="text/javascript"> 
+    document.getElementById("Ä®½·").onclick = function () { location.href = "product_comparison1.jsp";};
+    document.getElementById("¿À¸Þ°¡3").onclick = function () { location.href = "product_comparison2.jsp";};
+    document.getElementById("ºñÅ¸¹Î A").onclick = function () { location.href = "product_comparison3.jsp";};
+    document.getElementById("±Û·çÄÚ»ç¹Î").onclick = function () { location.href = "product_comparison4.jsp";};
+    document.getElementById("ºñÅ¸¹Î C").onclick = function () { location.href = "product_comparison5.jsp";};
+    document.getElementById("ºñÅ¸¹Î D").onclick = function () { location.href = "product_comparison6.jsp";};
+    document.getElementById("·çÅ×ÀÎ").onclick = function () { location.href = "product_comparison7.jsp";};
+    document.getElementById("ÇÁ·Î¹ÙÀÌ¿ÀÆ½½º").onclick = function () { location.href = "product_comparison8.jsp";};
+    document.getElementById("¾Ë·Î¿¡°Ö").onclick = function () { location.href = "product_comparison9.jsp";};
+    document.getElementById("Â÷ÀüÀÚÇÇ").onclick = function () { location.href = "product_comparison10.jsp";};
+    document.getElementById("¿¥¿¡½º¿¥").onclick = function () { location.href = "product_comparison11.jsp";};
+    document.getElementById("º¸½ºÀ£¸®¾Æ").onclick = function () { location.href = "product_comparison12.jsp";};
+    document.getElementById("°¨¸¶¸®³î·»»ê").onclick = function () { location.href = "product_comparison13.jsp";};
+    document.getElementById("ÀºÇàÀÙ").onclick = function () { location.href = "product_comparison14.jsp";};
+    document.getElementById("È«»ï").onclick = function () { location.href = "product_comparison15.jsp";};
+    document.getElementById("½ºÇÇ·ç¸®³ª").onclick = function () { location.href = "product_comparison16.jsp";};
+    document.getElementById("Å¬·Î·¼¶ó").onclick = function () { location.href = "product_comparison17.jsp";};
+    document.getElementById("Å°Åä»ê").onclick = function () { location.href = "product_comparison18.jsp";};
+    document.getElementById("Ä«Å×Å²").onclick = function () { location.href = "product_comparison19.jsp";};
+    document.getElementById("°¡¸£½Ã´Ï¾Æ").onclick = function () { location.href = "product_comparison20.jsp";};
+    document.getElementById("ÇÁ·ÎÆú¸®½º").onclick = function () { location.href = "product_comparison21.jsp";};
+    document.getElementById("ÄÚÅ¥ÅÙ").onclick = function () { location.href = "product_comparison22.jsp";};
+    document.getElementById("ÄÝ¶ó°Õ").onclick = function () { location.href = "product_comparison23.jsp";};
+    document.getElementById("¹ÐÅ©¾¾½½").onclick = function () { location.href = "product_comparison24.jsp";};
+    
+    
+    </script>
 </body>
 
 </html>
