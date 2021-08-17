@@ -176,16 +176,16 @@
                   <table class="table table-bordered" style="text-align: center;">
                     <thead>
                       <tr>
-                        <th class="product-thumbnail">제품이미지</th>
-                        <th class="product-name">제품명</th>
-                        <th class="product-brand">브랜드</th>
-                        <th class="product-maker">제조국</th>
-                        <th class="product-shape">형테</th>
-                        <th class="product-number">섭취횟수, 양</th>
-                        <th class="product-total">총량</th>
-                        <th class="product-as">특징</th>
-                        <th class="product-review">리뷰</th>
-                        <th class="product-remove">즐겨찾기 제거</th>
+                        <th class="product-thumbnail" style="width:140px;">제품이미지</th>
+                        <th class="product-name" style="width:160px;">제품명</th>
+                        <th class="product-brand" style="width:100px;">브랜드</th>
+                        <th class="product-maker" style="width:90px;">제조국</th>
+                        <th class="product-shape" style="width:120px;">형태</th>
+                        <th class="product-number" style="width:100px;">섭취횟수, 양</th>
+                        <th class="product-total" style="width:100px;">총량</th>
+                        <th class="product-as" style="width:130px;">특징</th>
+                        <th class="product-review" style="width:100px;">리뷰</th>
+                        <th class="product-remove" style="width:110px;">즐겨찾기 제거</th>
                       </tr>
                       
                                        
@@ -204,14 +204,18 @@
 						out.println("<td>"+arr.get(i).getPdtBrand()+"</td>");
 						out.println("<td>"+arr.get(i).getPdtCountry()+"</td>");
 						out.println("<td>"+arr.get(i).getPdtType()+"</td>");
-						out.println("<td>"+arr.get(i).getPdtDailyIntake()+"</td>");
-						out.println("<td>"+arr.get(i).getPdtOneIntake()+"</td>");
+						out.println("<td>"+arr.get(i).getPdtDailyIntake()+"/<br>"+arr.get(i).getPdtOneIntake()+"</td>");
 						out.println("<td>"+arr.get(i).getPdtJung()+"</td>");
+						if(arr.get(i).getPdtFree() == null) {
+							out.println("<td> </td>");
+						} else {
+							out.println("<td>"+arr.get(i).getPdtFree()+"</td>");
+						}
 				
 						%>
 						
 						<td>
-						    <input type="button1" class="btn btn-primary height-auto btn-sm" value="리뷰 보러가기" onclick="goReview(<%=i%>)"> 
+						    <input type="button1" class="btn btn-primary height-auto btn-sm" value="리뷰 보러가기" onclick="goReview(<%=i%>)" style="width: 120px;"> 
 						</td>
 				
 					    <td><input type="button" class="btn btn-primary height-auto btn-sm" value="X"> </td>
