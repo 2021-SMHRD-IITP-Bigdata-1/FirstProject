@@ -271,7 +271,7 @@ $w.on('scroll', function() {
                                 <input type="button" value="+"  onclick="goComparison('product_comparison9.jsp')">
                                 <br>
                                 <a href="#calcium8" id="nut11">칼슘</a>
-                                <input type="button" value="+"  onclick="goComparison('product_comparison17.jsp')">
+                                <input type="button" value="+"  onclick="goComparison('product_comparison1.jsp')">
                             </div>
                         </div>
                     </div>
@@ -731,22 +731,22 @@ $w.on('scroll', function() {
 	                        </div>
 	                        <br>
 	                        <div id="cha14-5">
-	                            <img class="about-img info-tag" src="img/blog/list/intestine/cholesterol_psyllium/차전자피.png" alt="">
-	                            <img class="about-img info-tag" src="img/blog/list/intestine/cholesterol_psyllium/main.jpg" alt="">
-	                            <img class="about-img info-tag" src="img/blog/list/intestine/cholesterol_psyllium/content_01.jpg" alt="">
-	                            <img class="about-img info-tag" src="img/blog/list/intestine/cholesterol_psyllium/content_02.jpg" alt="">
-	                            <img class="about-img info-tag" src="img/blog/list/intestine/cholesterol_psyllium/content_03.jpg" alt="">
-	                            <img class="about-img info-tag" src="img/blog/list/intestine/cholesterol_psyllium/content_04.jpg" alt="">
-	                            <img class="about-img info-tag" src="img/blog/list/intestine/cholesterol_psyllium/content_05.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/cholesterol_psyllium/차전자피.png" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/cholesterol_psyllium/main.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/cholesterol_psyllium/content_01.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/cholesterol_psyllium/content_02.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/cholesterol_psyllium/content_03.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/cholesterol_psyllium/content_04.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/cholesterol_psyllium/content_05.jpg" alt="">
 	                        </div>
 	                        <br>
 	                        <div id="catechin15">
-	                            <img class="about-img info-tag" src="img/blog/list/diet/cholesterol_catechins/카테킨.png" alt="">
-	                            <img class="about-img info-tag" src="img/blog/list/diet/cholesterol_catechins/main.jpg" alt="">
-	                            <img class="about-img info-tag" src="img/blog/list/diet/cholesterol_catechins/content_01.jpg" alt="">
-	                            <img class="about-img info-tag" src="img/blog/list/diet/cholesterol_catechins/content_02.jpg" alt="">
-	                            <img class="about-img info-tag" src="img/blog/list/diet/cholesterol_catechins/content_03.jpg" alt="">
-	                            <img class="about-img info-tag" src="img/blog/list/diet/cholesterol_catechins/content_04.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/cholesterol_catechins/카테킨.png" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/cholesterol_catechins/main.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/cholesterol_catechins/content_01.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/cholesterol_catechins/content_02.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/cholesterol_catechins/content_03.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/cholesterol_catechins/content_04.jpg" alt="">
 	                        </div>
 	                        <br>
 	                        <div id="chlorella16">
@@ -758,12 +758,12 @@ $w.on('scroll', function() {
 	                        </div>
 	                        <br>
 	                        <div id="chitosan17">
-	                            <img class="about-img info-tag" src="img/blog/list/diet/cholesterol_chitosan/키토산.png" alt="">
-	                            <img class="about-img info-tag" src="img/blog/list/diet/cholesterol_chitosan/main.jpg" alt="">
-	                            <img class="about-img info-tag" src="img/blog/list/diet/cholesterol_chitosan/content_01.jpg" alt="">
-	                            <img class="about-img info-tag" src="img/blog/list/diet/cholesterol_chitosan/content_02.jpg" alt="">
-	                            <img class="about-img info-tag" src="img/blog/list/diet/cholesterol_chitosan/content_03.jpg" alt="">
-	                            <img class="about-img info-tag" src="img/blog/list/diet/cholesterol_chitosan/content_04.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/cholesterol_chitosan/키토산.png" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/cholesterol_chitosan/main.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/cholesterol_chitosan/content_01.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/cholesterol_chitosan/content_02.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/cholesterol_chitosan/content_03.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/cholesterol_chitosan/content_04.jpg" alt="">
 	                        </div>
                     	</div>
                     </div>
@@ -774,25 +774,25 @@ $w.on('scroll', function() {
                     <div class="single-blog-item">
                         <div class="피부">
 	                        <div id="gamma18">
-	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/skin_gamma/감마리놀렌산.png" alt="">
-	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/skin_gamma/top.jpg" alt="">
-	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/skin_gamma/content.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/skin/skin_gamma/감마리놀렌산.png" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/skin/skin_gamma/top.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/skin/skin_gamma/content.jpg" alt="">
 	                        </div>
 	                        <br>
 	                        <div id="spirulina19">
-	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/skin_spirulina/스피루리나.png" alt="">
-	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/skin_spirulina/200803_etc_800_main.jpg" alt="">
-	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/skin_spirulina/contents_01.jpg" alt="">
-	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/skin_spirulina/contents_02.jpg" alt="">
-	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/skin_spirulina/contents_03.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/skin/skin_spirulina/스피루리나.png" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/skin/skin_spirulina/200803_etc_800_main.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/skin/skin_spirulina/contents_01.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/skin/skin_spirulina/contents_02.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/skin/skin_spirulina/contents_03.jpg" alt="">
 	                        </div>
 	                        <br>
 	                        <div id="aloe-gel19-5">
-	                            <img class="about-img info-tag" src="img/blog/list/intestine/skin_AloeGel/알로에겔.png" alt="">
-	                            <img class="about-img info-tag" src="img/blog/list/intestine/skin_AloeGel/main.jpg" alt="">
-	                            <img class="about-img info-tag" src="img/blog/list/intestine/skin_AloeGel/contents_01.jpg" alt="">
-	                            <img class="about-img info-tag" src="img/blog/list/intestine/skin_AloeGel/contents_02.jpg" alt="">
-	                            <img class="about-img info-tag" src="img/blog/list/intestine/skin_AloeGel/contents_03.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/skin/skin_AloeGel/알로에겔.png" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/skin/skin_AloeGel/main.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/skin/skin_AloeGel/contents_01.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/skin/skin_AloeGel/contents_02.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/skin/skin_AloeGel/contents_03.jpg" alt="">
 	                        </div>
 	                        <br>
 	                        <div id="collagen20">
@@ -803,11 +803,11 @@ $w.on('scroll', function() {
 	                        </div>
 	                        <br>
 	                        <div id="chlorella21">
-	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/skin_Chlorella/클로렐라.png" alt="">
-	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/skin_Chlorella/201013_etc_800_main.jpg" alt="">
-	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/skin_Chlorella/contents_01.jpg" alt="">
-	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/skin_Chlorella/contents_02.jpg" alt="">
-	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/skin_Chlorella/contents_03.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/skin/skin_Chlorella/클로렐라.png" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/skin/skin_Chlorella/201013_etc_800_main.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/skin/skin_Chlorella/contents_01.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/skin/skin_Chlorella/contents_02.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/skin/skin_Chlorella/contents_03.jpg" alt="">
 	                        </div>
                     	</div>
                     </div>
@@ -826,20 +826,20 @@ $w.on('scroll', function() {
 	                        </div>
 	                        <br>
 	                        <div id="spirulina23">
-	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/antioxidant_spirulina/스피루리나.png" alt="">
-	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/antioxidant_spirulina/200803_etc_800_main.jpg" alt="">
-	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/antioxidant_spirulina/contents_01.jpg" alt="">
-	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/antioxidant_spirulina/contents_02.jpg" alt="">
-	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/antioxidant_spirulina/contents_03.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/antioxidant/antioxidant_spirulina/스피루리나.png" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/antioxidant/antioxidant_spirulina/200803_etc_800_main.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/antioxidant/antioxidant_spirulina/contents_01.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/antioxidant/antioxidant_spirulina/contents_02.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/antioxidant/antioxidant_spirulina/contents_03.jpg" alt="">
 	                        </div>
 	                        <br>
 	                        <div id="catechin24">
-	                            <img class="about-img info-tag" src="img/blog/list/diet/antioxidant_catechins/카테킨.png" alt="">
-	                            <img class="about-img info-tag" src="img/blog/list/diet/antioxidant_catechins/main.jpg" alt="">
-	                            <img class="about-img info-tag" src="img/blog/list/diet/antioxidant_catechins/content_01.jpg" alt="">
-	                            <img class="about-img info-tag" src="img/blog/list/diet/antioxidant_catechins/content_02.jpg" alt="">
-	                            <img class="about-img info-tag" src="img/blog/list/diet/antioxidant_catechins/content_03.jpg" alt="">
-	                            <img class="about-img info-tag" src="img/blog/list/diet/antioxidant_catechins/content_04.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/antioxidant/antioxidant_catechins/카테킨.png" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/antioxidant/antioxidant_catechins/main.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/antioxidant/antioxidant_catechins/content_01.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/antioxidant/antioxidant_catechins/content_02.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/antioxidant/antioxidant_catechins/content_03.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/antioxidant/antioxidant_catechins/content_04.jpg" alt="">
 	                        </div>
 	                        <br>
 	                        <div id="co-q-1025">
@@ -850,11 +850,11 @@ $w.on('scroll', function() {
 	                        </div>
 	                        <br>
 	                        <div id="chlorella26">
-	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/antioxidant_Chlorella/클로렐라.png" alt="">
-	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/antioxidant_Chlorella/201013_etc_800_main.jpg" alt="">
-	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/antioxidant_Chlorella/contents_01.jpg" alt="">
-	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/antioxidant_Chlorella/contents_02.jpg" alt="">
-	                            <img class="about-img info-tag" src="img/blog/list/cholesterol/antioxidant_Chlorella/contents_03.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/antioxidant/antioxidant_Chlorella/클로렐라.png" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/antioxidant/antioxidant_Chlorella/201013_etc_800_main.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/antioxidant/antioxidant_Chlorella/contents_01.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/antioxidant/antioxidant_Chlorella/contents_02.jpg" alt="">
+	                            <img class="about-img info-tag" src="img/blog/list/antioxidant/antioxidant_Chlorella/contents_03.jpg" alt="">
 	                        </div>
 	                        <br>
 	                        <div id="propolis27">
