@@ -26,10 +26,10 @@ public class JoinCon extends HttpServlet {
 		int cnt = dao.join(id, pw, pwcheck, gender, birth);
 		
 		if(cnt > 0) {
-			System.out.println("ë¡œê·¸ì¸ ì„±ê³µ!");
+			System.out.println("·Î±×ÀÎ ¼º°ø!");
 			response.sendRedirect("index.jsp");
 		} else {
-			System.out.println("ë¡œê·¸ì¸ ì‹¤íŒ¨,,");
+			System.out.println("·Î±×ÀÎ ½ÇÆĞ,,");
 			response.sendRedirect("LoginJoin.jsp");
 		}
 		
