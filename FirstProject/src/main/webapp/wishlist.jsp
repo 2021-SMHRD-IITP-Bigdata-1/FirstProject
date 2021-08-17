@@ -1,4 +1,7 @@
 <%@page import="VO.MemberVO"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="VO.ProductVO"%>
+<%@page import="DAO.MemberDAO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -58,6 +61,13 @@
         margin: 2px 0px 0px 0px;
         border-radius: 10%;
         }
+          img{ 
+            width: auto;
+            height: 150px;
+            padding: auto;
+            box-sizing: border-box;
+            object-fit: contain;
+            }    
     </style>
 </head>
 
@@ -170,8 +180,6 @@
                         <th class="product-name">제품명</th>
                         <th class="product-brand">브랜드</th>
                         <th class="product-maker">제조국</th>
-                        <th class="product-price">정가</th>
-                        <th class="product-min-price">최저가</th>
                         <th class="product-shape">형테</th>
                         <th class="product-number">섭취횟수, 양</th>
                         <th class="product-total">총량</th>
@@ -179,50 +187,44 @@
                         <th class="product-review">리뷰</th>
                         <th class="product-remove">즐겨찾기 제거</th>
                       </tr>
+                      
+                                       
+                     <%
+                     MemberDAO dao = new MemberDAO();
+                     ArrayList<ProductVO> arr = dao.selectAll();
+					
+                     for(int i= 0; i<arr.size();i++){
+						out.println("<tr>");
+						out.println("<td>");
+						  %>
+						<img src=<%=arr.get(i).getPdtImg()%>>
+						<%
+						out.println("</td>");
+						out.println("<td>"+arr.get(i).getPdtName()+"</td>");
+						out.println("<td>"+arr.get(i).getPdtBrand()+"</td>");
+						out.println("<td>"+arr.get(i).getPdtCountry()+"</td>");
+						out.println("<td>"+arr.get(i).getPdtType()+"</td>");
+						out.println("<td>"+arr.get(i).getPdtDailyIntake()+"</td>");
+						out.println("<td>"+arr.get(i).getPdtOneIntake()+"</td>");
+						out.println("<td>"+arr.get(i).getPdtJung()+"</td>");
+				
+						%>
+						
+						<td>
+						    <input type="button1" class="btn btn-primary height-auto btn-sm" value="리뷰 보러가기" onclick="goReview(<%=i%>)"> 
+						</td>
+				
+					    <td><input type="button" class="btn btn-primary height-auto btn-sm" value="X"> </td>
+						
+						 
+						<%
+						out.println("</td>");
+					} %>
+                     
                     </thead>
                     <tbody>
                       <tr>
-                        <td class="product-thumbnail"><img src="img/영양제 이미지/가르시니아/그린몬스터 다이어트 가르시니아.jpg" alt="Image" class="img-fluid"></td>
-                        <td class="product-name"><h2 class="h5 text-black">Ibuprofen</h2></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td><a href="#" class="btn btn-primary height-auto btn-sm">X</a></td>
-                      </tr>
-                      <tr>
-                        <td class="product-thumbnail"><img src="img/영양제 이미지/감마리놀렌산/나우푸드 이브닝 프림로즈 500mg.jpg" alt="Image" class="img-fluid"></td>
-                        <td class="product-name"><h2 class="h5 text-black">Ibuprofen</h2></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td><a href="#" class="btn btn-primary height-auto btn-sm">X</a></td>
-                      </tr>
-                      <tr>
-                        <td class="product-thumbnail"><img src="img/영양제 이미지/루테인/뉴트리디데이 프리미엄 루테인 골드350MG.jpg" alt="Image" class="img-fluid"></td>
-                        <td class="product-name"><h2 class="h5 text-black">Ibuprofen</h2></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td><a href="#" class="btn btn-primary height-auto btn-sm">X</a></td>
-                      </tr>
+                       
         
                     </tbody>
                   </table>
@@ -235,7 +237,7 @@
               </div>
             </div>
           </div>
-        </div>
+
     
     
     <!-- Contact Section End -->
@@ -280,6 +282,51 @@
     <script src="js/circle-progress.min.js"></script>
     <script src="js/jquery.barfiller.js"></script>
     <script src="js/main.js"></script>
+    
+    <script>
+     function LoginCheck() {
+        	
+        	var checkBoxArr = [];
+					
+					$.ajax({
+						// 데이터 전송방식(get/post)
+						type : "get",
+						// 데이터를 전송할 서버페이지
+						url : "LoginCheckCon",
+						// 응답데이터 타입
+						dataType : "text",
+						success : function(check) {
+							
+							// 로그인 되어있지 않다면,
+							if(check == "true") {
+								
+								alert("로그인 후 이용가능합니다.");
+								location.href='LoginJoin.jsp';
+								
+							} else {
+								
+								// 로그인이 되어있다면,
+								$("input[name=symptom]:checked").each(function() {
+									checkBoxArr.push($(this).val());
+								});
+								
+								alert(checkBoxArr + '을(를) 선택하셨습니다.');
+								
+							}
+						},
+						error : function() {
+							alert("실패!");
+						}
+						
+					})
+				}
+     </script>
+     
+         <script type="text/javascript"> 
+    $('input[type="button"]').click(function(e){
+    	   $(this).closest('tr').remove()
+    	})
+    </script>
 </body>
 
 </html>

@@ -27,7 +27,7 @@ public class LoginCon extends HttpServlet {
 		MemberVO vo = dao.login(id, pw);
 		
 		if(vo != null) {
-			// ë¡œê·¸ì¸ ì„±ê³µ ì‹œ,
+			// ·Î±×ÀÎ ¼º°ø ½Ã,
 			HttpSession session = request.getSession();
 			session.setAttribute("vo_session", vo);
 			
@@ -40,11 +40,11 @@ public class LoginCon extends HttpServlet {
 			response.sendRedirect("index.jsp");
 
 		} else {
-			// ë¡œê·¸ì¸ ì‹¤íŒ¨ ì‹œ,
+			// ·Î±×ÀÎ ½ÇÆĞ ½Ã,
 			response.setContentType("text/html; charset=utf-8");
 			PrintWriter out = response.getWriter();
 			
-			out.println("<script>alert('ì•„ì´ë”” í˜¹ì€ ë¹„ë°€ë²ˆí˜¸ë¥¼ ì˜ëª» ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤.'); location.href='"+ "LoginJoin.jsp" +"'; </script>");
+			out.println("<script>alert('¾ÆÀÌµğ È¤Àº ºñ¹Ğ¹øÈ£¸¦ Àß¸ø ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù.'); location.href='"+ "LoginJoin.jsp" +"'; </script>");
 			
 			out.close();
 		}

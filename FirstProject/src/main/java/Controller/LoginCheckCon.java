@@ -22,10 +22,10 @@ public class LoginCheckCon extends HttpServlet {
 		boolean check = false;
 		
 		if(session.getAttribute("vo_session") == null) {
-			// ë¡œê·¸ì¸ ë˜ì–´ìˆì§€ ì•ŠìŒ
+			// ·Î±×ÀÎ µÇ¾îÀÖÁö ¾ÊÀ½
 			check = true;
 		} else {
-			// ë¡œê·¸ì¸ ë˜ì–´ìˆìŒ
+			// ·Î±×ÀÎ µÇ¾îÀÖÀ½
 			check = false;
 		}
 		
