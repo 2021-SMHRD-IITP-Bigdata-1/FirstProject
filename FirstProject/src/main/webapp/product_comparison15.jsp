@@ -248,7 +248,7 @@
                      MemberDAO dao = new MemberDAO();
                      ArrayList<ProductVO> arr = dao.selectAll();
                
-                     for(int i= 85;  i<90; i++){
+                     for(int i= 84;  i<90; i++){
 		             	out.println("<tr>");
 	                  	out.println("<td>");
 		                %>
