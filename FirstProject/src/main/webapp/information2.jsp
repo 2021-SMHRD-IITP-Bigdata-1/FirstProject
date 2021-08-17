@@ -96,7 +96,7 @@
 		                                <i onclick="dp_menu()" class="search-btn2 fa">마이페이지</i>
 		                                 <div style="display: none;" id="drop-content">
 		                                     <a href='member_update.jsp'>회원정보수정</a>
-		                                     <a href='wishlist.jsp'>즐겨찾기</a>
+		                                     <a href='wishlist.jsp'  type="submit" onclick="LoginCheck()">즐겨찾기</a>
 		                                     <a href='member_ withdraw.jsp'>회원탈퇴</a>
 		                                 </div>
 		                                </div>

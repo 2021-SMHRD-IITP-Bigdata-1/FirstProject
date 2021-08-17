@@ -280,8 +280,8 @@
     <script src="js/main.js"></script>
      <script>
      function LoginCheck() {
-        	
-        	var checkBoxArr = [];
+     	
+     	var checkBoxArr = [];
 					
 					$.ajax({
 						// 데이터 전송방식(get/post)
@@ -315,6 +315,7 @@
 						
 					})
 				}
+
      </script>
 </body>
 
