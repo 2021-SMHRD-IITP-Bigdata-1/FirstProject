@@ -180,7 +180,7 @@ $w.on('scroll', function() {
                             data-parent="#accordionExample">
                             <div class="card-body">
                                 <a href = "#milkseatle" id="nut1">밀크씨슬</a>
-                                <input type="button" value="+" onclick="goComparison(1)">
+                                <input type="button" value="+" onclick="goComparison('product_comparison5.jsp')">
                             </div>
                         </div>
                     </div>
@@ -198,13 +198,13 @@ $w.on('scroll', function() {
                             data-parent="#accordionExample">
                             <div class="card-body">
                                 <a href="#glucosamine1" id="nut2">글루코사민</a>
-                                <input type="button" value="+" onclick="goComparison(2)">
+                                <input type="button" value="+" onclick="goComparison('product_comparison3.jsp')">
                                 <br>
                                 <a href="#boswelia2" id="nut3">보스웰리아</a>
-                                <input type="button" value="+" onclick="goComparison(3)">
+                                <input type="button" value="+" onclick="goComparison('product_comparison6.jsp')">
                                 <br>
                                 <a href="#msm2-5" id="nut4">엠에스엠(MSM)</a>
-                                <input type="button" value="+" onclick="goComparison(4)">
+                                <input type="button" value="+" onclick="goComparison('product_comparison12.jsp')">
                             </div>
                         </div>
                     </div>
@@ -222,10 +222,10 @@ $w.on('scroll', function() {
                             data-parent="#accordionExample">
                             <div class="card-body">
                                 <a href="#omega-33" id="nut5">오메가3</a>
-                                <input type="button" value="+" onclick="goComparison(5)">
+                                <input type="button" value="+" onclick="goComparison('product_comparison13.jsp')">
                                 <br>
                                 <a href="#ginkgo4" id="nut6">은행잎(징코)
-                                <input type="button" value="+" onclick="goComparison(6)">
+                                <input type="button" value="+" onclick="goComparison('product_comparison14.jsp')">
                                 </a>
                             </div>
                         </div>
@@ -244,13 +244,13 @@ $w.on('scroll', function() {
                             data-parent="#accordionExample">
                             <div class="card-body">
                                 <a href="#vitamin-a5" id="nut7">비타민A</a>
-                                <input type="button" value="+" onclick="goComparison(7)">
+                                <input type="button" value="+" onclick="goComparison('product_comparison7.jsp')">
                                 <br>
                                 <a href="#lutein-a5-5" id="nut8">루테인</a>
-                                <input type="button" value="+" onclick="goComparison(8)">
+                                <input type="button" value="+" onclick="goComparison('product_comparison4.jsp')">
                                 <br>
                                 <a href="#omega-36" id="nut9">오메가3</a>
-                                <input type="button" value="+" onclick="goComparison(9)">
+                                <input type="button" value="+" onclick="goComparison('product_comparison13.jsp')">
                             </div>
                         </div>
                     </div>
@@ -268,10 +268,10 @@ $w.on('scroll', function() {
                             data-parent="#accordionExample">
                             <div class="card-body">
                                 <a href="#vitamin-d7" id="nut10">비타민D</a>
-                                <input type="button" value="+"  onclick="goComparison(10)">
+                                <input type="button" value="+"  onclick="goComparison('product_comparison9.jsp')">
                                 <br>
                                 <a href="#calcium8" id="nut11">칼슘</a>
-                                <input type="button" value="+"  onclick="goComparison(11)">
+                                <input type="button" value="+"  onclick="goComparison('product_comparison17.jsp')">
                             </div>
                         </div>
                     </div>
@@ -289,13 +289,13 @@ $w.on('scroll', function() {
                             data-parent="#accordionExample">
                             <div class="card-body">
                                 <a href="#aloe-gel8-5" id="nut12">알로에겔</a>
-                                <input type="button" value="+"  onclick="goComparison(12)">
+                                <input type="button" value="+"  onclick="goComparison('product_comparison11.jsp')">
                                 <br>
                                 <a href="#probiotics9" id="nut13">프로바이오틱스</a>
-                                <input type="button" value="+"  onclick="goComparison(13)">
+                                <input type="button" value="+"  onclick="goComparison('product_comparison22.jsp')">
                                 <br>
                                 <a href="#cha9-5" id="nut14">차전자피 식이섬유</a>
-                            	<input type="button" value="+ "  onclick="goComparison(14)">
+                            	<input type="button" value="+ "  onclick="goComparison('product_comparison15.jsp')">
                             </div>
                         </div>
                     </div>
@@ -313,13 +313,13 @@ $w.on('scroll', function() {
                             data-parent="#accordionExample">
                             <div class="card-body">
                                 <a href="#garcinia10" id="nut15">가르시니아</a>
-                                <input type="button" value="+"  onclick="goComparison(15)">
+                                <input type="button" value="+"  onclick="goComparison('product_comparison1.jsp')">
                                 <br>
                                 <a href="#catechin11" id="nut16">카테킨</a>
-                                <input type="button" value="+"  onclick="goComparison(16)">
+                                <input type="button" value="+"  onclick="goComparison('product_comparison16.jsp')">
                                 <br>
                                 <a href="#chitosan12" id="nut17">키토산</a>
-                                <input type="button" value="+"  onclick="goComparison(17)">
+                                <input type="button" value="+"  onclick="goComparison('product_comparison21.jsp')">
                             </div>
                         </div>
                     </div>
@@ -337,22 +337,22 @@ $w.on('scroll', function() {
                             data-parent="#accordionExample">
                             <div class="card-body">
                                 <a href="#gamma13" id="nut18">감마리놀렌산</a>
-                                <input type="button" value="+"  onclick="goComparison(18)">
+                                <input type="button" value="+"  onclick="goComparison('product_comparison2.jsp')">
                                 <br>
                                 <a href="#spirulina14" id="nut19">스피루리나</a>
-                                <input type="button" value="+"  onclick="goComparison(19)">
+                                <input type="button" value="+"  onclick="goComparison('product_comparison10.jsp')">
                                 <br>
                                 <a href="#cha14-5" id="nut20">차전자피 식이섬유</a>
-                                <input type="button" value="+"  onclick="goComparison(20)">
+                                <input type="button" value="+"  onclick="goComparison('product_comparison15.jsp')">
                                 <br>
                                 <a href="#catechin15" id="nut21">카테킨</a>
-                                <input type="button" value="+"  onclick="goComparison(21)">
+                                <input type="button" value="+"  onclick="goComparison('product_comparison16.jsp')">
                                 <br>
                                 <a href="#chlorella16" id="nut22">클로렐라</a>
-                                <input type="button" value="+"  onclick="goComparison(22)">
+                                <input type="button" value="+"  onclick="goComparison('product_comparison20.jsp')">
                                 <br>
                                 <a href="#chitosan17" id="nut23">키토산</a>
-                                <input type="button" value="+"  onclick="goComparison(23)">
+                                <input type="button" value="+"  onclick="goComparison('product_comparison21.jsp')">
                             </div>
                         </div>
                     </div>
@@ -370,19 +370,19 @@ $w.on('scroll', function() {
                             data-parent="#accordionExample">
                             <div class="card-body">
                                 <a href="#gamma18" id="nut24">감마리놀렌산</a>
-                                <input type="button" value="+"  onclick="goComparison(24)">
+                                <input type="button" value="+"  onclick="goComparison('product_comparison2.jsp')">
                                 <br>
                                 <a href="#spirulina19" id="nut25">스피루리나</a>
-                                <input type="button" value="+"  onclick="goComparison(25)">
+                                <input type="button" value="+"  onclick="goComparison('product_comparison10.jsp')">
                                 <br>
                                 <a href="#aloe-gel19-5" id="nut26">알로에겔</a>
-                                <input type="button" value="+"  onclick="goComparison(26)">
+                                <input type="button" value="+"  onclick="goComparison('product_comparison11.jsp')">
                                 <br>
                                 <a href="#collagen20" id="nut27">콜라겐</a>
-                                <input type="button" value="+"  onclick="goComparison(27)">
+                                <input type="button" value="+"  onclick="goComparison('product_comparison19.jsp')">
                                 <br>
                                 <a href="#chlorella21"id="nut28">클로렐라</a>
-                                <input type="button" value="+"  onclick="goComparison(28)">
+                                <input type="button" value="+"  onclick="goComparison('product_comparison20.jsp')">
                             </div>
                         </div>
                     </div>
@@ -399,25 +399,25 @@ $w.on('scroll', function() {
                             data-parent="#accordionExample">
                             <div class="card-body">
                                 <a href="#vitamin-c22" id="nut29">비타민C</a>
-                                <input type="button" value="+" onclick="goComparison(29)">
+                                <input type="button" value="+" onclick="goComparison('product_comparison8.jsp')">
                                 <br>
                                 <a href="#spirulina23" id="nut30">스피루리나</a>
-                                <input type="button" value="+" onclick="goComparison(30)">
+                                <input type="button" value="+" onclick="goComparison('product_comparison10.jsp')">
                                 <br>
                                 <a href="#catechin24" id="nut31">카테킨</a>
-                                <input type="button" value="+" onclick="goComparison(31)">
+                                <input type="button" value="+" onclick="goComparison('product_comparison16.jsp')">
                                 <br>
                                 <a href="#co-q-1025" id="nut32">코큐텐</a>
-                                <input type="button" value="+" onclick="goComparison(32)">
+                                <input type="button" value="+" onclick="goComparison('product_comparison18.jsp')">
                                 <br>
                                 <a href="#chlorella26" id="nut33">클로렐라</a>
-                                <input type="button" value="+" onclick="goComparison(33)">
+                                <input type="button" value="+" onclick="goComparison('product_comparison20.jsp')">
                                 <br>
                                 <a href="#propolis27" id="nut34">프로폴리스</a>
-                                <input type="button" value="+" onclick="goComparison(34)">
+                                <input type="button" value="+" onclick="goComparison('product_comparison23.jsp')">
                                 <br>
                                 <a href="#red-ginseng28" id="nut35">홍삼</a>
-                                <input type="button" value="+" onclick="goComparison(35)">
+                                <input type="button" value="+" onclick="goComparison('product_comparison24.jsp')">
                             </div>
                         </div>
                     </div>
@@ -435,13 +435,13 @@ $w.on('scroll', function() {
                             data-parent="#accordionExample">
                             <div class="card-body">
                                 <a href="#gamma29" id="nut36">감마리놀렌산</a>
-                                <input type="button" value="+" onclick="goComparison(36)">
+                                <input type="button" value="+" onclick="goComparison('product_comparison2.jsp')">
                                 <br>
-                                <a href="#ginkgo30" id="nut37">은행잎(징코)</a>
-                                <input type="button" value="+" onclick="goComparison(37)">
+                                <a href="#ginkgo30" id="nut37">은행잎</a>
+                                <input type="button" value="+" onclick="goComparison('product_comparison14.jsp')">
                                 <br>
                                 <a href="#red-ginseng31" id="nut38">홍삼</a>
-                                <input type="button" value="+" onclick="goComparison(38)">
+                                <input type="button" value="+" onclick="goComparison('product_comparison24.jsp')">
                             </div>
                         </div>
                     </div>
@@ -942,115 +942,12 @@ $w.on('scroll', function() {
     <script src="js/main.js"></script>
     
     <script type ="text/javascript">
-    	function goComparison(num) {
-    		var nutName = document.getElementById('nut'+num).innerText;
+    	function goComparison(str) {
     		
-    		alert(nutName);
-    		
-    		
-    		if(nutName.equals("칼슘")) {
-    			location.href = "product_comparison1.jsp";
-    		} else if(nutName.equals("오메가3")) {
-    			location.href = "product_comparison2.jsp";
-    		} else if(nutName.equals("비타민A")) {
-    			location.href = "product_comparison7.jsp";
-    		} else if(nutName.equals("글루코사민")) {
-    			location.href = "product_comparison3.jsp";
-    		} else if(nutName.equals("비타민C")) {
-    			location.href = "product_comparison8.jsp";
-    		} else if(nutName.equals("비타민D")) {
-    			location.href = "product_comparison9.jsp";
-    		} else if(nutName.equals("루테인")) {
-    			location.href = "product_comparison4.jsp";
-    		} else if(nutName.equals("프로바이오틱스")) {
-    			location.href = "product_comparison22.jsp";
-    		} else if(nutName.equals("알로에겔")) {
-    			location.href = "product_comparison11.jsp";
-    		} else if(nutName.equals("차전자피")) {
-    			location.href = "product_comparison15.jsp";
-    		} else if(nutName.equals("엠에스엠")) {
-    			location.href = "product_comparison12.jsp";
-    		} else if(nutName.equals("보스웰리아")) {}
-    			location.href = "product_comparison6.jsp";
-    		} else if(nutName.equals("감마리놀렌산")) {
-    			location.href = "product_comparison2.jsp";
-    		} else if(nutName.equals("은행잎")) {
-    			location.href = "product_comparison14.jsp";
-    		} else if(nutName.equals("홍삼")) {
-    			location.href = "product_comparison24.jsp";
-    		} else if(nutName.equals("스피루리나")) {
-    			location.href = "product_comparison10.jsp";
-    		} else if(nutName.equals("클로렐라")) {
-    			location.href = "product_comparison20.jsp";
-    		} else if(nutName.equals("키토산")) {
-    			location.href = "product_comparison21.jsp";
-    		} else if(nutName.equals("카테킨")) {
-    			location.href = "product_comparison16.jsp";
-    		} else if(nutName.equals("가르시니아")) {
-    			location.href = "product_comparison1.jsp";
-    		} else if(nutName.equals("프로폴리스")) {
-    			location.href = "product_comparison23.jsp";
-    		} else if(nutName.equals("코큐텐")) {
-    			location.href = "product_comparison18.jsp";
-    		} else if(nutName.equals("콜라겐")) {
-    			location.href = "product_comparison19.jsp";
-    		} else if(nutName.equals("밀크시슬")) {
-    			location.href = "product_comparison5.jsp";
-    		} else {
-    			alert("실패 ㅠㅠㅠㅠㅠㅠ");
-    		}
-    		
-    		
-                /*
-    		$.ajax({
-				// 데이터 전송방식(get/post)
-				type : "post",
-				contentType: "application/x-www-form-urlencoded; charset=euc-kr",
-				
-				
-				// 전송할 데이터
-				data : {"nut" : nutName},
-				// 데이터를 전송할 서버페이지
-				url : "ComparisonCon",
-				
-				// 응답데이터 타입
-				dataType : "text",
-				success : function(data) {
-					 alert(data);
-					 
-					 if(data == "true") {
-						 if(nutName.equals('')) {
-							 
-						 } else if(nutName.equals(''))
-						 location.href = 'product_comparison.jsp';
-						 
-					 } else {
-						 
-					 }
-					 
-				},
-				error : function() {
-					alert("실패!");
-				}
-				
-			})
-			*/
-    		
-    		
-
+    		location.replace(str);
     	}
     
     </script>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
 </body>
 
