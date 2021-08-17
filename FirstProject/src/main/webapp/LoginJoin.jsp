@@ -301,13 +301,7 @@
 								
 							} else {
 								
-								// 로그인이 되어있다면,
-								$("input[name=symptom]:checked").each(function() {
-									checkBoxArr.push($(this).val());
-								});
-								
-								alert(checkBoxArr + '을(를) 선택하셨습니다.');
-								
+															
 							}
 						},
 						error : function() {
