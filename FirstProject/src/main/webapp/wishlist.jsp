@@ -1,4 +1,7 @@
 <%@page import="VO.MemberVO"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="VO.ProductVO"%>
+<%@page import="DAO.MemberDAO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -58,6 +61,13 @@
         margin: 2px 0px 0px 0px;
         border-radius: 10%;
         }
+          img{ 
+            width: auto;
+            height: 150px;
+            padding: auto;
+            box-sizing: border-box;
+            object-fit: contain;
+            }    
     </style>
 </head>
 
@@ -177,49 +187,44 @@
                         <th class="product-review">리뷰</th>
                         <th class="product-remove">즐겨찾기 제거</th>
                       </tr>
+                      
+                                       
+                     <%
+                     MemberDAO dao = new MemberDAO();
+                     ArrayList<ProductVO> arr = dao.selectAll();
+					
+                     for(int i= 0; i<arr.size();i++){
+						out.println("<tr>");
+						out.println("<td>");
+						  %>
+						<img src=<%=arr.get(i).getPdtImg()%>>
+						<%
+						out.println("</td>");
+						out.println("<td>"+arr.get(i).getPdtName()+"</td>");
+						out.println("<td>"+arr.get(i).getPdtBrand()+"</td>");
+						out.println("<td>"+arr.get(i).getPdtCountry()+"</td>");
+						out.println("<td>"+arr.get(i).getPdtType()+"</td>");
+						out.println("<td>"+arr.get(i).getPdtDailyIntake()+"</td>");
+						out.println("<td>"+arr.get(i).getPdtOneIntake()+"</td>");
+						out.println("<td>"+arr.get(i).getPdtJung()+"</td>");
+				
+						%>
+						
+						<td>
+						    <input type="button1" class="btn btn-primary height-auto btn-sm" value="리뷰 보러가기" onclick="goReview(<%=i%>)"> 
+						</td>
+				
+					    <td><input type="button" class="btn btn-primary height-auto btn-sm" value="X"> </td>
+						
+						 
+						<%
+						out.println("</td>");
+					} %>
+                     
                     </thead>
                     <tbody>
                       <tr>
-                        <td class="product-thumbnail"><img src="img/영양제 이미지/가르시니아/그린몬스터 다이어트 가르시니아.jpg" alt="Image" class="img-fluid"></td>
-                        <td class="product-name"><h2 class="h5 text-black">Ibuprofen</h2></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td><a href="#"  class="btn btn-primary height-auto btn-sm" data-action="delete">X</a></td>
-                      </tr>
-                      <tr>
-                        <td class="product-thumbnail"><img src="img/영양제 이미지/감마리놀렌산/나우푸드 이브닝 프림로즈 500mg.jpg" alt="Image" class="img-fluid"></td>
-                        <td class="product-name"><h2 class="h5 text-black">Ibuprofen</h2></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td><a href="#" class="btn btn-primary height-auto btn-sm">X</a></td>
-                      </tr>
-                      <tr>
-                        <td class="product-thumbnail"><img src="img/영양제 이미지/루테인/뉴트리디데이 프리미엄 루테인 골드350MG.jpg" alt="Image" class="img-fluid"></td>
-                        <td class="product-name"><h2 class="h5 text-black">Ibuprofen</h2></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td><a href="#" class="btn btn-primary height-auto btn-sm">X</a></td>
-                      </tr>
+                       
         
                     </tbody>
                   </table>
@@ -232,7 +237,7 @@
               </div>
             </div>
           </div>
-        </div>
+
     
     
     <!-- Contact Section End -->
@@ -316,6 +321,12 @@
 					})
 				}
      </script>
+     
+         <script type="text/javascript"> 
+    $('input[type="button"]').click(function(e){
+    	   $(this).closest('tr').remove()
+    	})
+    </script>
 </body>
 
 </html>
