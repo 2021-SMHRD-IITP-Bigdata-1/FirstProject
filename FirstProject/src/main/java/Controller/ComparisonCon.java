@@ -31,7 +31,7 @@ public class ComparisonCon extends HttpServlet {
 		
 		
 		//String nutName = request.getParameter("nut");
-		System.out.println("ê°€ë‚˜ë‹¤"+nutName);
+		System.out.println("°¡³ª´Ù"+nutName);
 		
 		MemberDAO dao = new MemberDAO();
 		
@@ -39,7 +39,7 @@ public class ComparisonCon extends HttpServlet {
 		
 //		String nutCode = dao.selectNutCode(nutName);
 //
-//		// í´ë¦­í•œ ì˜ì–‘ì†Œì˜ ì œí’ˆ ArrayList íšë“
+//		// Å¬¸¯ÇÑ ¿µ¾ç¼ÒÀÇ Á¦Ç° ArrayList È¹µæ
 //		ArrayList<ProductVO> array = dao.selectProduct(nutCode);
 //
 //		request.setAttribute("array", array);
