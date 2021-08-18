@@ -245,7 +245,7 @@
                 <div class="col-lg-12">
                     <section class="ftco-section">
                         <div class="container">
-                            <div class="row justify-content-center">
+                            <div class="row justify-content-center" style="margin-left: 200px;">
                                 <div>
                                     <h2 class="heading-section"><strong>영양제 비교분석</strong></h2>
                                 </div>
