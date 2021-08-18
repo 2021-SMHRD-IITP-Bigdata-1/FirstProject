@@ -62,12 +62,40 @@
 			font-size: 20px;
 			padding : 25px;
 		}
+		#drop-content{
+	        position: absolute;
+	        z-index: 1;
+        }
+    	#drop-content a{
+	        display:block;
+	        font-size: 15px;
+	        width: 150px;
+	        background-color: #2e2929;
+	        color: rgb(250, 250, 250);
+	        text-decoration: none;
+	        padding: 17px 12px;
+	        margin: 2px 0px 0px 0px;
+	        border-radius: 10%;
+        }
 
 
     </style>
 </head>
 
 <body>
+    <script>
+        function dp_menu(){
+            let click = document.getElementById("drop-content");
+            if(click.style.display === "none"){
+                click.style.display = "block";
+    
+            }else{
+                click.style.display = "none";
+    
+            }
+        }
+    </script>
+
 	<%
 		MemberVO vo = (MemberVO)session.getAttribute("vo_session");
 		
@@ -103,14 +131,14 @@
 	                            <li><a href="./information2.jsp">성분별 영양제품비교 </a></li>
 	                            <li><a></a></li>
 	                            <li><div class="dropdown">
-	                                <i onclick="dp_menu()" class="search-btn2 fa">마이페이지</i>
-	                                 <div style="display: none;" id="drop-content">
-	                                     <a href='member_update.jsp'>회원정보수정</a>
-	                                     <a href='wishlist.jsp'>즐겨찾기</a>
-	                                     <a href='member_ withdraw.jsp'>회원탈퇴</a>
-	                                 </div>
-	                                </div>
-	                                </li>
+                                    <i onclick="dp_menu()" class="search-btn2 fa">마이페이지</i>
+	                                    <div style="display: none;" id="drop-content">
+	                                        <a href='member_update.jsp'>회원정보수정</a>
+	                                        <a href='wishlist.jsp'  type="submit" onclick="LoginCheck()">즐겨찾기</a>
+	                                        <a href='member_ withdraw.jsp'>회원탈퇴</a>
+	                                    </div>
+                                    </div>
+                                    </li>
 	                            <% if(vo == null) { %>
 	                         		<li><a href="LoginJoin.jsp">로그인/회원가입</a></li>
 	                         	<% } else { %>
