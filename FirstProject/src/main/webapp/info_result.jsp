@@ -110,6 +110,16 @@
         right: 0px;
         top: 100px;
         }
+       
+       .go {
+       		border-radius: 50%;
+       		height: 30px;
+       		width : 30px;
+       		background-color: lightsteelblue;
+       		font: 15px;
+       		border: none;
+       		
+       }
    </style>
 </head>
 
@@ -180,7 +190,7 @@ $w.on('scroll', function() {
                             data-parent="#accordionExample">
                             <div class="card-body">
                                 <a href = "#milkseatle" id="nut1">¹ÐÅ©¾¾½½</a>
-                                <input type="button" value="+" onclick="goComparison('product_comparison24.jsp')">
+                                <input type="button" class="go" value=">>" onclick="goComparison('product_comparison24.jsp')">
                             </div>
                         </div>
                     </div>
@@ -198,13 +208,13 @@ $w.on('scroll', function() {
                             data-parent="#accordionExample">
                             <div class="card-body">
                                 <a href="#glucosamine1" id="nut2">±Û·çÄÚ»ç¹Î</a>
-                                <input type="button" value="+" onclick="goComparison('product_comparison4.jsp')">
+                                <input type="button" class="go" value=">>" onclick="goComparison('product_comparison4.jsp')">
                                 <br>
                                 <a href="#boswelia2" id="nut3">º¸½ºÀ£¸®¾Æ</a>
-                                <input type="button" value="+" onclick="goComparison('product_comparison12.jsp')">
+                                <input type="button" class="go" value=">>" onclick="goComparison('product_comparison12.jsp')">
                                 <br>
                                 <a href="#msm2-5" id="nut4">¿¥¿¡½º¿¥(MSM)</a>
-                                <input type="button" value="+" onclick="goComparison('product_comparison11.jsp')">
+                                <input type="button" class="go" value=">>" onclick="goComparison('product_comparison11.jsp')">
                             </div>
                         </div>
                     </div>
@@ -222,10 +232,10 @@ $w.on('scroll', function() {
                             data-parent="#accordionExample">
                             <div class="card-body">
                                 <a href="#omega-33" id="nut5">¿À¸Þ°¡3</a>
-                                <input type="button" value="+" onclick="goComparison('product_comparison2.jsp')">
+                                <input type="button" class="go" value=">>" onclick="goComparison('product_comparison2.jsp')">
                                 <br>
                                 <a href="#ginkgo4" id="nut6">ÀºÇàÀÙ(Â¡ÄÚ)
-                                <input type="button" value="+" onclick="goComparison('product_comparison14.jsp')">
+                                <input type="button" class="go" value=">>" onclick="goComparison('product_comparison14.jsp')">
                                 </a>
                             </div>
                         </div>
@@ -244,13 +254,13 @@ $w.on('scroll', function() {
                             data-parent="#accordionExample">
                             <div class="card-body">
                                 <a href="#vitamin-a5" id="nut7">ºñÅ¸¹ÎA</a>
-                                <input type="button" value="+" onclick="goComparison('product_comparison3.jsp')">
+                                <input type="button" class="go" value=">>" onclick="goComparison('product_comparison3.jsp')">
                                 <br>
                                 <a href="#lutein-a5-5" id="nut8">·çÅ×ÀÎ</a>
-                                <input type="button" value="+" onclick="goComparison('product_comparison7.jsp')">
+                                <input type="button" class="go" value=">>" onclick="goComparison('product_comparison7.jsp')">
                                 <br>
                                 <a href="#omega-36" id="nut9">¿À¸Þ°¡3</a>
-                                <input type="button" value="+" onclick="goComparison('product_comparison2.jsp')">
+                                <input type="button" class="go" value=">>" onclick="goComparison('product_comparison2.jsp')">
                             </div>
                         </div>
                     </div>
@@ -268,10 +278,10 @@ $w.on('scroll', function() {
                             data-parent="#accordionExample">
                             <div class="card-body">
                                 <a href="#vitamin-d7" id="nut10">ºñÅ¸¹ÎD</a>
-                                <input type="button" value="+"  onclick="goComparison('product_comparison6.jsp')">
+                                <input type="button" class="go" value=">>"  onclick="goComparison('product_comparison6.jsp')">
                                 <br>
                                 <a href="#calcium8" id="nut11">Ä®½·</a>
-                                <input type="button" value="+"  onclick="goComparison('product_comparison1.jsp')">
+                                <input type="button" class="go" value=">>"  onclick="goComparison('product_comparison1.jsp')">
                             </div>
                         </div>
                     </div>
@@ -289,13 +299,13 @@ $w.on('scroll', function() {
                             data-parent="#accordionExample">
                             <div class="card-body">
                                 <a href="#aloe-gel8-5" id="nut12">¾Ë·Î¿¡°Ö</a>
-                                <input type="button" value="+"  onclick="goComparison('product_comparison9.jsp')">
+                                <input type="button" class="go" value=">>"  onclick="goComparison('product_comparison9.jsp')">
                                 <br>
                                 <a href="#probiotics9" id="nut13">ÇÁ·Î¹ÙÀÌ¿ÀÆ½½º</a>
-                                <input type="button" value="+"  onclick="goComparison('product_comparison8.jsp')">
+                                <input type="button" class="go" value=">>"  onclick="goComparison('product_comparison8.jsp')">
                                 <br>
                                 <a href="#cha9-5" id="nut14">Â÷ÀüÀÚÇÇ ½ÄÀÌ¼¶À¯</a>
-                            	<input type="button" value="+ "  onclick="goComparison('product_comparison10.jsp')">
+                            	<input type="button" class="go" value=">>"  onclick="goComparison('product_comparison10.jsp')">
                             </div>
                         </div>
                     </div>
@@ -313,13 +323,13 @@ $w.on('scroll', function() {
                             data-parent="#accordionExample">
                             <div class="card-body">
                                 <a href="#garcinia10" id="nut15">°¡¸£½Ã´Ï¾Æ</a>
-                                <input type="button" value="+"  onclick="goComparison('product_comparison20.jsp')">
+                                <input type="button" class="go" value=">>"  onclick="goComparison('product_comparison20.jsp')">
                                 <br>
                                 <a href="#catechin11" id="nut16">Ä«Å×Å²</a>
-                                <input type="button" value="+"  onclick="goComparison('product_comparison19.jsp')">
+                                <input type="button" class="go" value=">>"  onclick="goComparison('product_comparison19.jsp')">
                                 <br>
                                 <a href="#chitosan12" id="nut17">Å°Åä»ê</a>
-                                <input type="button" value="+"  onclick="goComparison('product_comparison18.jsp')">
+                                <input type="button" class="go" value=">>"  onclick="goComparison('product_comparison18.jsp')">
                             </div>
                         </div>
                     </div>
@@ -337,22 +347,22 @@ $w.on('scroll', function() {
                             data-parent="#accordionExample">
                             <div class="card-body">
                                 <a href="#gamma13" id="nut18">°¨¸¶¸®³î·»»ê</a>
-                                <input type="button" value="+"  onclick="goComparison('product_comparison13.jsp')">
+                                <input type="button" class="go" value=">>"  onclick="goComparison('product_comparison13.jsp')">
                                 <br>
                                 <a href="#spirulina14" id="nut19">½ºÇÇ·ç¸®³ª</a>
-                                <input type="button" value="+"  onclick="goComparison('product_comparison16.jsp')">
+                                <input type="button" class="go" value=">>"  onclick="goComparison('product_comparison16.jsp')">
                                 <br>
                                 <a href="#cha14-5" id="nut20">Â÷ÀüÀÚÇÇ ½ÄÀÌ¼¶À¯</a>
-                                <input type="button" value="+"  onclick="goComparison('product_comparison10.jsp')">
+                                <input type="button" class="go" value=">>"  onclick="goComparison('product_comparison10.jsp')">
                                 <br>
                                 <a href="#catechin15" id="nut21">Ä«Å×Å²</a>
-                                <input type="button" value="+"  onclick="goComparison('product_comparison19.jsp')">
+                                <input type="button" class="go" value=">>"  onclick="goComparison('product_comparison19.jsp')">
                                 <br>
                                 <a href="#chlorella16" id="nut22">Å¬·Î·¼¶ó</a>
-                                <input type="button" value="+"  onclick="goComparison('product_comparison17.jsp')">
+                                <input type="button" class="go" value=">>"  onclick="goComparison('product_comparison17.jsp')">
                                 <br>
                                 <a href="#chitosan17" id="nut23">Å°Åä»ê</a>
-                                <input type="button" value="+"  onclick="goComparison('product_comparison18.jsp')">
+                                <input type="button" class="go" value=">>"  onclick="goComparison('product_comparison18.jsp')">
                             </div>
                         </div>
                     </div>
@@ -370,19 +380,19 @@ $w.on('scroll', function() {
                             data-parent="#accordionExample">
                             <div class="card-body">
                                 <a href="#gamma18" id="nut24">°¨¸¶¸®³î·»»ê</a>
-                                <input type="button" value="+"  onclick="goComparison('product_comparison13.jsp')">
+                                <input type="button" class="go" value=">>"  onclick="goComparison('product_comparison13.jsp')">
                                 <br>
                                 <a href="#spirulina19" id="nut25">½ºÇÇ·ç¸®³ª</a>
-                                <input type="button" value="+"  onclick="goComparison('product_comparison16.jsp')">
+                                <input type="button" class="go" value=">>"  onclick="goComparison('product_comparison16.jsp')">
                                 <br>
                                 <a href="#aloe-gel19-5" id="nut26">¾Ë·Î¿¡°Ö</a>
-                                <input type="button" value="+"  onclick="goComparison('product_comparison9.jsp')">
+                                <input type="button" class="go" value=">>"  onclick="goComparison('product_comparison9.jsp')">
                                 <br>
                                 <a href="#collagen20" id="nut27">ÄÝ¶ó°Õ</a>
-                                <input type="button" value="+"  onclick="goComparison('product_comparison23.jsp')">
+                                <input type="button" class="go" value=">>" onclick="goComparison('product_comparison23.jsp')">
                                 <br>
                                 <a href="#chlorella21"id="nut28">Å¬·Î·¼¶ó</a>
-                                <input type="button" value="+"  onclick="goComparison('product_comparison17.jsp')">
+                                <input type="button" class="go" value=">>"  onclick="goComparison('product_comparison17.jsp')">
                             </div>
                         </div>
                     </div>
@@ -399,25 +409,25 @@ $w.on('scroll', function() {
                             data-parent="#accordionExample">
                             <div class="card-body">
                                 <a href="#vitamin-c22" id="nut29">ºñÅ¸¹ÎC</a>
-                                <input type="button" value="+" onclick="goComparison('product_comparison5.jsp')">
+                                <input type="button" class="go" value=">>" onclick="goComparison('product_comparison5.jsp')">
                                 <br>
                                 <a href="#spirulina23" id="nut30">½ºÇÇ·ç¸®³ª</a>
-                                <input type="button" value="+" onclick="goComparison('product_comparison16.jsp')">
+                                <input type="button" class="go" value=">>" onclick="goComparison('product_comparison16.jsp')">
                                 <br>
                                 <a href="#catechin24" id="nut31">Ä«Å×Å²</a>
-                                <input type="button" value="+" onclick="goComparison('product_comparison19.jsp')">
+                                <input type="button" class="go" value=">>" onclick="goComparison('product_comparison19.jsp')">
                                 <br>
                                 <a href="#co-q-1025" id="nut32">ÄÚÅ¥ÅÙ</a>
-                                <input type="button" value="+" onclick="goComparison('product_comparison22.jsp')">
+                                <input type="button" class="go" value=">>" onclick="goComparison('product_comparison22.jsp')">
                                 <br>
                                 <a href="#chlorella26" id="nut33">Å¬·Î·¼¶ó</a>
-                                <input type="button" value="+" onclick="goComparison('product_comparison17.jsp')">
+                                <input type="button" class="go" value=">>" onclick="goComparison('product_comparison17.jsp')">
                                 <br>
                                 <a href="#propolis27" id="nut34">ÇÁ·ÎÆú¸®½º</a>
-                                <input type="button" value="+" onclick="goComparison('product_comparison21.jsp')">
+                                <input type="button"  lass="go" value=">>" onclick="goComparison('product_comparison21.jsp')">
                                 <br>
                                 <a href="#red-ginseng28" id="nut35">È«»ï</a>
-                                <input type="button" value="+" onclick="goComparison('product_comparison15.jsp')">
+                                <input type="button" class="go" value=">>" onclick="goComparison('product_comparison15.jsp')">
                             </div>
                         </div>
                     </div>
@@ -435,13 +445,13 @@ $w.on('scroll', function() {
                             data-parent="#accordionExample">
                             <div class="card-body">
                                 <a href="#gamma29" id="nut36">°¨¸¶¸®³î·»»ê</a>
-                                <input type="button" value="+" onclick="goComparison('product_comparison13.jsp')">
+                                <input type="button" class="go" value=">>" onclick="goComparison('product_comparison13.jsp')">
                                 <br>
                                 <a href="#ginkgo30" id="nut37">ÀºÇàÀÙ</a>
-                                <input type="button" value="+" onclick="goComparison('product_comparison14.jsp')">
+                                <input type="button" class="go" value=">>" onclick="goComparison('product_comparison14.jsp')">
                                 <br>
                                 <a href="#red-ginseng31" id="nut38">È«»ï</a>
-                                <input type="button" value="+" onclick="goComparison('product_comparison15.jsp')">
+                                <input type="button" class="go" value=">>" onclick="goComparison('product_comparison15.jsp')">
                             </div>
                         </div>
                     </div>

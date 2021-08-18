@@ -13,7 +13,7 @@
     <meta name="keywords" content="TopGym, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>로그인/회원가입 페이지입니다.</title>
+    <title>즐겨찾기 페이지</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,500,700,900" rel="stylesheet">
@@ -61,7 +61,7 @@
         margin: 2px 0px 0px 0px;
         border-radius: 10%;
         }
-          img{ 
+          .pdtImg{ 
             width: auto;
             height: 150px;
             padding: auto;
@@ -197,7 +197,7 @@
 						out.println("<tr>");
 						out.println("<td>");
 						  %>
-						<img src=<%=arr.get(i).getPdtImg()%>>
+						<img class="pdtImg" src=<%=arr.get(i).getPdtImg()%>>
 						<%
 						out.println("</td>");
 						out.println("<td>"+arr.get(i).getPdtName()+"</td>");
