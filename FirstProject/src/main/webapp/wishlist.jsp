@@ -189,33 +189,35 @@
                       </tr>
                       
                                        
-                     <%
-                     MemberDAO dao = new MemberDAO();
-                     ArrayList<ProductVO> arr = dao.selectAll();
-					
-                     for(int i= 0; i<arr.size();i++){
+                    <%
+                    MemberDAO dao = new MemberDAO();
+                    ArrayList<ProductVO> arr = dao.selectAll(); 
+                    %>
+                    
+						<!-- pdtCode = 1인 제품 -->
+						<%
 						out.println("<tr>");
 						out.println("<td>");
-						  %>
-						<img class="pdtImg" src=<%=arr.get(i).getPdtImg()%>>
+						%>
+						<img class="pdtImg" src=<%=arr.get(0).getPdtImg()%>>
 						<%
 						out.println("</td>");
-						out.println("<td>"+arr.get(i).getPdtName()+"</td>");
-						out.println("<td>"+arr.get(i).getPdtBrand()+"</td>");
-						out.println("<td>"+arr.get(i).getPdtCountry()+"</td>");
-						out.println("<td>"+arr.get(i).getPdtType()+"</td>");
-						out.println("<td>"+arr.get(i).getPdtDailyIntake()+"/<br>"+arr.get(i).getPdtOneIntake()+"</td>");
-						out.println("<td>"+arr.get(i).getPdtJung()+"</td>");
-						if(arr.get(i).getPdtFree() == null) {
+						out.println("<td>"+arr.get(0).getPdtName()+"</td>");
+						out.println("<td>"+arr.get(0).getPdtBrand()+"</td>");
+						out.println("<td>"+arr.get(0).getPdtCountry()+"</td>");
+						out.println("<td>"+arr.get(0).getPdtType()+"</td>");
+						out.println("<td>"+arr.get(0).getPdtDailyIntake()+"/<br>"+arr.get(0).getPdtOneIntake()+"</td>");
+						out.println("<td>"+arr.get(0).getPdtJung()+"</td>");
+						if(arr.get(0).getPdtFree() == null) {
 							out.println("<td> </td>");
 						} else {
-							out.println("<td>"+arr.get(i).getPdtFree()+"</td>");
+							out.println("<td>"+arr.get(0).getPdtFree()+"</td>");
 						}
 				
 						%>
 						
 						<td>
-						    <input type="button1" class="btn btn-primary height-auto btn-sm" value="리뷰 보러가기" onclick="goReview(<%=i%>)" style="width: 120px;"> 
+						    <input type="button1" class="btn btn-primary height-auto btn-sm" value="리뷰 보러가기" onclick="goReview(0)" style="width: 120px;"> 
 						</td>
 				
 					    <td><input type="button" class="btn btn-primary height-auto btn-sm" value="X"> </td>
@@ -223,8 +225,42 @@
 						 
 						<%
 						out.println("</td>");
-					} %>
-                     
+						%>
+						
+						
+						<!-- pdtCode = 4인 제품 -->
+						<%
+						out.println("<tr>");
+						out.println("<td>");
+						%>
+						<img class="pdtImg" src=<%=arr.get(3).getPdtImg()%>>
+						<%
+						out.println("</td>");
+						out.println("<td>"+arr.get(3).getPdtName()+"</td>");
+						out.println("<td>"+arr.get(3).getPdtBrand()+"</td>");
+						out.println("<td>"+arr.get(3).getPdtCountry()+"</td>");
+						out.println("<td>"+arr.get(3).getPdtType()+"</td>");
+						out.println("<td>"+arr.get(3).getPdtDailyIntake()+"/<br>"+arr.get(3).getPdtOneIntake()+"</td>");
+						out.println("<td>"+arr.get(3).getPdtJung()+"</td>");
+						if(arr.get(3).getPdtFree() == null) {
+							out.println("<td> </td>");
+						} else {
+							out.println("<td>"+arr.get(3).getPdtFree()+"</td>");
+						}
+				
+						%>
+						
+						<td>
+						    <input type="button1" class="btn btn-primary height-auto btn-sm" value="리뷰 보러가기" onclick="goReview(0)" style="width: 120px;"> 
+						</td>
+				
+					    <td><input type="button" class="btn btn-primary height-auto btn-sm" value="X"> </td>
+						
+						 
+						<%
+						out.println("</td>");
+						%>
+                    
                     </thead>
                     <tbody>
                       <tr>
@@ -327,9 +363,16 @@
      </script>
      
          <script type="text/javascript"> 
-    $('input[type="button"]').click(function(e){
-    	   $(this).closest('tr').remove()
-    	})
+    		$('input[type="button"]').click(function(e){
+    	   		$(this).closest('tr').remove()
+    		})
+    	
+    	
+    	    function goReview(i) {
+    		if(i == 0) {
+    			location.href = 'review.jsp';
+    		}
+    	}
     </script>
 </body>
 
