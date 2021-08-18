@@ -228,7 +228,7 @@
                                             <tr>
                                               <th class="none" style="height: 80.5px;"></th>
                                               <th class="none" style="height: 80.5px;"></th>
-                                              <th class="column" style="height: 110.87px;">제품명</th>
+                                              <th class="column" style="height: 112px;">제품명</th>
                                               <th class="column" style="height: 86.42px;">제조사</th>
                                               <th class="column" style="height: 86.42px;">제조국</th>
                                               <th class="column" style="height: 86.42px;">원가</th>
@@ -239,8 +239,8 @@
                                               <th class="column" style="height: 86.42px;">개수</th>
                                               <th class="column" style="height: 111px;">무함유</th>
                                               <th class="column" style="height: 200px;">함량</th>
-                                              <th class="column" style="height: 92.4px;">리뷰확인</th>
-                                              <th class="column" style="height: 92.4px;">즐겨찾기</th>
+                                              <th class="column" style="height: 93px;">리뷰확인</th>
+                                              <th class="column" style="height: 93px;">즐겨찾기</th>
                                               
                                             </tr>
                                           </thead>
@@ -265,7 +265,11 @@
 						out.println("<td>"+arr.get(i).getPdtDailyIntake()+"</td>");
 						out.println("<td>"+arr.get(i).getPdtOneIntake()+"</td>");
 						out.println("<td>"+arr.get(i).getPdtJung()+"</td>");
-						out.println("<td style='height:111px;'>"+arr.get(i).getPdtFree()+"</td>");
+						if(arr.get(i).getPdtFree() == null) {
+							out.println("<td style='height:111px;'> </td>");
+						} else {
+							out.println("<td style='height:111px;'>"+arr.get(i).getPdtFree()+"</td>");
+						}
 						out.println("<td style='height:200px;'>"+arr.get(i).getPdtContent()+"</td>");
 						%>
 						
