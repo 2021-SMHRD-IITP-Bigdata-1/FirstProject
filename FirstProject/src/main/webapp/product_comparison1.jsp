@@ -52,8 +52,8 @@
             object-fit: contain;
             }    
         td { 
-        	text-align: center;
-        	width: 200px;
+           text-align: center;
+           width: 200px;
          }   
        .vertical {
         display: -ms-grid !important;
@@ -141,7 +141,7 @@
     font-size: 12px;
     color: #dc3545; }
     .ftco-section {
-    	margin-left: -220px;
+       margin-left: -220px;
     }
     
          
@@ -149,10 +149,10 @@
 </head>
 
 <body>
-	<%
-		MemberVO vo = (MemberVO)session.getAttribute("vo_session");
-	%>
-	
+   <%
+      MemberVO vo = (MemberVO)session.getAttribute("vo_session");
+   %>
+   
 <script>
     function dp_menu(){
         let click = document.getElementById("drop-content");
@@ -181,25 +181,25 @@
                         </div>
                         <nav class="mobile-menu">
                             <ul>
-	                            <li><a href="./information1.jsp">효능/부위별 정보</a></li>
-	                            <li><a href="./information2.jsp">성분별 영양제품비교 </a></li>
-	                            <li><a></a></li>
-	                            <li><div class="dropdown">
+                               <li><a href="./information1.jsp">효능/부위별 정보</a></li>
+                               <li><a href="./information2.jsp">성분별 영양제품비교 </a></li>
+                               <li><a></a></li>
+                               <li><div class="dropdown">
                                     <i onclick="dp_menu()" class="search-btn2 fa">마이페이지</i>
-	                                    <div style="display: none;" id="drop-content">
-	                                        <a href='member_update.jsp'>회원정보수정</a>
-	                                        <a href='wishlist.jsp'  type="submit" onclick="LoginCheck()">즐겨찾기</a>
-	                                        <a href='member_ withdraw.jsp'>회원탈퇴</a>
-	                                    </div>
+                                       <div style="display: none;" id="drop-content">
+                                           <a href='member_update.jsp'>회원정보수정</a>
+                                           <a href='wishlist.jsp'  type="submit" onclick="LoginCheck()">즐겨찾기</a>
+                                           <a href='member_ withdraw.jsp'>회원탈퇴</a>
+                                       </div>
                                     </div>
                                     </li>
-	                            <% if(vo == null) { %>
-	                         		<li><a href="LoginJoin.jsp">로그인/회원가입</a></li>
-	                         	<% } else { %>
-	                         		<li><a href="LogoutCon">로그아웃</a></li>
-	                         	<% } %>
-	                            <li class="search-btn search-trigger"><i class="fa fa-search"></i></li>
-                           	</ul>
+                               <% if(vo == null) { %>
+                                  <li><a href="LoginJoin.jsp">로그인/회원가입</a></li>
+                               <% } else { %>
+                                  <li><a href="LogoutCon">로그아웃</a></li>
+                               <% } %>
+                               <li class="search-btn search-trigger"><i class="fa fa-search"></i></li>
+                              </ul>
                         </nav>
                         <div id="mobile-menu-wrap"></div>
                     </div>
@@ -269,7 +269,7 @@
                                               <th class="column" style="height: 111px;">무함유</th>
                                               <th class="column" style="height: 200px;">함량</th>
                                               <th class="column" style="height: 93px;">리뷰확인</th>
-                                              <th class="column" style="height: 93px;">즐겨찾기</th>
+                                              <th class="column" style="height: 164px;">즐겨찾기</th>
                                               
                                             </tr>
                                           </thead>
@@ -279,40 +279,41 @@
                      ArrayList<ProductVO> arr = dao.selectAll();
                
                      for(int i= 0;  i<6; i++){
-		             	out.println("<tr>");
-	                  	out.println("<td>");
-		                %>
-						<img src=<%=arr.get(i).getPdtImg()%>>
-						<%
-						out.println("</td>");
-						out.println("<td>"+arr.get(i).getPdtName()+"</td>");
-						out.println("<td>"+arr.get(i).getPdtBrand()+"</td>");
-						out.println("<td>"+arr.get(i).getPdtCountry()+"</td>");
-						out.println("<td>"+arr.get(i).getPdtPrice()+"</td>");
-						out.println("<td>"+arr.get(i).getPdtDiscPrice()+"</td>");
-						out.println("<td>"+arr.get(i).getPdtType()+"</td>");
-						out.println("<td>"+arr.get(i).getPdtDailyIntake()+"</td>");
-						out.println("<td>"+arr.get(i).getPdtOneIntake()+"</td>");
-						out.println("<td>"+arr.get(i).getPdtJung()+"</td>");
-						if(arr.get(i).getPdtFree() == null) {
-							out.println("<td style='height:111px;'> </td>");
-						} else {
-							out.println("<td style='height:111px;'>"+arr.get(i).getPdtFree()+"</td>");
-						}
-						out.println("<td style='height:200px;'>"+arr.get(i).getPdtContent()+"</td>");
-						%>
-						
-						<td>
-						    <input type="button" value="리뷰 보러가기" onclick="goReview(<%=i%>)"> 
-						 </td>
-				
-						<td>
-						     <input type="submit"  value="★" onclick="alertAdd()"> 
-						 </td>
-						 
-						<%
-						out.println("</td>");
-					} %>
+                      out.println("<tr>");
+                        out.println("<td>");
+                      %>
+                  <img src=<%=arr.get(i).getPdtImg()%>>
+                  <%
+                  out.println("</td>");
+                  out.println("<td>"+arr.get(i).getPdtName()+"</td>");
+                  out.println("<td>"+arr.get(i).getPdtBrand()+"</td>");
+                  out.println("<td>"+arr.get(i).getPdtCountry()+"</td>");
+                  out.println("<td>"+arr.get(i).getPdtPrice()+"</td>");
+                  out.println("<td>"+arr.get(i).getPdtDiscPrice()+"</td>");
+                  out.println("<td>"+arr.get(i).getPdtType()+"</td>");
+                  out.println("<td>"+arr.get(i).getPdtDailyIntake()+"</td>");
+                  out.println("<td>"+arr.get(i).getPdtOneIntake()+"</td>");
+                  out.println("<td>"+arr.get(i).getPdtJung()+"</td>");
+                  if(arr.get(i).getPdtFree() == null) {
+                     out.println("<td style='height:111px;'> </td>");
+                  } else {
+                     out.println("<td style='height:111px;'>"+arr.get(i).getPdtFree()+"</td>");
+                  }
+                  out.println("<td style='height:200px;'>"+arr.get(i).getPdtContent()+"</td>");
+                  %>
+                  
+                  <td>
+                      <i class="fa fa-search" onclick="goReview(<%=i%>)"></i>
+                   </td>
+            
+                  <td>
+                             <img id="img<%=i+1%>" src="img/star1.png" style="width:10%;">
+                         <img id="img<%=(i+1)*7%>" src="img/star2.png" style= width:10%;">
+                   </td>
+                   
+                  <%
+                  out.println("</td>");
+               } %>
                      </tbody>
                                       </table>
                                 </div>
@@ -383,17 +384,120 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="js/main.js"></script>
     
     <script>
-    	function goReview(i) {
-    		
-    		if(i == 0) {
-    			location.href = 'review.jsp';
-    		}
-    	}
+       function goReview(i) {
+          
+          if(i == 0) {
+             location.replace('review.jsp');
+          }
+       }
     
-    	function alertAdd() {
-    		
-    		alert('즐겨찾기 목록에 추가되었습니다.');
-    	}
+       function alertAdd() {
+          
+          alert('즐겨찾기 목록에 추가되었습니다.');
+       }
+       
+       $(document).ready(function(){
+            /*웹페이지 열었을 때*/
+            $("#img1").show();
+            $("#img7").hide();
+ 
+            /*img1을 클릭했을 때 img2를 보여줌*/
+            $("#img1").click(function(){
+                $("#img1").hide();
+                $("#img7").show();
+            });
+ 
+            /*img2를 클릭했을 때 img1을 보여줌*/
+            $("#img7").click(function(){
+                $("#img1").show();
+                $("#img7").hide();
+            });
+        });
+       $(document).ready(function(){
+            /*웹페이지 열었을 때*/
+            $("#img2").show();
+            $("#img14").hide();
+ 
+            /*img1을 클릭했을 때 img2를 보여줌*/
+            $("#img2").click(function(){
+                $("#img2").hide();
+                $("#img14").show();
+            });
+ 
+            /*img2를 클릭했을 때 img1을 보여줌*/
+            $("#img14").click(function(){
+                $("#img2").show();
+                $("#img14").hide();
+            });
+        });
+       $(document).ready(function(){
+            /*웹페이지 열었을 때*/
+            $("#img3").show();
+            $("#img21").hide();
+ 
+            /*img1을 클릭했을 때 img2를 보여줌*/
+            $("#img3").click(function(){
+                $("#img3").hide();
+                $("#img21").show();
+            });
+ 
+            /*img2를 클릭했을 때 img1을 보여줌*/
+            $("#img21").click(function(){
+                $("#img3").show();
+                $("#img21").hide();
+            });
+        });
+       $(document).ready(function(){
+            /*웹페이지 열었을 때*/
+            $("#img4").show();
+            $("#img28").hide();
+ 
+            /*img1을 클릭했을 때 img2를 보여줌*/
+            $("#img4").click(function(){
+                $("#img4").hide();
+                $("#img28").show();
+            });
+ 
+            /*img2를 클릭했을 때 img1을 보여줌*/
+            $("#img28").click(function(){
+                $("#img4").show();
+                $("#img28").hide();
+            });
+        });
+       $(document).ready(function(){
+            /*웹페이지 열었을 때*/
+            $("#img5").show();
+            $("#img35").hide();
+ 
+            /*img1을 클릭했을 때 img2를 보여줌*/
+            $("#img5").click(function(){
+                $("#img5").hide();
+                $("#img35").show();
+            });
+ 
+            /*img2를 클릭했을 때 img1을 보여줌*/
+            $("#img35").click(function(){
+                $("#img5").show();
+                $("#img35").hide();
+            });
+        });
+       $(document).ready(function(){
+            /*웹페이지 열었을 때*/
+            $("#img6").show();
+            $("#img42").hide();
+ 
+            /*img1을 클릭했을 때 img2를 보여줌*/
+            $("#img6").click(function(){
+                $("#img6").hide();
+                $("#img42").show();
+            });
+ 
+            /*img2를 클릭했을 때 img1을 보여줌*/
+            $("#img42").click(function(){
+                $("#img6").show();
+                $("#img42").hide();
+            });
+        });
     </script>
     
     
