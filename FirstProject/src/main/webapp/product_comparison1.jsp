@@ -386,7 +386,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     	function goReview(i) {
     		
     		if(i == 0) {
-    			location.replace('review.jsp');
+    			location.href = 'review.jsp';
     		}
     	}
     

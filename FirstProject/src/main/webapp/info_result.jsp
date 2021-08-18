@@ -424,7 +424,7 @@ $w.on('scroll', function() {
                                 <input type="button" class="go" value=">>" onclick="goComparison('product_comparison17.jsp')">
                                 <br>
                                 <a href="#propolis27" id="nut34">ÇÁ·ÎÆú¸®½º</a>
-                                <input type="button"  lass="go" value=">>" onclick="goComparison('product_comparison21.jsp')">
+                                <input type="button" class="go" value=">>" onclick="goComparison('product_comparison21.jsp')">
                                 <br>
                                 <a href="#red-ginseng28" id="nut35">È«»ï</a>
                                 <input type="button" class="go" value=">>" onclick="goComparison('product_comparison15.jsp')">
