@@ -274,7 +274,7 @@
 						 </td>
 				
 						<td>
-						     <input type="button"  value="¡Ú"> 
+						     <input type="submit"  value="¡Ú"> 
 						 </td>
 						 
 						<%
@@ -352,7 +352,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     
     <script>
     	function goReview(i) {
-    		alert(i);
     		
     		if(i == 0) {
     			location.replace('review.jsp');

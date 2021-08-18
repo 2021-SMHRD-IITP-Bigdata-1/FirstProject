@@ -22,10 +22,8 @@ public class LoginCheckCon extends HttpServlet {
 		boolean check = false;
 		
 		if(session.getAttribute("vo_session") == null) {
-			// 로그인 되어있지 않음
 			check = true;
 		} else {
-			// 로그인 되어있음
 			check = false;
 		}
 		

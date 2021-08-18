@@ -24,7 +24,7 @@ public class SymptomCheckCon extends HttpServlet {
 		HttpSession session = request.getSession();
 		MemberVO vo = (MemberVO)session.getAttribute("vo_session");
 		
-		// ÄÜ¼ÖÃ¢¿¡ ¼±ÅÃÇÑ°Íµé Ãâ·Â
+		// ï¿½Ü¼ï¿½Ã¢ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ°Íµï¿½ ï¿½ï¿½ï¿½
 		for(int i = 0; i < symptoms.length; i++) {
 			System.out.println(symptoms[i]);
 		}
@@ -36,12 +36,12 @@ public class SymptomCheckCon extends HttpServlet {
 		int cnt = dao.selectSymptom(symptoms, vo.getMemCode());
 		
 		if(cnt > 0) {
-			// ¼±ÅÃÇÑ symptomsµéÀÌ MEMBER_PICK¿¡ INSERT ¼º°ø ½Ã,
-			System.out.println("¼±ÅÃÇÑ symptoms insert ¼º°ø!");
+			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ symptomsï¿½ï¿½ï¿½ï¿½ MEMBER_PICKï¿½ï¿½ INSERT ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½,
+			System.out.println("symptoms insert ì„±ê³µ!");
 			
 			response.sendRedirect("info_result.jsp");
 		} else {
-			System.out.println("insert ½ÇÆÐ ¤Ð¤Ð");
+			System.out.println("insert ì‹¤íŒ¨,,");
 		}
 		
 		
