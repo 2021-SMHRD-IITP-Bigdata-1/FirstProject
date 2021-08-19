@@ -140,9 +140,6 @@
   .table tbody td .close span {
     font-size: 12px;
     color: #dc3545; }
-    .ftco-section {
-       margin-left: -220px;
-    }
     
          
     </style>
@@ -243,7 +240,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <section class="ftco-section">
+                    <section class="ftco-section" style="margin-left: -250px;">
                         <div class="container">
                             <div class="row justify-content-center" style="margin-left: 200px;">
                                 <div>
@@ -258,17 +255,17 @@
                                               <th class="none" style="height: 80.5px;"></th>
                                               <th class="none" style="height: 80.5px;"></th>
                                               <th class="column" style="height: 112px;">제품명</th>
-                                              <th class="column" style="height: 86.42px;">제조사</th>
-                                              <th class="column" style="height: 86.42px;">제조국</th>
-                                              <th class="column" style="height: 86.42px;">원가</th>
-                                              <th class="column" style="height: 86.42px;">세일가</th>
-                                              <th class="column" style="height: 86.42px;">형태</th>
-                                              <th class="column" style="height: 86.42px;">일일 섭취량</th>
-                                              <th class="column" style="height: 86.42px;">1회 섭취량</th>
-                                              <th class="column" style="height: 86.42px;">개수</th>
+                                              <th class="column" style="height: 87px;">제조사</th>
+                                              <th class="column" style="height: 87px;">제조국</th>
+                                              <th class="column" style="height: 87px;">원가</th>
+                                              <th class="column" style="height: 87px;">세일가</th>
+                                              <th class="column" style="height: 87px;">형태</th>
+                                              <th class="column" style="height: 87px;">일일 섭취량</th>
+                                              <th class="column" style="height: 87px;">1회 섭취량</th>
+                                              <th class="column" style="height: 87px;">개수</th>
                                               <th class="column" style="height: 111px;">무함유</th>
                                               <th class="column" style="height: 200px;">함량</th>
-                                              <th class="column" style="height: 93px;">리뷰확인</th>
+                                              <th class="column" style="height: 87px;">리뷰확인</th>
                                               <th class="column" style="height: 164px;">즐겨찾기</th>
                                               
                                             </tr>
@@ -307,9 +304,9 @@
                    </td>
             
                   <td>
-                             <img id="img<%=i+1%>" src="img/star1.png" style="width:10%;">
-                         <img id="img<%=(i+1)*7%>" src="img/star2.png" style= width:10%;">
-                   </td>
+                         <img id="img<%=i+1%>" src="img/star1.png" style="width:13%;" onclick="alertAdd()">
+                         <img id="img<%=(i+1)*7%>" src="img/star2.png" style= width:13%;">
+                  </td>
                    
                   <%
                   out.println("</td>");
@@ -387,7 +384,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
        function goReview(i) {
           
           if(i == 0) {
-             location.replace('review.jsp');
+             location.href = 'review.jsp';
           }
        }
     

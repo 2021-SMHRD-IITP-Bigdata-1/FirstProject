@@ -4,7 +4,7 @@ select * from MEMBER where mem_id='�ѱ����ڵ��ɱ�';
 
 delete from member;
 
-select * from product;
+select * from product where pdt_name = '실리마린 밀크 시슬 추출물 300mg 베지 캡슐';
 
 select * from summary;
 

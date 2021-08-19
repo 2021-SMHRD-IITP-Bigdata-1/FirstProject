@@ -124,15 +124,15 @@
         <div class="slide-items owl-carousel">
             <div class="single-slide set-bg active" data-setbg="img/bg.jpg">
                 <h1>Be Fit.  Comparison</h1>
-                <a href="information1.jsp" class="primary-btn">Read More</a>
+                <!-- <a href="information1.jsp" class="primary-btn">Read More</a> -->
             </div>
             <div class="single-slide set-bg" data-setbg="img/bg-2.jpg">
                 <h1>Be Fit. Nutritional supplements</h1>
-                <a href="information2.jsp" class="primary-btn">Read More</a>
+                <!-- <a href="information2.jsp" class="primary-btn">Read More</a> -->
             </div>
             <div class="single-slide set-bg" data-setbg="img/bg-3.jpg">
                 <h1>Be Fit. information</h1>
-                <a href="information1.jsp" class="primary-btn">Read More</a>
+                <!-- <a href="information1.jsp" class="primary-btn">Read More</a> -->
             </div>
         </div>
     </section>
@@ -300,12 +300,6 @@
 								
 							} else {
 								
-								// 로그인이 되어있다면,
-								$("input[name=symptom]:checked").each(function() {
-									checkBoxArr.push($(this).val());
-								});
-								
-								alert(checkBoxArr + '을(를) 선택하셨습니다.');
 								
 							}
 						},

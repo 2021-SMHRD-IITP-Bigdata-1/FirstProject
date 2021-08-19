@@ -29,6 +29,21 @@
     <link rel="stylesheet" href="css/style1.css">
 
     <style>
+    #drop-content{
+        position: absolute;
+        z-index: 1;
+        }
+    #drop-content a{
+        display:block;
+        font-size: 15px;
+        width: 150px;
+        background-color: #2e2929;
+        color: rgb(250, 250, 250);
+        text-decoration: none;
+        padding: 17px 12px;
+        margin: 2px 0px 0px 0px;
+        border-radius: 10%;
+        }
         img{ 
             width: auto;
             height: 100px;
@@ -134,6 +149,19 @@
 	<%
 		MemberVO vo = (MemberVO)session.getAttribute("vo_session");
 	%>
+	
+	    <script>
+        function dp_menu(){
+            let click = document.getElementById("drop-content");
+            if(click.style.display === "none"){
+                click.style.display = "block";
+    
+            }else{
+                click.style.display = "none";
+    
+            }
+        }
+    </script>
     <!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>
@@ -213,34 +241,33 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <section class="ftco-section">
+                    <section class="ftco-section" style="margin-left: -250px;">
                         <div class="container">
-                            <div class="row justify-content-center">
+                            <div class="row justify-content-center" style="margin-left: 200px;">
                                 <div>
                                     <h2 class="heading-section"><strong>영양제 비교분석</strong></h2>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
-                                    <div class="table-wrap">
                                         <table class="table vertical">
                                           <thead class="thead-dark" style="width: 140px;">
                                             <tr>
                                               <th class="none" style="height: 80.5px;"></th>
                                               <th class="none" style="height: 80.5px;"></th>
-                                              <th class="column" style="height: 110.87px;">제품명</th>
-                                              <th class="column" style="height: 86.42px;">제조사</th>
-                                              <th class="column" style="height: 86.42px;">제조국</th>
-                                              <th class="column" style="height: 86.42px;">원가</th>
-                                              <th class="column" style="height: 86.42px;">세일가</th>
-                                              <th class="column" style="height: 86.42px;">형태</th>
-                                              <th class="column" style="height: 86.42px;">일일 섭취량</th>
-                                              <th class="column" style="height: 86.42px;">1회 섭취량</th>
-                                              <th class="column" style="height: 86.42px;">개수</th>
+                                              <th class="column" style="height: 140px;">제품명</th>
+                                              <th class="column" style="height: 87px;">제조사</th>
+                                              <th class="column" style="height: 87px;">제조국</th>
+                                              <th class="column" style="height: 87px;">원가</th>
+                                              <th class="column" style="height: 87px;">세일가</th>
+                                              <th class="column" style="height: 87px;">형태</th>
+                                              <th class="column" style="height: 87px;">일일 섭취량</th>
+                                              <th class="column" style="height: 87px;">1회 섭취량</th>
+                                              <th class="column" style="height: 87px;">개수</th>
                                               <th class="column" style="height: 111px;">무함유</th>
                                               <th class="column" style="height: 200px;">함량</th>
-                                              <th class="column" style="height: 92.4px;">리뷰확인</th>
-                                              <th class="column" style="height: 92.4px;">즐겨찾기</th>
+                                              <th class="column" style="height: 87px;">리뷰확인</th>
+                                              <th class="column" style="height: 164px;">즐겨찾기</th>
                                               
                                             </tr>
                                           </thead>
@@ -256,7 +283,7 @@
 		                   <img src=<%=arr.get(i).getPdtImg()%>>
 							<%
 							out.println("</td>");
-							out.println("<td>"+arr.get(i).getPdtName()+"</td>");
+							out.println("<td style='height:140px;'>"+arr.get(i).getPdtName()+"</td>");
 							out.println("<td>"+arr.get(i).getPdtBrand()+"</td>");
 							out.println("<td>"+arr.get(i).getPdtCountry()+"</td>");
 							out.println("<td>"+arr.get(i).getPdtPrice()+"</td>");
@@ -265,16 +292,21 @@
 							out.println("<td>"+arr.get(i).getPdtDailyIntake()+"</td>");
 							out.println("<td>"+arr.get(i).getPdtOneIntake()+"</td>");
 							out.println("<td>"+arr.get(i).getPdtJung()+"</td>");
-							out.println("<td style='height:111px;'>"+arr.get(i).getPdtFree()+"</td>");
+							if(arr.get(i).getPdtFree() == null) {
+			                     out.println("<td style='height:111px;'> </td>");
+			                  } else {
+			                     out.println("<td style='height:111px;'>"+arr.get(i).getPdtFree()+"</td>");
+			                  }
 							out.println("<td style='height:200px;'>"+arr.get(i).getPdtContent()+"</td>");
 							%>
 							
 							<td>
-							    <input type="button" value="리뷰 보러가기" onclick="goReview(<%=i%>)"> 
+							    <i class="fa fa-search" onclick="goReview(<%=i%>)"></i>
 							 </td>
 					
 							<td>
-							     <input type="button"  value="★"> 
+							     <img id="img<%=i-137%>" src="img/star1.png" style="width:13%;" onclick="alertAdd()">
+                        		 <img id="img<%=(i-137)*7%>" src="img/star2.png" style= width:13%;">	
 							 </td>
 							 
 							<%
@@ -282,7 +314,6 @@
 						} %>
                      </tbody>
                                       </table>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -349,6 +380,123 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="js/circle-progress.min.js"></script>
     <script src="js/jquery.barfiller.js"></script>
     <script src="js/main.js"></script>
+    
+        <script>
+       function goReview(i) {
+          
+          if(i == 0) {
+             location.href = 'review.jsp';
+          }
+       }
+    
+       function alertAdd() {
+          
+          alert('즐겨찾기 목록에 추가되었습니다.');
+       }
+       
+       $(document).ready(function(){
+            /*웹페이지 열었을 때*/
+            $("#img1").show();
+            $("#img7").hide();
+ 
+            /*img1을 클릭했을 때 img2를 보여줌*/
+            $("#img1").click(function(){
+                $("#img1").hide();
+                $("#img7").show();
+            });
+ 
+            /*img2를 클릭했을 때 img1을 보여줌*/
+            $("#img7").click(function(){
+                $("#img1").show();
+                $("#img7").hide();
+            });
+        });
+       $(document).ready(function(){
+            /*웹페이지 열었을 때*/
+            $("#img2").show();
+            $("#img14").hide();
+ 
+            /*img1을 클릭했을 때 img2를 보여줌*/
+            $("#img2").click(function(){
+                $("#img2").hide();
+                $("#img14").show();
+            });
+ 
+            /*img2를 클릭했을 때 img1을 보여줌*/
+            $("#img14").click(function(){
+                $("#img2").show();
+                $("#img14").hide();
+            });
+        });
+       $(document).ready(function(){
+            /*웹페이지 열었을 때*/
+            $("#img3").show();
+            $("#img21").hide();
+ 
+            /*img1을 클릭했을 때 img2를 보여줌*/
+            $("#img3").click(function(){
+                $("#img3").hide();
+                $("#img21").show();
+            });
+ 
+            /*img2를 클릭했을 때 img1을 보여줌*/
+            $("#img21").click(function(){
+                $("#img3").show();
+                $("#img21").hide();
+            });
+        });
+       $(document).ready(function(){
+            /*웹페이지 열었을 때*/
+            $("#img4").show();
+            $("#img28").hide();
+ 
+            /*img1을 클릭했을 때 img2를 보여줌*/
+            $("#img4").click(function(){
+                $("#img4").hide();
+                $("#img28").show();
+            });
+ 
+            /*img2를 클릭했을 때 img1을 보여줌*/
+            $("#img28").click(function(){
+                $("#img4").show();
+                $("#img28").hide();
+            });
+        });
+       $(document).ready(function(){
+            /*웹페이지 열었을 때*/
+            $("#img5").show();
+            $("#img35").hide();
+ 
+            /*img1을 클릭했을 때 img2를 보여줌*/
+            $("#img5").click(function(){
+                $("#img5").hide();
+                $("#img35").show();
+            });
+ 
+            /*img2를 클릭했을 때 img1을 보여줌*/
+            $("#img35").click(function(){
+                $("#img5").show();
+                $("#img35").hide();
+            });
+        });
+       $(document).ready(function(){
+            /*웹페이지 열었을 때*/
+            $("#img6").show();
+            $("#img42").hide();
+ 
+            /*img1을 클릭했을 때 img2를 보여줌*/
+            $("#img6").click(function(){
+                $("#img6").hide();
+                $("#img42").show();
+            });
+ 
+            /*img2를 클릭했을 때 img1을 보여줌*/
+            $("#img42").click(function(){
+                $("#img6").show();
+                $("#img42").hide();
+            });
+        });
+    </script>
 </body>
 
 </html>

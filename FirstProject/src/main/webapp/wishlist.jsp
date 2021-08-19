@@ -177,13 +177,13 @@
                     <thead>
                       <tr>
                         <th class="product-thumbnail" style="width:140px;">제품이미지</th>
-                        <th class="product-name" style="width:160px;">제품명</th>
-                        <th class="product-brand" style="width:100px;">브랜드</th>
+                        <th class="product-name" style="width:180px;">제품명</th>
+                        <th class="product-brand" style="width:150px;">브랜드</th>
                         <th class="product-maker" style="width:90px;">제조국</th>
                         <th class="product-shape" style="width:120px;">형태</th>
-                        <th class="product-number" style="width:100px;">섭취횟수, 양</th>
+                        <th class="product-number" style="width:130px;">섭취횟수, 양</th>
                         <th class="product-total" style="width:100px;">총량</th>
-                        <th class="product-as" style="width:130px;">특징</th>
+                        <th class="product-as" style="width:160px;">특징</th>
                         <th class="product-review" style="width:100px;">리뷰</th>
                         <th class="product-remove" style="width:110px;">즐겨찾기 제거</th>
                       </tr>
@@ -254,7 +254,41 @@
 						    <input type="button1" class="btn btn-primary height-auto btn-sm" value="리뷰 보러가기" onclick="goReview(0)" style="width: 120px;"> 
 						</td>
 				
-					    <td><input type="button" class="btn btn-primary height-auto btn-sm" value="X"> </td>
+					    <td><input type="button" class="btn btn-primary height-auto btn-sm" value="X" onclick="alertDel()"> </td>
+						
+						 
+						<%
+						out.println("</td>");
+						%>
+                    
+                    	
+                    	<!-- pdtCode = 142인 제품 -->
+						<%
+						out.println("<tr>");
+						out.println("<td>");
+						%>
+						<img class="pdtImg" src=<%=arr.get(141).getPdtImg()%>>
+						<%
+						out.println("</td>");
+						out.println("<td>"+arr.get(141).getPdtName()+"</td>");
+						out.println("<td>"+arr.get(141).getPdtBrand()+"</td>");
+						out.println("<td>"+arr.get(141).getPdtCountry()+"</td>");
+						out.println("<td>"+arr.get(141).getPdtType()+"</td>");
+						out.println("<td>"+arr.get(141).getPdtDailyIntake()+"/<br>"+arr.get(141).getPdtOneIntake()+"</td>");
+						out.println("<td>"+arr.get(141).getPdtJung()+"</td>");
+						if(arr.get(141).getPdtFree() == null) {
+							out.println("<td> </td>");
+						} else {
+							out.println("<td>"+arr.get(141).getPdtFree()+"</td>");
+						}
+				
+						%>
+						
+						<td>
+						    <input type="button1" class="btn btn-primary height-auto btn-sm" value="리뷰 보러가기" onclick="goReview(0)" style="width: 120px;"> 
+						</td>
+				
+					    <td><input type="button" class="btn btn-primary height-auto btn-sm" value="X" onclick="alertDel()"> </td>
 						
 						 
 						<%
@@ -345,12 +379,6 @@
 								
 							} else {
 								
-								// 로그인이 되어있다면,
-								$("input[name=symptom]:checked").each(function() {
-									checkBoxArr.push($(this).val());
-								});
-								
-								alert(checkBoxArr + '을(를) 선택하셨습니다.');
 								
 							}
 						},
@@ -360,6 +388,11 @@
 						
 					})
 				}
+     
+     function alertDel() {
+    	 
+    	 alert('제품을 목록에서 삭제하였습니다.');
+     }
      </script>
      
          <script type="text/javascript"> 
