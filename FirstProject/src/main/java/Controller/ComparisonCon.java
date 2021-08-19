@@ -26,12 +26,8 @@ public class ComparisonCon extends HttpServlet {
 
 		String nutName = URLDecoder.decode(request.getParameter("nut"),"euc-kr");
 
-		
-
-		
-		
 		//String nutName = request.getParameter("nut");
-		System.out.println("°¡³ª´Ù"+nutName);
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"+nutName);
 		
 		MemberDAO dao = new MemberDAO();
 		
@@ -39,7 +35,7 @@ public class ComparisonCon extends HttpServlet {
 		
 //		String nutCode = dao.selectNutCode(nutName);
 //
-//		// Å¬¸¯ÇÑ ¿µ¾ç¼ÒÀÇ Á¦Ç° ArrayList È¹µæ
+//		// Å¬ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç° ArrayList È¹ï¿½ï¿½
 //		ArrayList<ProductVO> array = dao.selectProduct(nutCode);
 //
 //		request.setAttribute("array", array);
